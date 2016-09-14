@@ -10,17 +10,18 @@ import UIKit
 
 class LevelOne_View: UIView {
 
-    let winBlock: UIImage? = UIImage(named:"green_button10.png")
+    let winBlock: UIImage? = UIImage(named: "green_panel.png")
 
     // Only override draw() if you perform custom drawing.
     // An empty implementation adversely affects performance during animation.
     override func draw(_ rect: CGRect) {
-        drawWinBlock();
+       // drawWinBlock();
     }
     
     func drawWinBlock(){
         // Drawing code
         guard let winBlock = winBlock else{
+            debugPrint("Image file not found")
             return
         }
         
