@@ -10,15 +10,36 @@ import UIKit
 
 
 class ViewController: UIViewController {
-    var originalWinBlockCenter: CGPoint!
+    var originalPlayerBlockCenter: CGPoint!
+    var collision: UICollisionBehavior!
+    var animator: UIDynamicAnimator!
 
-    @IBOutlet var winBlock: UIImageView!
+    let playerBlock = UIView(frame: CGRect(x: 100, y: 300, width: 50, height: 50))
+    let barrier = UIView(frame: CGRect(x: 50, y: 200, width: 300, height: 2))
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        let panGestureRecognizer = UIPanGestureRecognizer(target: self, action: #selector(ViewController.didWinBlockPan(_:)))
-        winBlock.isUserInteractionEnabled = true
-        winBlock.addGestureRecognizer(panGestureRecognizer)
+
+        // Create Blocks
+        playerBlock.backgroundColor = UIColor.green
+        view.addSubview(playerBlock)
+        
+        //Set Gesture Controls
+        let panGestureRecognizer = UIPanGestureRecognizer(target: self, action: #selector(ViewController.didPlayerBlockPan(_:)))
+        playerBlock.isUserInteractionEnabled = true
+        playerBlock.addGestureRecognizer(panGestureRecognizer)
+        
+        // Set Barriers
+        barrier.backgroundColor = UIColor.black
+        view.addSubview(barrier)
+        
+        //Set Collisions
+        animator = UIDynamicAnimator(referenceView: view)
+        collision = UICollisionBehavior(items: [playerBlock])
+        collision.translatesReferenceBoundsIntoBoundary = true
+        collision.addBoundary(withIdentifier: "barrier", for: UIBezierPath(rect: barrier.frame))
+        animator.addBehavior(collision)
+
     }
 
     override func didReceiveMemoryWarning() {
@@ -27,16 +48,30 @@ class ViewController: UIViewController {
     }
     
     
-    @IBAction func didWinBlockPan(_ sender: UIPanGestureRecognizer) {
+    @IBAction func didPlayerBlockPan(_ sender: UIPanGestureRecognizer) {
         //var point = sender.location(in: view)
         //var velocity = sender.velocity(in: view)
         let translation = sender.translation(in: view)
         
         if sender.state == UIGestureRecognizerState.began {
-            originalWinBlockCenter = winBlock.center
+            originalPlayerBlockCenter = playerBlock.center
         } else if sender.state == UIGestureRecognizerState.changed {
-            winBlock.center = CGPoint(x: originalWinBlockCenter.x, y: originalWinBlockCenter.y + translation.y)
+            if (barrier.frame.intersects(playerBlock.frame)) {
+                // Do something
+                sender.isEnabled = false
+                var unstuck: CGFloat = 0.00
+                while(barrier.frame.intersects(playerBlock.frame)){
+                    unstuck += 1.00
+                    print("Unstuck val: \(unstuck)")
+                    let new_y = originalPlayerBlockCenter.y + translation.y + unstuck
+                    playerBlock.center = CGPoint(x: originalPlayerBlockCenter.x, y: new_y )
+                }
+                sender.isEnabled = true
+            }else{
+                playerBlock.center = CGPoint(x: originalPlayerBlockCenter.x, y: originalPlayerBlockCenter.y + translation.y)
+            }
         } else if sender.state == UIGestureRecognizerState.ended {
+            
         }
     }
     

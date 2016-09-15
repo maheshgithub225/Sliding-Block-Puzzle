@@ -17,38 +17,18 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" customClass="LevelOne_View" customModule="T1_Red">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="green_panel.png" translatesAutoresizingMaskIntoConstraints="NO" id="r7V-68-VI8">
-                                <frame key="frameInset" minX="59" minY="360" width="92" height="92"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.042948717948717907" green="0.042948717948717907" blue="0.042948717948717907" alpha="1" colorSpace="calibratedRGB"/>
-                                <accessibility key="accessibilityConfiguration">
-                                    <accessibilityTraits key="traits" image="YES" adjustable="YES" allowsDirectInteraction="YES"/>
-                                </accessibility>
-                                <gestureRecognizers/>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="hoj-UZ-lzY" appends="YES" id="Gsd-hV-Dfr"/>
-                                </connections>
-                            </imageView>
-                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <gestureRecognizers/>
                     </view>
-                    <connections>
-                        <outlet property="winBlock" destination="r7V-68-VI8" id="HMs-s4-nDi"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <panGestureRecognizer minimumNumberOfTouches="1" id="hoj-UZ-lzY">
                     <connections>
-                        <action selector="winBlockPan:" destination="BYZ-38-t0r" id="NBu-Gp-Eza"/>
+                        <action selector="didPlayerBlockPan:" destination="BYZ-38-t0r" id="bp6-wB-Wjf"/>
                     </connections>
                 </panGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="24.800000000000001" y="43.628185907046479"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="green_panel.png" width="100" height="100"/>
-    </resources>
 </document>

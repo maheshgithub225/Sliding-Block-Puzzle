@@ -17,7 +17,7 @@ class LevelOne_View: UIView {
     override func draw(_ rect: CGRect) {
        // drawWinBlock();
     }
-    
+      
     func drawWinBlock(){
         // Drawing code
         guard let winBlock = winBlock else{
