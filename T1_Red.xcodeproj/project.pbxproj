@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		BD7545D91D886B9100CB2082 /* LevelOne_View.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD7545D81D886B9100CB2082 /* LevelOne_View.swift */; };
+		BD97422D1D8B045C00830F1E /* LevelOneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD97422C1D8B045C00830F1E /* LevelOneViewController.swift */; };
 		BDE536651D89B78C00514723 /* green_panel.png in Resources */ = {isa = PBXBuildFile; fileRef = BDE536641D89B78C00514723 /* green_panel.png */; };
 		BDF9BB8E1D81D19A00403F55 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF9BB8D1D81D19A00403F55 /* AppDelegate.swift */; };
 		BDF9BB901D81D19A00403F55 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF9BB8F1D81D19A00403F55 /* ViewController.swift */; };
@@ -36,7 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		BD7545D81D886B9100CB2082 /* LevelOne_View.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LevelOne_View.swift; sourceTree = "<group>"; };
+		BD97422C1D8B045C00830F1E /* LevelOneViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LevelOneViewController.swift; sourceTree = "<group>"; };
 		BDE536641D89B78C00514723 /* green_panel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = green_panel.png; sourceTree = "<group>"; };
 		BDF9BB8A1D81D19A00403F55 /* T1_Red.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = T1_Red.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDF9BB8D1D81D19A00403F55 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -116,7 +116,7 @@
 				BDF9BB941D81D19A00403F55 /* Assets.xcassets */,
 				BDF9BB961D81D19A00403F55 /* LaunchScreen.storyboard */,
 				BDF9BB991D81D19A00403F55 /* Info.plist */,
-				BD7545D81D886B9100CB2082 /* LevelOne_View.swift */,
+				BD97422C1D8B045C00830F1E /* LevelOneViewController.swift */,
 			);
 			path = T1_Red;
 			sourceTree = "<group>";
@@ -275,8 +275,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				BDF9BB901D81D19A00403F55 /* ViewController.swift in Sources */,
-				BD7545D91D886B9100CB2082 /* LevelOne_View.swift in Sources */,
 				BDF9BB8E1D81D19A00403F55 /* AppDelegate.swift in Sources */,
+				BD97422D1D8B045C00830F1E /* LevelOneViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
