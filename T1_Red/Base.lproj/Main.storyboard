@@ -69,16 +69,16 @@
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f50-7b-tvh" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <panGestureRecognizer minimumNumberOfTouches="1" id="l4E-bd-jui">
-                    <connections>
-                        <action selector="didPuzzleBlockPan:" destination="vm9-XB-sXt" id="GdM-AU-AzK"/>
-                        <outlet property="delegate" destination="vm9-XB-sXt" id="cvg-zl-I19"/>
-                    </connections>
-                </panGestureRecognizer>
                 <panGestureRecognizer minimumNumberOfTouches="1" id="hoj-UZ-lzY">
                     <connections>
                         <action selector="didPlayerBlockPan:" destination="vm9-XB-sXt" id="DgZ-n8-o2C"/>
                         <outlet property="delegate" destination="vm9-XB-sXt" id="zgc-I5-cqM"/>
+                    </connections>
+                </panGestureRecognizer>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="l4E-bd-jui">
+                    <connections>
+                        <action selector="didPuzzleBlockPan:" destination="vm9-XB-sXt" id="GdM-AU-AzK"/>
+                        <outlet property="delegate" destination="vm9-XB-sXt" id="cvg-zl-I19"/>
                     </connections>
                 </panGestureRecognizer>
             </objects>

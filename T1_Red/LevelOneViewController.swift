@@ -23,7 +23,7 @@ class LevelOneViewController: UIViewController {
     // Puzzle Blocks
     let puzzleBlockVertical = UIView(frame: CGRect(x: 180, y: 400, width: 50, height: 100))
 
-    
+     
     // Barriers
     let barrierUpper = UIView(frame: CGRect(x: 0, y: -300, width: 414, height: 500))
     let barrierLeft = UIView(frame: CGRect(x: -100, y: 200, width: 114, height: 736))
