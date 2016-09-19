@@ -14,16 +14,19 @@ class LevelOneViewController: UIViewController {
     var originalPlayerBlockCenter: CGPoint!
     var originalPuzzleBlockCenterVertical: CGPoint!
     var originalPuzzleBlockCenterHorizontal: CGPoint!
+    var orginalPuzzleBloackCenterOrange: CGPoint!
     var collision: UICollisionBehavior!
     var animator: UIDynamicAnimator!
     // Debug Code
-    let DEBUG_OUTPUT = true
+    let DEBUG_OUTPUT = false
     let DEBUG_FREE_PLAYER = false
     // Player Blocks
-    let playerBlock = UIView(frame: CGRect(x: 100, y: 400, width: 50, height: 50))
+    let playerBlock = UIView(frame: CGRect(x: 10, y: 400, width: 50, height: 50))
     // Puzzle Blocks
-    let puzzleBlockVertical = UIView(frame: CGRect(x: 180, y: 400, width: 50, height: 100))
-    let puzzleBlockHorizontal = UIView(frame: CGRect(x: 260, y: 200, width: 100, height: 50))
+    let puzzleBlockVertical = UIView(frame: CGRect(x: 200, y: 430, width: 50, height: 198))
+    let puzzleBlockHorizontal = UIView(frame: CGRect(x: 200, y: 200, width: 160, height: 50))
+    let puzzleBlockOrange = UIView(frame: CGRect(x:80, y: 200, width:50, height:150))
+   // let sampleimage = UIImageView(frame: CGRect(x: 10, y: 400, width: 50, height: 50))
      
     // Barriers
     let barrierUpper = UIView(frame: CGRect(x: 0, y: -300, width: 414, height: 500))
@@ -43,6 +46,8 @@ class LevelOneViewController: UIViewController {
         view.addSubview(puzzleBlockVertical)
         puzzleBlockHorizontal.backgroundColor = UIColor.blue
         view.addSubview(puzzleBlockHorizontal)
+        puzzleBlockOrange.backgroundColor = UIColor.orange
+        view.addSubview(puzzleBlockOrange)
         
         //Set Gesture Controls
         var panGestureRecognizer = UIPanGestureRecognizer(target: self, action: #selector(LevelOneViewController.didPlayerBlockPan(_:)))
@@ -57,6 +62,9 @@ class LevelOneViewController: UIViewController {
         puzzleBlockHorizontal.isUserInteractionEnabled = true
         puzzleBlockHorizontal.addGestureRecognizer(panGestureRecognizer)
         
+        panGestureRecognizer = UIPanGestureRecognizer(target: self, action: #selector(LevelOneViewController.didPuzzleBlockPanOrange(_:)))
+        puzzleBlockOrange.isUserInteractionEnabled = true
+        puzzleBlockOrange.addGestureRecognizer(panGestureRecognizer)
         
         // Set Barriers
         barrierUpper.backgroundColor = UIColor.black
@@ -81,6 +89,7 @@ class LevelOneViewController: UIViewController {
         collision.addBoundary(withIdentifier: "barrierLower", for: UIBezierPath(rect: barrierLower.frame))
         collision.addBoundary(withIdentifier: "puzzleBlockVertical", for: UIBezierPath(rect: puzzleBlockVertical.frame))
         collision.addBoundary(withIdentifier: "puzzleBlockHorizontal", for: UIBezierPath(rect: puzzleBlockHorizontal.frame))
+        collision.addBoundary(withIdentifier: "puzzleBlockOrange", for: UIBezierPath(rect: puzzleBlockOrange.frame))
         animator.addBehavior(collision)
         
     }
@@ -174,6 +183,30 @@ class LevelOneViewController: UIViewController {
                     }
                 }else{
                     while(puzzleBlockVertical.frame.intersects(playerBlock.frame)){
+                        unstuck += 0.01
+                        if(DEBUG_OUTPUT){
+                            print("Unstuck val: \(unstuck)")
+                        }
+                        let new_x = originalPlayerBlockCenter.x + translation.x + unstuck
+                        playerBlock.center = CGPoint(x: new_x, y: originalPlayerBlockCenter.y )
+                    }
+                }
+                sender.isEnabled = true
+            }else if(puzzleBlockOrange.frame.intersects(playerBlock.frame)){
+                sender.isEnabled = false //Disables Gesture
+                var unstuck: CGFloat = 0.00
+                let translationDirection = translation.x
+                if(translationDirection >= 0){
+                    while(puzzleBlockOrange.frame.intersects(playerBlock.frame)){
+                        unstuck += 0.01
+                        if(DEBUG_OUTPUT){
+                            print("Unstuck val: \(unstuck)")
+                        }
+                        let new_x = originalPlayerBlockCenter.x + translation.x - unstuck
+                        playerBlock.center = CGPoint(x: new_x, y: originalPlayerBlockCenter.y )
+                    }
+                }else{
+                    while(puzzleBlockOrange.frame.intersects(playerBlock.frame)){
                         unstuck += 0.01
                         if(DEBUG_OUTPUT){
                             print("Unstuck val: \(unstuck)")
@@ -414,6 +447,30 @@ class LevelOneViewController: UIViewController {
                     }
                 }
                 sender.isEnabled = true
+            }else if(puzzleBlockOrange.frame.intersects(puzzleBlockHorizontal.frame)){
+                sender.isEnabled = false //Disables Gesture
+                var unstuck: CGFloat = 0.00
+                let translationDirection = translation.x
+                if(translationDirection >= 0){
+                    while(puzzleBlockOrange.frame.intersects(puzzleBlockHorizontal.frame)){
+                        unstuck += 0.01
+                        if(DEBUG_OUTPUT){
+                            print("Unstuck val: \(unstuck)")
+                        }
+                        let new_x = originalPuzzleBlockCenterHorizontal.x + translation.x - unstuck
+                        puzzleBlockHorizontal.center = CGPoint(x: new_x, y: originalPuzzleBlockCenterHorizontal.y )
+                    }
+                }else{
+                    while(puzzleBlockOrange.frame.intersects(puzzleBlockHorizontal.frame)){
+                        unstuck += 0.01
+                        if(DEBUG_OUTPUT){
+                            print("Unstuck val: \(unstuck)")
+                        }
+                        let new_x = originalPuzzleBlockCenterHorizontal.x + translation.x + unstuck
+                        puzzleBlockHorizontal.center = CGPoint(x: new_x, y: originalPuzzleBlockCenterHorizontal.y )
+                    }
+                }
+                sender.isEnabled = true
             }else{
                 if(DEBUG_FREE_PLAYER){
                     puzzleBlockHorizontal.center = CGPoint(x: originalPuzzleBlockCenterHorizontal.x + translation.x, y: originalPuzzleBlockCenterHorizontal.y + translation.y)
@@ -426,7 +483,133 @@ class LevelOneViewController: UIViewController {
             //Nothing!
         }
     }
-
+    @IBAction func didPuzzleBlockPanOrange(_ sender: UIPanGestureRecognizer) {
+        //var point = sender.location(in: view)
+        //var velocity = sender.velocity(in: view)
+        let translation = sender.translation(in: view)
+        
+        if sender.state == UIGestureRecognizerState.began {
+            orginalPuzzleBloackCenterOrange = puzzleBlockOrange.center
+        } else if sender.state == UIGestureRecognizerState.changed {
+            if (barrierUpper.frame.intersects(puzzleBlockOrange.frame)) {     // Block has intersected with boundry, get unstuck.
+                sender.isEnabled = false    //Disables Gestures
+                var unstuck: CGFloat = 0.00
+                while(barrierUpper.frame.intersects(puzzleBlockOrange.frame)){
+                    unstuck += 0.01
+                    if(DEBUG_OUTPUT){
+                        print("Unstuck val: \(unstuck)")
+                    }
+                    let new_y = orginalPuzzleBloackCenterOrange.y + translation.y + unstuck
+                    puzzleBlockOrange.center = CGPoint(x: orginalPuzzleBloackCenterOrange.x, y: new_y )
+                }
+                sender.isEnabled = true     // Enables Gesture
+            }else if(barrierLower.frame.intersects(puzzleBlockOrange.frame)){
+                sender.isEnabled = false    //Disables Gestures
+                var unstuck: CGFloat = 0.00
+                while(barrierLower.frame.intersects(puzzleBlockOrange.frame)){
+                    unstuck += 0.01
+                    if(DEBUG_OUTPUT){
+                        print("Unstuck val: \(unstuck)")
+                    }
+                    let new_y = orginalPuzzleBloackCenterOrange.y + translation.y - unstuck
+                    puzzleBlockOrange.center = CGPoint(x: orginalPuzzleBloackCenterOrange.x, y: new_y )
+                }
+                sender.isEnabled = true     // Enables Gesture
+            }else if(barrierLeft.frame.intersects(puzzleBlockOrange.frame)){
+                sender.isEnabled = false    //Disables Gestures
+                var unstuck: CGFloat = 0.00
+                while(barrierLeft.frame.intersects(puzzleBlockOrange.frame)){
+                    unstuck += 0.01
+                    if(DEBUG_OUTPUT){
+                        print("Unstuck val: \(unstuck)")
+                    }
+                    let new_x = orginalPuzzleBloackCenterOrange.x + translation.x + unstuck
+                    puzzleBlockOrange.center = CGPoint(x: new_x, y: orginalPuzzleBloackCenterOrange.y)
+                }
+                sender.isEnabled = true     // Enables Gesture
+            }else if(barrierUpperRight.frame.intersects(puzzleBlockOrange.frame)){
+                sender.isEnabled = false    //Disables Gestures
+                var unstuck: CGFloat = 0.00
+                while(barrierUpperRight.frame.intersects(puzzleBlockOrange.frame)){
+                    unstuck += 0.01
+                    if(DEBUG_OUTPUT){
+                        print("Unstuck val: \(unstuck)")
+                    }
+                    let new_x = orginalPuzzleBloackCenterOrange.x + translation.x - unstuck
+                    puzzleBlockOrange.center = CGPoint(x: new_x, y: orginalPuzzleBloackCenterOrange.y )
+                }
+                sender.isEnabled = true     // Enables Gesture
+            }else if(barrierLowerRight.frame.intersects(puzzleBlockOrange.frame)){
+                sender.isEnabled = false    //Disables Gestures
+                var unstuck: CGFloat = 0.00
+                while(barrierLowerRight.frame.intersects(puzzleBlockOrange.frame)){
+                    unstuck += 0.01
+                    if(DEBUG_OUTPUT){
+                        print("Unstuck val: \(unstuck)")
+                    }
+                    let new_x = orginalPuzzleBloackCenterOrange.x + translation.x - unstuck
+                    puzzleBlockOrange.center = CGPoint(x: new_x, y: orginalPuzzleBloackCenterOrange.y )
+                }
+                sender.isEnabled = true     // Enables Gesture
+            }else if(playerBlock.frame.intersects(puzzleBlockOrange.frame)){
+                sender.isEnabled = false //Disables Gesture
+                var unstuck: CGFloat = 0.00
+                let translationDirection = translation.y
+                if(translationDirection >= 0){
+                    while(playerBlock.frame.intersects(puzzleBlockOrange.frame)){
+                        unstuck += 0.01
+                        if(DEBUG_OUTPUT){
+                            print("Unstuck val: \(unstuck)")
+                        }
+                        let new_y = orginalPuzzleBloackCenterOrange.y + translation.y - unstuck
+                        puzzleBlockOrange.center = CGPoint(x: orginalPuzzleBloackCenterOrange.x, y: new_y )
+                    }
+                }else{
+                    while(playerBlock.frame.intersects(puzzleBlockOrange.frame)){
+                        unstuck += 0.01
+                        if(DEBUG_OUTPUT){
+                            print("Unstuck val: \(unstuck)")
+                        }
+                        let new_y = orginalPuzzleBloackCenterOrange.y + translation.y + unstuck
+                        puzzleBlockOrange.center = CGPoint(x: orginalPuzzleBloackCenterOrange.x, y: new_y )
+                    }
+                }
+                sender.isEnabled = true
+            }else if(puzzleBlockHorizontal.frame.intersects(puzzleBlockOrange.frame)){
+                sender.isEnabled = false //Disables Gesture
+                var unstuck: CGFloat = 0.00
+                let translationDirection = translation.y
+                if(translationDirection >= 0){
+                    while(puzzleBlockHorizontal.frame.intersects(puzzleBlockOrange.frame)){
+                        unstuck += 0.01
+                        if(DEBUG_OUTPUT){
+                            print("Unstuc val: \(unstuck)")
+                        }
+                        let new_y = orginalPuzzleBloackCenterOrange.y + translation.y - unstuck
+                        puzzleBlockOrange.center = CGPoint(x: orginalPuzzleBloackCenterOrange.x, y: new_y )
+                    }
+                }else{
+                    while(puzzleBlockHorizontal.frame.intersects(puzzleBlockOrange.frame)){
+                        unstuck += 0.01
+                        if(DEBUG_OUTPUT){
+                            print("Unstuck val: \(unstuck)")
+                        }
+                        let new_y = orginalPuzzleBloackCenterOrange.y + translation.y + unstuck
+                        puzzleBlockOrange.center = CGPoint(x: orginalPuzzleBloackCenterOrange.x, y: new_y )
+                    }
+                }
+                sender.isEnabled = true
+            }else{
+                if(DEBUG_FREE_PLAYER){
+                    puzzleBlockOrange.center = CGPoint(x: orginalPuzzleBloackCenterOrange.x + translation.x, y: orginalPuzzleBloackCenterOrange.y + translation.y)
+                }else{
+                    puzzleBlockOrange.center = CGPoint(x: orginalPuzzleBloackCenterOrange.x, y: orginalPuzzleBloackCenterOrange.y + translation.y)
+                }
+            }
+        } else if sender.state == UIGestureRecognizerState.ended {
+            //Nothing!
+        }
+    }
     
     
     func gestureRecognizer(gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWithGestureRecognizer otherGestureRecognizer: UIGestureRecognizer) -> Bool {
