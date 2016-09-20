@@ -48,21 +48,9 @@ class load: UIView {
         
         
       capture.draw(in: p)
-        capturetwo.draw(at: ptwo)
-
+      capturetwo.draw(at: ptwo)
+    
       
         
     }
-    
-    public func delay(_ delay: Double, closure:(() -> Void)) {
-        
-        // var dispatchTime: DispatchTime = DispatchTime.now() + Double(Int64(delay * Double(NSEC_PER_SEC))) / Double(NSEC_PER_SEC)
-        // DispatchQueue.main.after(when: dispatchTime, execute: closure)
-        DispatchQueue.main.asyncAfter(deadline: .now() + delay, execute: closure)
-        
-    }
-    
-
-
-
 }

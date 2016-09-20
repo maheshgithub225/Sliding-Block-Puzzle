@@ -29,11 +29,11 @@ class LevelOneViewController: UIViewController {
    // let sampleimage = UIImageView(frame: CGRect(x: 10, y: 400, width: 50, height: 50))
      
     // Barriers
-    let barrierUpper = UIView(frame: CGRect(x: 0, y: -300, width: 414, height: 500))
-    let barrierLeft = UIView(frame: CGRect(x: -100, y: 200, width: 114, height: 736))
-    let barrierUpperRight = UIView(frame: CGRect(x: 400, y: 200, width: 414, height: 190))
-    let barrierLowerRight = UIView(frame: CGRect(x: 400, y: 460, width: 414, height: 190))
-    let barrierLower = UIView(frame: CGRect(x: 0, y: 636, width: 414, height: 400))
+    let barrierUpper = UIView(frame: CGRect(x: 0, y: -600, width: 414, height: 800))
+    let barrierLeft = UIView(frame: CGRect(x: -1000, y: 200, width: 1014, height: 736))
+    let barrierUpperRight = UIView(frame: CGRect(x: 400, y: 200, width: 1014, height: 190))
+    let barrierLowerRight = UIView(frame: CGRect(x: 400, y: 460, width: 1014, height: 190))
+    let barrierLower = UIView(frame: CGRect(x: 0, y: 636, width: 414, height: 800))
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -101,10 +101,9 @@ class LevelOneViewController: UIViewController {
     
     
     @IBAction func didPlayerBlockPan(_ sender: UIPanGestureRecognizer) {
-        //var point = sender.location(in: view)
-        //var velocity = sender.velocity(in: view)
+        //let point = sender.location(in: view)
         let translation = sender.translation(in: view)
-        
+
         if sender.state == UIGestureRecognizerState.began {
             originalPlayerBlockCenter = playerBlock.center
         } else if sender.state == UIGestureRecognizerState.changed {
@@ -224,7 +223,52 @@ class LevelOneViewController: UIViewController {
                 }
             }
         } else if sender.state == UIGestureRecognizerState.ended {
-            //Nothing!
+            var unstuck: CGFloat = 0.00
+            while(barrierUpper.frame.intersects(playerBlock.frame)){
+                unstuck += 0.01
+                if(DEBUG_OUTPUT){
+                    print("Unstuck val: \(unstuck)")
+                }
+                let new_y = originalPlayerBlockCenter.y + translation.y + unstuck
+                playerBlock.center = CGPoint(x: originalPlayerBlockCenter.x, y: new_y )
+            }
+            unstuck = 0.00
+            while(barrierLower.frame.intersects(playerBlock.frame)){
+                unstuck += 0.01
+                if(DEBUG_OUTPUT){
+                    print("Unstuck val: \(unstuck)")
+                }
+                let new_y = originalPlayerBlockCenter.y + translation.y - unstuck
+                playerBlock.center = CGPoint(x: originalPlayerBlockCenter.x, y: new_y )
+            }
+            unstuck = 0.00
+            while(barrierLeft.frame.intersects(playerBlock.frame)){
+                unstuck += 0.01
+                if(DEBUG_OUTPUT){
+                    print("Unstuck val: \(unstuck)")
+                }
+                let new_x = originalPlayerBlockCenter.x + translation.x + unstuck
+                playerBlock.center = CGPoint(x: new_x, y: originalPlayerBlockCenter.y)
+            }
+            unstuck = 0.00
+            while(barrierLowerRight.frame.intersects(playerBlock.frame)){
+                unstuck += 0.01
+                if(DEBUG_OUTPUT){
+                    print("Unstuck val: \(unstuck)")
+                }
+                let new_x = originalPlayerBlockCenter.x + translation.x - unstuck
+                playerBlock.center = CGPoint(x: new_x, y: originalPlayerBlockCenter.y)
+            }
+            unstuck = 0.00
+            while(barrierLowerRight.frame.intersects(playerBlock.frame)){
+                unstuck += 0.01
+                if(DEBUG_OUTPUT){
+                    print("Unstuck val: \(unstuck)")
+                }
+                let new_x = originalPlayerBlockCenter.x + translation.x - unstuck
+                playerBlock.center = CGPoint(x: new_x, y: originalPlayerBlockCenter.y)
+            }
+            unstuck = 0.00
         }
     }
     
@@ -232,7 +276,6 @@ class LevelOneViewController: UIViewController {
         //var point = sender.location(in: view)
         //var velocity = sender.velocity(in: view)
         let translation = sender.translation(in: view)
-        
         if sender.state == UIGestureRecognizerState.began {
             originalPuzzleBlockCenterVertical = puzzleBlockVertical.center
         } else if sender.state == UIGestureRecognizerState.changed {
@@ -480,7 +523,7 @@ class LevelOneViewController: UIViewController {
 
             }
         } else if sender.state == UIGestureRecognizerState.ended {
-            //Nothing!
+            
         }
     }
     @IBAction func didPuzzleBlockPanOrange(_ sender: UIPanGestureRecognizer) {
