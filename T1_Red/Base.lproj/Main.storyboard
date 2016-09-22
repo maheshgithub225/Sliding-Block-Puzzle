@@ -15,7 +15,7 @@
                         <viewControllerLayoutGuide type="bottom" id="lMa-H2-ACg"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Uag-Sp-tuo" customClass="load" customModule="T1_Red" customModuleProvider="target">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -33,7 +33,7 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" customClass="Splash" customModule="T1_Red" customModuleProvider="target">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X9M-su-8XF">
@@ -87,7 +87,7 @@
                         <viewControllerLayoutGuide type="bottom" id="M5U-hC-EBW"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="0pR-JU-Mp1">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
@@ -104,21 +104,27 @@
             </objects>
             <point key="canvasLocation" x="74" y="42"/>
         </scene>
-        <!--GameInfoController-->
+        <!--Level Two View Controller-->
         <scene sceneID="Gbt-pV-ZZV">
             <objects>
-                <viewController title="GameInfoController" id="yUj-Hz-eFA" sceneMemberID="viewController">
+                <viewController title="Level Two View Controller" id="yUj-Hz-eFA" customClass="LevelTwoViewController" customModule="T1_Red" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="JPI-Ou-da0"/>
                         <viewControllerLayoutGuide type="bottom" id="1PC-nT-9XS"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="bcZ-3J-xb3">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Wr-Jg-DZa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="aCp-1c-rFK">
+                    <connections>
+                        <action selector="didPlayerBlockPan1:" destination="yUj-Hz-eFA" id="1SJ-0f-hkG"/>
+                        <outlet property="delegate" destination="yUj-Hz-eFA" id="Kzs-xQ-6Ok"/>
+                    </connections>
+                </panGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="797" y="42"/>
         </scene>
