@@ -34,6 +34,11 @@ class LevelOneViewController: UIViewController {
     let barrierUpperRight = UIView(frame: CGRect(x: 400, y: 200, width: 1014, height: 190))
     let barrierLowerRight = UIView(frame: CGRect(x: 400, y: 460, width: 1014, height: 190))
     let barrierLower = UIView(frame: CGRect(x: 0, y: 636, width: 414, height: 800))
+    
+    // Exit
+    let exitBlock = UIView(frame: CGRect(x: 405, y: 380, width: 700, height: 80))
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -48,6 +53,10 @@ class LevelOneViewController: UIViewController {
         view.addSubview(puzzleBlockHorizontal)
         puzzleBlockOrange.backgroundColor = UIColor.orange
         view.addSubview(puzzleBlockOrange)
+        
+        // Create Exit
+        exitBlock.backgroundColor = UIColor.darkGray
+        view.addSubview(exitBlock)
         
         //Set Gesture Controls
         var panGestureRecognizer = UIPanGestureRecognizer(target: self, action: #selector(LevelOneViewController.didPlayerBlockPan(_:)))
