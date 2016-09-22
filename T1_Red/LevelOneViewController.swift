@@ -34,6 +34,7 @@ class LevelOneViewController: UIViewController {
     let barrierUpperRight = UIView(frame: CGRect(x: 400, y: 200, width: 1014, height: 190))
     let barrierLowerRight = UIView(frame: CGRect(x: 400, y: 460, width: 1014, height: 190))
     let barrierLower = UIView(frame: CGRect(x: 0, y: 636, width: 414, height: 800))
+
     
     // Exit
     let exitBlock = UIView(frame: CGRect(x: 405, y: 380, width: 700, height: 80))
@@ -43,7 +44,7 @@ class LevelOneViewController: UIViewController {
         super.viewDidLoad()
         
         // Create Blocks 
-        playerBlock.backgroundColor = UIColor.green
+        playerBlock.backgroundColor = UIColor(patternImage: UIImage(named: "mag50x50.png")!)
         view.addSubview(playerBlock)
         
         // Create Puzzle Blocks
@@ -76,11 +77,11 @@ class LevelOneViewController: UIViewController {
         puzzleBlockOrange.addGestureRecognizer(panGestureRecognizer)
         
         // Set Barriers
-        barrierUpper.backgroundColor = UIColor.black
-        barrierLeft.backgroundColor = UIColor.black
-        barrierUpperRight.backgroundColor = UIColor.black
-        barrierLowerRight.backgroundColor = UIColor.black
-        barrierLower.backgroundColor = UIColor.black
+        barrierUpper.backgroundColor = UIColor.clear
+        barrierLeft.backgroundColor = UIColor.clear
+        barrierUpperRight.backgroundColor = UIColor.clear
+        barrierLowerRight.backgroundColor = UIColor.clear
+        barrierLower.backgroundColor = UIColor.clear
         view.addSubview(barrierUpper)
         view.addSubview(barrierLeft)
         view.addSubview(barrierUpperRight)
@@ -108,6 +109,10 @@ class LevelOneViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    func pressed(sender: UIButton!) {
+        let nextLevel =  super.self().storyboard?.instantiateViewController(withIdentifier: "Level2") as! ViewController
+        super.self().present(nextLevel, animated: true, completion: nil)
+    }
     
     @IBAction func didPlayerBlockPan(_ sender: UIPanGestureRecognizer) {
         //let point = sender.location(in: view)
@@ -224,6 +229,18 @@ class LevelOneViewController: UIViewController {
                     }
                 }
                 sender.isEnabled = true
+            }else if(exitBlock.frame.intersects(playerBlock.frame)){
+                sender.isEnabled = false
+                sender.isEnabled = true
+                
+                let endScreen = UIView(frame: CGRect(x: 0, y: 0, width: 1000, height: 1000))
+                endScreen.backgroundColor = UIColor(white: 1, alpha: 0.75)
+                super.view.addSubview(endScreen)
+                let nextButton = UIButton()
+                nextButton.setTitle("Next Level", for: .normal)
+                nextButton.frame = CGRect(x:15, y:-50, width: 300, height: 500)
+                nextButton.addTarget(self, action: Selector(("presed")), for: .touchUpInside)
+                super.view.addSubview(nextButton)
             }else{
                 if(DEBUG_FREE_PLAYER){
                     playerBlock.center = CGPoint(x: originalPlayerBlockCenter.x + translation.x, y: originalPlayerBlockCenter.y + translation.y)
@@ -677,5 +694,7 @@ class LevelOneViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
+    
 }
+
+
