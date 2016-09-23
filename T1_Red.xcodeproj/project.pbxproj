@@ -16,6 +16,10 @@
 		93F567871D91231C008064B8 /* userguide.png in Resources */ = {isa = PBXBuildFile; fileRef = 93F5677F1D91231C008064B8 /* userguide.png */; };
 		93F567891D912355008064B8 /* Splash.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F567881D912355008064B8 /* Splash.swift */; };
 		93F5678B1D91235E008064B8 /* load.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F5678A1D91235E008064B8 /* load.swift */; };
+		A57F18311D94929500B941D4 /* cs3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A57F18301D94929500B941D4 /* cs3.jpg */; };
+		A57F18331D9493A700B941D4 /* Screen Shot 2016-09-22 at 5.32.44 PM.png in Resources */ = {isa = PBXBuildFile; fileRef = A57F18321D9493A700B941D4 /* Screen Shot 2016-09-22 at 5.32.44 PM.png */; };
+		A57F18351D94B06000B941D4 /* CrimeScene.png in Resources */ = {isa = PBXBuildFile; fileRef = A57F18341D94B06000B941D4 /* CrimeScene.png */; };
+		A57F183B1D94B28200B941D4 /* Screen Shot 2016-09-22 at 7.42.41 PM.png in Resources */ = {isa = PBXBuildFile; fileRef = A57F183A1D94B28200B941D4 /* Screen Shot 2016-09-22 at 7.42.41 PM.png */; };
 		A5BBD1461D9433DC0069301A /* splash screen pic.png in Resources */ = {isa = PBXBuildFile; fileRef = A5BBD1451D9433DC0069301A /* splash screen pic.png */; };
 		A5BBD1481D9439870069301A /* Screen Shot 2016-09-22 at 11.08.14 AM.png in Resources */ = {isa = PBXBuildFile; fileRef = A5BBD1471D9439870069301A /* Screen Shot 2016-09-22 at 11.08.14 AM.png */; };
 		BD79DE521D9440D200C49BD4 /* make-it-chalk-line.png in Resources */ = {isa = PBXBuildFile; fileRef = BD79DE511D9440D200C49BD4 /* make-it-chalk-line.png */; };
@@ -64,6 +68,10 @@
 		93F5677F1D91231C008064B8 /* userguide.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = userguide.png; sourceTree = "<group>"; };
 		93F567881D912355008064B8 /* Splash.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Splash.swift; sourceTree = "<group>"; };
 		93F5678A1D91235E008064B8 /* load.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = load.swift; sourceTree = "<group>"; };
+		A57F18301D94929500B941D4 /* cs3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cs3.jpg; sourceTree = "<group>"; };
+		A57F18321D9493A700B941D4 /* Screen Shot 2016-09-22 at 5.32.44 PM.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Screen Shot 2016-09-22 at 5.32.44 PM.png"; sourceTree = "<group>"; };
+		A57F18341D94B06000B941D4 /* CrimeScene.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CrimeScene.png; sourceTree = "<group>"; };
+		A57F183A1D94B28200B941D4 /* Screen Shot 2016-09-22 at 7.42.41 PM.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Screen Shot 2016-09-22 at 7.42.41 PM.png"; sourceTree = "<group>"; };
 		A5BBD1451D9433DC0069301A /* splash screen pic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "splash screen pic.png"; sourceTree = "<group>"; };
 		A5BBD1471D9439870069301A /* Screen Shot 2016-09-22 at 11.08.14 AM.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Screen Shot 2016-09-22 at 11.08.14 AM.png"; sourceTree = "<group>"; };
 		BD79DE511D9440D200C49BD4 /* make-it-chalk-line.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "make-it-chalk-line.png"; sourceTree = "<group>"; };
@@ -119,7 +127,11 @@
 		BD7545E01D8881A900CB2082 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				A57F18301D94929500B941D4 /* cs3.jpg */,
 				BD79DE5B1D944F0500C49BD4 /* mag50x50.png */,
+				A57F18321D9493A700B941D4 /* Screen Shot 2016-09-22 at 5.32.44 PM.png */,
+				A57F18341D94B06000B941D4 /* CrimeScene.png */,
+				A57F183A1D94B28200B941D4 /* Screen Shot 2016-09-22 at 7.42.41 PM.png */,
 				BD79DE571D9444AE00C49BD4 /* asphalt.jpg */,
 				BD79DE551D94440A00C49BD4 /* vertical-make-it-chalk.png */,
 				BD79DE511D9440D200C49BD4 /* make-it-chalk-line.png */,
@@ -318,7 +330,11 @@
 				BD79DE561D94440A00C49BD4 /* vertical-make-it-chalk.png in Resources */,
 				BDF9BB931D81D19A00403F55 /* Main.storyboard in Resources */,
 				93F567811D91231C008064B8 /* blackscreen.bmp in Resources */,
+				A57F18351D94B06000B941D4 /* CrimeScene.png in Resources */,
+				A57F18311D94929500B941D4 /* cs3.jpg in Resources */,
 				A5BBD1461D9433DC0069301A /* splash screen pic.png in Resources */,
+				A57F18331D9493A700B941D4 /* Screen Shot 2016-09-22 at 5.32.44 PM.png in Resources */,
+				A57F183B1D94B28200B941D4 /* Screen Shot 2016-09-22 at 7.42.41 PM.png in Resources */,
 				BD79DE581D9444AE00C49BD4 /* asphalt.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

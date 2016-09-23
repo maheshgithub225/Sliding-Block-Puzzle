@@ -21,11 +21,11 @@ class LevelOneViewController: UIViewController {
     let DEBUG_OUTPUT = false
     let DEBUG_FREE_PLAYER = false
     // Player Blocks
-    let playerBlock = UIView(frame: CGRect(x: 10, y: 400, width: 50, height: 50))
+    //let playerBlock = UIView(frame: CGRect(x: 10, y: 400, width: 50, height: 50))
     // Puzzle Blocks
-    let puzzleBlockVertical = UIView(frame: CGRect(x: 200, y: 430, width: 50, height: 198))
-    let puzzleBlockHorizontal = UIView(frame: CGRect(x: 200, y: 200, width: 160, height: 50))
-    let puzzleBlockOrange = UIView(frame: CGRect(x:80, y: 200, width:50, height:150))
+    //let puzzleBlockVertical = UIView(frame: CGRect(x: 200, y: 430, width: 50, height: 198))
+    //let puzzleBlockHorizontal = UIView(frame: CGRect(x: 200, y: 200, width: 160, height: 50))
+    //let puzzleBlockOrange = UIView(frame: CGRect(x:80, y: 200, width:50, height:150))
    // let sampleimage = UIImageView(frame: CGRect(x: 10, y: 400, width: 50, height: 50))
      
     // Barriers
@@ -36,27 +36,43 @@ class LevelOneViewController: UIViewController {
     let barrierLower = UIView(frame: CGRect(x: 0, y: 636, width: 414, height: 800))
 
     
-    // Exit
-    let exitBlock = UIView(frame: CGRect(x: 405, y: 380, width: 700, height: 80))
+    @IBOutlet weak var puzzleBlockHorizontal: UIImageView!
+    @IBOutlet weak var puzzleBlockOrange: UIImageView!
+    @IBOutlet weak var puzzleBlockVertical: UIImageView!
+    @IBOutlet weak var playerBlock: UIImageView!
     
+    // Exit
+    let exitBlock = UIView(frame: CGRect(x: 430, y: 380, width: 700, height: 80))
+    
+    //Alert
+    let alertController = UIAlertController(title: "Clue1", message: "Clue1", preferredStyle: .alert)
+    let NextClue = UIAlertAction(title: "Next Clue?", style: .destructive){
+        (result : UIAlertAction)in debugPrint("Next Clue")
+    }
+    let Menu = UIAlertAction(title: "Menu", style: .destructive){
+        (result : UIAlertAction)in debugPrint("Menu")
+    }
+    let Back = UIAlertAction(title: "Back", style: .destructive){
+         (result : UIAlertAction)in debugPrint("Menu")
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Create Blocks 
-        playerBlock.backgroundColor = UIColor(patternImage: UIImage(named: "mag50x50.png")!)
-        view.addSubview(playerBlock)
+       // playerBlock.backgroundColor = UIColor(patternImage: UIImage(named: "mag50x50.png")!)
+        //view.addSubview(playerBlock)
         
         // Create Puzzle Blocks
-        puzzleBlockVertical.backgroundColor = UIColor.red
-        view.addSubview(puzzleBlockVertical)
-        puzzleBlockHorizontal.backgroundColor = UIColor.blue
-        view.addSubview(puzzleBlockHorizontal)
-        puzzleBlockOrange.backgroundColor = UIColor.orange
-        view.addSubview(puzzleBlockOrange)
+        //puzzleBlockVertical.backgroundColor = UIColor.red
+        //view.addSubview(puzzleBlockVertical)
+        //puzzleBlockHorizontal.backgroundColor = UIColor.blue
+        //view.addSubview(puzzleBlockHorizontal)
+        //puzzleBlockOrange.backgroundColor = UIColor.orange
+       // view.addSubview(puzzleBlockOrange)
         
         // Create Exit
-        exitBlock.backgroundColor = UIColor.darkGray
+        exitBlock.backgroundColor = UIColor.black
         view.addSubview(exitBlock)
         
         //Set Gesture Controls
@@ -104,6 +120,7 @@ class LevelOneViewController: UIViewController {
         
     }
     
+  
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -232,15 +249,19 @@ class LevelOneViewController: UIViewController {
             }else if(exitBlock.frame.intersects(playerBlock.frame)){
                 sender.isEnabled = false
                 sender.isEnabled = true
+                alertController.addAction(NextClue)
+                alertController.addAction(Menu)
+                alertController.addAction(Back)
                 
-                let endScreen = UIView(frame: CGRect(x: 0, y: 0, width: 1000, height: 1000))
+                self.present(alertController, animated: true, completion: nil)
+              /*  let endScreen = UIView(frame: CGRect(x: 0, y: 0, width: 1000, height: 1000))
                 endScreen.backgroundColor = UIColor(white: 1, alpha: 0.75)
                 super.view.addSubview(endScreen)
                 let nextButton = UIButton()
                 nextButton.setTitle("Next Level", for: .normal)
                 nextButton.frame = CGRect(x:15, y:-50, width: 300, height: 500)
                 nextButton.addTarget(self, action: Selector(("presed")), for: .touchUpInside)
-                super.view.addSubview(nextButton)
+                super.view.addSubview(nextButton) */
             }else{
                 if(DEBUG_FREE_PLAYER){
                     playerBlock.center = CGPoint(x: originalPlayerBlockCenter.x + translation.x, y: originalPlayerBlockCenter.y + translation.y)

@@ -36,10 +36,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Screen Shot 2016-09-22 at 11.08.14 AM.png" translatesAutoresizingMaskIntoConstraints="NO" id="Sey-uh-2MV">
-                                <frame key="frameInset" width="414" height="736"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EC7-Ds-fxk">
                                 <frame key="frameInset" minX="22" minY="421" width="127" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -58,6 +54,10 @@
                                 <frame key="frameInset" minX="17" minY="570" width="137" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Screen Shot 2016-09-22 at 5.32.44 PM.png" translatesAutoresizingMaskIntoConstraints="NO" id="Sey-uh-2MV">
+                                <frame key="frameInset" width="414" height="736"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
@@ -79,38 +79,75 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="asphalt.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="3Nf-nw-RLY">
-                                <frame key="frameInset" minY="-8" width="414" height="744"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="blackscreen.bmp" translatesAutoresizingMaskIntoConstraints="NO" id="3Nf-nw-RLY">
+                                <frame key="frameInset" minY="195" width="414" height="438"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="vertical-make-it-chalk.png" translatesAutoresizingMaskIntoConstraints="NO" id="7Re-0S-dfb">
-                                <frame key="frameInset" minX="-26" minY="190" width="57" height="471"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Dhd-5V-GwS">
+                                <frame key="frameInset" minX="239" minY="207" width="155" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.87690199609999997" green="0.15237322680000001" blue="0.085564566149999993" alpha="1" colorSpace="calibratedRGB"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Vm5-Sq-Lbe">
+                                <frame key="frameInset" minX="115" minY="207" width="49" height="169"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.79339823300000001" green="0.77518856079999998" blue="0.53476831449999995" alpha="1" colorSpace="calibratedRGB"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CbH-Aa-K7I">
+                                <frame key="frameInset" minX="20" minY="401" width="83" height="46"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="i7m-aM-iV6">
+                                <frame key="frameInset" minX="273" minY="434" width="44" height="199"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.63475685370000001" green="0.69694862570000005" blue="0.26840156659999997" alpha="1" colorSpace="calibratedRGB"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="CrimeScene.png" translatesAutoresizingMaskIntoConstraints="NO" id="FLP-aN-RAI">
+                                <frame key="frameInset" minY="165" width="414" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="vertical-make-it-chalk.png" translatesAutoresizingMaskIntoConstraints="NO" id="p7v-xG-U3e">
-                                <frame key="frameInset" minX="377" minY="460" width="49" height="187"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="CrimeScene.png" translatesAutoresizingMaskIntoConstraints="NO" id="eJp-81-7mB">
+                                <frame key="frameInset" minY="633" width="414" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="vertical-make-it-chalk.png" translatesAutoresizingMaskIntoConstraints="NO" id="FFa-Tf-NpH">
-                                <frame key="frameInset" minX="364" minY="190" width="74" height="193"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Screen Shot 2016-09-22 at 7.42.41 PM.png" translatesAutoresizingMaskIntoConstraints="NO" id="PhO-SP-n3Z">
+                                <frame key="frameInset" minY="201" width="12" height="432"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="make-it-chalk-line.png" translatesAutoresizingMaskIntoConstraints="NO" id="SdN-RJ-Ts4">
-                                <frame key="frameInset" minY="623" width="424" height="50"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Screen Shot 2016-09-22 at 7.42.41 PM.png" translatesAutoresizingMaskIntoConstraints="NO" id="7fm-zc-l4E">
+                                <frame key="frameInset" minX="402" minY="455" width="12" height="178"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="make-it-chalk-line.png" translatesAutoresizingMaskIntoConstraints="NO" id="Kjc-LS-9V2">
-                                <frame key="frameInset" minX="2" minY="171" width="424" height="50"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Screen Shot 2016-09-22 at 7.42.41 PM.png" translatesAutoresizingMaskIntoConstraints="NO" id="FzP-gc-AX0">
+                                <frame key="frameInset" minX="402" minY="201" width="12" height="189"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="badge.png" translatesAutoresizingMaskIntoConstraints="NO" id="sJh-on-4hP">
+                                <frame key="frameInset" minX="273" minY="28" width="121" height="111"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="CLUE 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WA7-dL-GpC">
+                                <frame key="frameInset" minX="20" minY="28" width="118" height="46"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="textColor" red="1" green="0.61312330653039337" blue="0.15540080441390469" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                         <gestureRecognizers/>
                     </view>
                     <navigationItem key="navigationItem" id="RDc-6d-7EK"/>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="blackOpaque"/>
                     <nil key="simulatedTopBarMetrics"/>
                     <nil key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="playerBlock" destination="CbH-Aa-K7I" id="QBo-Ez-pJ4"/>
+                        <outlet property="puzzleBlockHorizontal" destination="Dhd-5V-GwS" id="W31-de-Nql"/>
+                        <outlet property="puzzleBlockOrange" destination="Vm5-Sq-Lbe" id="5MC-fy-Fo0"/>
+                        <outlet property="puzzleBlockVertical" destination="i7m-aM-iV6" id="MW2-2q-SjM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f50-7b-tvh" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <panGestureRecognizer minimumNumberOfTouches="1" id="hoj-UZ-lzY">
@@ -133,7 +170,64 @@
                     <view key="view" contentMode="scaleToFill" id="bcZ-3J-xb3">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="blackscreen.bmp" translatesAutoresizingMaskIntoConstraints="NO" id="cIA-gJ-W8i">
+                                <frame key="frameInset" minY="192" width="414" height="438"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zrM-Qu-fZa">
+                                <frame key="frameInset" minX="239" minY="204" width="155" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.87690199609999997" green="0.15237322680000001" blue="0.085564566149999993" alpha="1" colorSpace="calibratedRGB"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="d1b-WS-gUG">
+                                <frame key="frameInset" minX="115" minY="204" width="49" height="169"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.79339823300000001" green="0.77518856079999998" blue="0.53476831449999995" alpha="1" colorSpace="calibratedRGB"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ikF-XL-6bb">
+                                <frame key="frameInset" minX="20" minY="398" width="83" height="46"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="w1d-ZG-eYs">
+                                <frame key="frameInset" minX="273" minY="431" width="44" height="199"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.63475685370000001" green="0.69694862570000005" blue="0.26840156659999997" alpha="1" colorSpace="calibratedRGB"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="CrimeScene.png" translatesAutoresizingMaskIntoConstraints="NO" id="ucT-MF-KBF">
+                                <frame key="frameInset" minY="162" width="414" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="CrimeScene.png" translatesAutoresizingMaskIntoConstraints="NO" id="By9-w2-yyr">
+                                <frame key="frameInset" minY="630" width="414" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Screen Shot 2016-09-22 at 7.42.41 PM.png" translatesAutoresizingMaskIntoConstraints="NO" id="4FG-wI-WoQ">
+                                <frame key="frameInset" minY="198" width="12" height="432"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Screen Shot 2016-09-22 at 7.42.41 PM.png" translatesAutoresizingMaskIntoConstraints="NO" id="yN9-iI-7AX">
+                                <frame key="frameInset" minX="402" minY="452" width="12" height="178"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Screen Shot 2016-09-22 at 7.42.41 PM.png" translatesAutoresizingMaskIntoConstraints="NO" id="34I-In-LgF">
+                                <frame key="frameInset" minX="402" minY="198" width="12" height="189"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="badge.png" translatesAutoresizingMaskIntoConstraints="NO" id="RBl-2B-XoN">
+                                <frame key="frameInset" minX="273" minY="28" width="121" height="111"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="CLUE 2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bdc-cV-Hfu">
+                                <frame key="frameInset" minX="20" minY="28" width="118" height="46"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="textColor" red="1" green="0.61312330650000002" blue="0.15540080440000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Wr-Jg-DZa" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -144,13 +238,90 @@
                     </connections>
                 </panGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="797" y="42"/>
+            <point key="canvasLocation" x="746" y="42"/>
+        </scene>
+        <!--Third Level View Controller-->
+        <scene sceneID="1Hn-vN-Ex4">
+            <objects>
+                <viewController title="Third Level View Controller" id="uRz-KR-Kah" customClass="LevelThreeViewController" customModule="T1_Red" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="yeK-qV-wIA"/>
+                        <viewControllerLayoutGuide type="bottom" id="eX8-x9-zKt"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="k5s-KE-jf9">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="blackscreen.bmp" translatesAutoresizingMaskIntoConstraints="NO" id="jG0-Yr-QOQ">
+                                <frame key="frameInset" minY="192" width="414" height="438"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="l1d-Oe-bEl">
+                                <frame key="frameInset" minX="239" minY="204" width="155" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.87690199609999997" green="0.15237322680000001" blue="0.085564566149999993" alpha="1" colorSpace="calibratedRGB"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EhS-nM-QDL">
+                                <frame key="frameInset" minX="115" minY="204" width="49" height="169"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.79339823300000001" green="0.77518856079999998" blue="0.53476831449999995" alpha="1" colorSpace="calibratedRGB"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Cnp-ns-8sx">
+                                <frame key="frameInset" minX="20" minY="398" width="83" height="46"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rSd-Nu-65Y">
+                                <frame key="frameInset" minX="273" minY="431" width="44" height="199"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.63475685370000001" green="0.69694862570000005" blue="0.26840156659999997" alpha="1" colorSpace="calibratedRGB"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="CrimeScene.png" translatesAutoresizingMaskIntoConstraints="NO" id="V5W-MX-OA0">
+                                <frame key="frameInset" minY="162" width="414" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="CrimeScene.png" translatesAutoresizingMaskIntoConstraints="NO" id="kPn-86-tl8">
+                                <frame key="frameInset" minY="630" width="414" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Screen Shot 2016-09-22 at 7.42.41 PM.png" translatesAutoresizingMaskIntoConstraints="NO" id="Uax-V5-af1">
+                                <frame key="frameInset" minY="198" width="12" height="432"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Screen Shot 2016-09-22 at 7.42.41 PM.png" translatesAutoresizingMaskIntoConstraints="NO" id="Fra-0a-wPs">
+                                <frame key="frameInset" minX="402" minY="452" width="12" height="178"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Screen Shot 2016-09-22 at 7.42.41 PM.png" translatesAutoresizingMaskIntoConstraints="NO" id="meR-9D-WHc">
+                                <frame key="frameInset" minX="402" minY="198" width="12" height="189"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="CLUE 3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AKK-Bf-MnN">
+                                <frame key="frameInset" minX="20" minY="28" width="118" height="46"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="textColor" red="1" green="0.61312330650000002" blue="0.15540080440000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="badge.png" translatesAutoresizingMaskIntoConstraints="NO" id="BJW-A4-RAQ">
+                                <frame key="frameInset" minX="273" minY="28" width="121" height="111"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Jil-ce-h9S" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="F32-Oc-BW4"/>
+            </objects>
+            <point key="canvasLocation" x="1423" y="42"/>
         </scene>
     </scenes>
     <resources>
-        <image name="Screen Shot 2016-09-22 at 11.08.14 AM.png" width="744" height="1392"/>
-        <image name="asphalt.jpg" width="3015" height="2311"/>
-        <image name="make-it-chalk-line.png" width="795" height="70"/>
-        <image name="vertical-make-it-chalk.png" width="70" height="795"/>
+        <image name="CrimeScene.png" width="600" height="64"/>
+        <image name="Screen Shot 2016-09-22 at 5.32.44 PM.png" width="828" height="1474"/>
+        <image name="Screen Shot 2016-09-22 at 7.42.41 PM.png" width="110" height="1382"/>
+        <image name="badge.png" width="271" height="255"/>
+        <image name="blackscreen.bmp" width="608" height="578"/>
     </resources>
 </document>
