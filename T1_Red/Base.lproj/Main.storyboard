@@ -15,7 +15,7 @@
                         <viewControllerLayoutGuide type="bottom" id="lMa-H2-ACg"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Uag-Sp-tuo" customClass="load" customModule="T1_Red" customModuleProvider="target">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -36,7 +36,7 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" customClass="Splash" customModule="T1_Red" customModuleProvider="target">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Screen Shot 2016-09-22 at 5.32.44 PM.png" translatesAutoresizingMaskIntoConstraints="NO" id="9Hb-wE-SOj">
@@ -85,7 +85,7 @@
                         <viewControllerLayoutGuide type="bottom" id="M5U-hC-EBW"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="0pR-JU-Mp1">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Dhd-5V-GwS">
@@ -98,10 +98,11 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.79339823300000001" green="0.77518856079999998" blue="0.53476831449999995" alpha="1" colorSpace="calibratedRGB"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CbH-Aa-K7I">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="752_ricks_police_car.png" translatesAutoresizingMaskIntoConstraints="NO" id="CbH-Aa-K7I">
                                 <frame key="frameInset" minX="20" minY="401" width="83" height="46"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" red="0.13121309880000001" green="0.63162715520000001" blue="0.88951051260000003" alpha="1" colorSpace="calibratedRGB"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="i7m-aM-iV6">
                                 <frame key="frameInset" minX="273" minY="435" width="48" height="198"/>
@@ -207,7 +208,7 @@
                         <viewControllerLayoutGuide type="bottom" id="1PC-nT-9XS"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="bcZ-3J-xb3">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="blackscreen.bmp" translatesAutoresizingMaskIntoConstraints="NO" id="cIA-gJ-W8i">
@@ -223,7 +224,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Screen Shot 2016-09-22 at 7.42.41 PM.png" translatesAutoresizingMaskIntoConstraints="NO" id="clB-NY-7lJ">
-                                <frame key="frameInset" minY="204" width="12" height="215"/>
+                                <frame key="frameInset" minY="198" width="12" height="221"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Screen Shot 2016-09-22 at 7.42.41 PM.png" translatesAutoresizingMaskIntoConstraints="NO" id="yN9-iI-7AX">
@@ -244,10 +245,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.87690199609999997" green="0.15237322680000001" blue="0.085564566149999993" alpha="1" colorSpace="calibratedRGB"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ikF-XL-6bb">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="752_ricks_police_car.png" translatesAutoresizingMaskIntoConstraints="NO" id="ikF-XL-6bb">
                                 <frame key="frameInset" minX="20" minY="398" width="83" height="46"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VnR-tz-FLq">
                                 <frame key="frameInset" minX="206" minY="499" width="164" height="48"/>
@@ -349,17 +349,16 @@
                         <viewControllerLayoutGuide type="bottom" id="eX8-x9-zKt"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="k5s-KE-jf9">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="blackscreen.bmp" translatesAutoresizingMaskIntoConstraints="NO" id="jG0-Yr-QOQ">
                                 <frame key="frameInset" minY="192" width="414" height="438"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6Kk-14-Ql9">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="752_ricks_police_car.png" translatesAutoresizingMaskIntoConstraints="NO" id="6Kk-14-Ql9">
                                 <frame key="frameInset" minX="20" minY="391" width="92" height="46"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="daC-DN-uXy">
                                 <frame key="frameInset" minX="152" minY="216" width="101" height="48"/>
@@ -428,7 +427,7 @@
                                 <color key="backgroundColor" red="1" green="0.61312330650000002" blue="0.15540080440000001" alpha="1" colorSpace="calibratedRGB"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Screen Shot 2016-09-22 at 7.42.41 PM.png" translatesAutoresizingMaskIntoConstraints="NO" id="F1H-kG-0q8">
-                                <frame key="frameInset" minY="203" width="12" height="215"/>
+                                <frame key="frameInset" minY="198" width="12" height="220"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Screen Shot 2016-09-22 at 7.42.41 PM.png" translatesAutoresizingMaskIntoConstraints="NO" id="581-rB-ajN">
@@ -503,6 +502,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="752_ricks_police_car.png" width="921" height="442"/>
         <image name="CrimeScene.png" width="600" height="64"/>
         <image name="Screen Shot 2016-09-22 at 5.32.44 PM.png" width="828" height="1474"/>
         <image name="Screen Shot 2016-09-22 at 7.42.41 PM.png" width="110" height="1382"/>

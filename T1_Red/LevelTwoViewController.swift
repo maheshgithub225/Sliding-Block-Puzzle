@@ -34,7 +34,7 @@ class LevelTwoViewController: UIViewController {
     var startPuzzleBrown: CGRect!
     
     // Exit
-    let exitBlock = UIView(frame: CGRect(x: 430, y: 380, width: 700, height: 80))
+    let exitBlock = UIView(frame: CGRect(x: 400, y: 380, width: 700, height: 80))
     
     //Alert
     let alertController = UIAlertController(title: "Clue1", message: "Clue1", preferredStyle: .alert)
