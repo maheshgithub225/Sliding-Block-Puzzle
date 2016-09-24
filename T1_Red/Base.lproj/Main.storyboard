@@ -15,7 +15,7 @@
                         <viewControllerLayoutGuide type="bottom" id="lMa-H2-ACg"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Uag-Sp-tuo" customClass="load" customModule="T1_Red" customModuleProvider="target">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -36,7 +36,7 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" customClass="Splash" customModule="T1_Red" customModuleProvider="target">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Screen Shot 2016-09-22 at 5.32.44 PM.png" translatesAutoresizingMaskIntoConstraints="NO" id="9Hb-wE-SOj">
@@ -85,7 +85,7 @@
                         <viewControllerLayoutGuide type="bottom" id="M5U-hC-EBW"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="0pR-JU-Mp1">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Dhd-5V-GwS">
@@ -154,8 +154,8 @@
                                 <color key="textColor" red="1" green="0.61312330650000002" blue="0.15540080440000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="SCORE :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ecf-w0-XxA">
-                                <frame key="frameInset" minX="29" minY="106" width="81" height="44"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="MOVES :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ecf-w0-XxA">
+                                <frame key="frameInset" minX="29" minY="106" width="91" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="20"/>
                                 <color key="textColor" red="1" green="0.61312330650000002" blue="0.15540080440000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -172,6 +172,13 @@
                                 <color key="textColor" red="1" green="0.61312330650000002" blue="0.15540080440000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jr8-Ex-eOH">
+                                <frame key="frameInset" minX="115" minY="112" width="60" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="20"/>
+                                <color key="textColor" red="1" green="0.61312330650000002" blue="0.15540080440000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                         <gestureRecognizers/>
@@ -181,6 +188,7 @@
                     <nil key="simulatedTopBarMetrics"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="ScoreCard" destination="Jr8-Ex-eOH" id="k2L-P7-etA"/>
                         <outlet property="TimerView" destination="JZG-6z-mCG" id="MFd-oE-lsv"/>
                         <outlet property="playerBlock" destination="CbH-Aa-K7I" id="QBo-Ez-pJ4"/>
                         <outlet property="puzzleBlockHorizontal" destination="Dhd-5V-GwS" id="W31-de-Nql"/>
@@ -207,7 +215,7 @@
                         <viewControllerLayoutGuide type="bottom" id="1PC-nT-9XS"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="bcZ-3J-xb3">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="blackscreen.bmp" translatesAutoresizingMaskIntoConstraints="NO" id="cIA-gJ-W8i">
@@ -291,8 +299,8 @@
                                 <color key="textColor" red="1" green="0.61312330650000002" blue="0.15540080440000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="SCORE :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mAV-y3-Ieq">
-                                <frame key="frameInset" minX="23" minY="101" width="81" height="44"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="MOVES :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mAV-y3-Ieq">
+                                <frame key="frameInset" minX="23" minY="101" width="85" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="20"/>
                                 <color key="textColor" red="1" green="0.61312330650000002" blue="0.15540080440000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -313,6 +321,13 @@
                                 <frame key="frameInset" minY="671" width="414" height="65"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PhN-ZT-wa8">
+                                <frame key="frameInset" minX="112" minY="107" width="60" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="20"/>
+                                <color key="textColor" red="1" green="0.61312330650000002" blue="0.15540080440000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                     </view>
@@ -320,6 +335,7 @@
                     <nil key="simulatedTopBarMetrics"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="ScoreCard1" destination="PhN-ZT-wa8" id="zDv-K3-Vxm"/>
                         <outlet property="TimerView2" destination="S34-6i-bMf" id="m6j-8N-yBj"/>
                         <outlet property="playerBlock" destination="ikF-XL-6bb" id="tvd-Sq-jTA"/>
                         <outlet property="puzzleBlockHorizontal" destination="zrM-Qu-fZa" id="h6S-iy-5eq"/>
@@ -349,7 +365,7 @@
                         <viewControllerLayoutGuide type="bottom" id="eX8-x9-zKt"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="k5s-KE-jf9">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="blackscreen.bmp" translatesAutoresizingMaskIntoConstraints="NO" id="jG0-Yr-QOQ">
@@ -461,8 +477,8 @@
                                 <color key="textColor" red="1" green="0.61312330650000002" blue="0.15540080440000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="SCORE :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Ja-Nk-Eei">
-                                <frame key="frameInset" minX="30" minY="99" width="81" height="44"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="MOVES :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Ja-Nk-Eei">
+                                <frame key="frameInset" minX="30" minY="99" width="85" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="20"/>
                                 <color key="textColor" red="1" green="0.61312330650000002" blue="0.15540080440000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -475,6 +491,13 @@
                                 <color key="textColor" red="1" green="0.61312330650000002" blue="0.15540080440000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T9x-ib-NPU">
+                                <frame key="frameInset" minX="119" minY="105" width="60" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="20"/>
+                                <color key="textColor" red="1" green="0.61312330650000002" blue="0.15540080440000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                     </view>
@@ -482,6 +505,7 @@
                     <nil key="simulatedTopBarMetrics"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="ScoreCard2" destination="T9x-ib-NPU" id="9FQ-Cc-ZDL"/>
                         <outlet property="TimerView3" destination="qvE-np-vVg" id="ysC-bC-vDy"/>
                         <outlet property="playerBlock" destination="6Kk-14-Ql9" id="aty-TH-7Jr"/>
                         <outlet property="puzzleBlockHorizontal" destination="TVy-qm-zWW" id="tYX-wC-BCK"/>
@@ -500,6 +524,30 @@
                 <panGestureRecognizer minimumNumberOfTouches="1" id="F32-Oc-BW4"/>
             </objects>
             <point key="canvasLocation" x="1421.7391304347827" y="41.576086956521742"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="NzR-0L-6BW">
+            <objects>
+                <viewController id="RzL-LU-X2L" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="g4h-Bg-xO4"/>
+                        <viewControllerLayoutGuide type="bottom" id="fbH-Vg-oG5"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="S9Z-rH-EQr">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="X9y-Im-NO0">
+                                <frame key="frameInset" minX="87" minY="256" width="240" height="317"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="exg-Ww-wNi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2156.521739130435" y="41.576086956521742"/>
         </scene>
     </scenes>
     <resources>
