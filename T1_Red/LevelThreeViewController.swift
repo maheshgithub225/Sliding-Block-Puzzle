@@ -58,6 +58,7 @@ class LevelThreeViewController: UIViewController {
     
     }
     @IBOutlet weak var TimerView3: UILabel!
+    @IBOutlet weak var ScoreCard2: UILabel!
 
     @IBOutlet weak var puzzleBlockVerticalOrange: UIImageView!
     @IBOutlet weak var puzzleBlockHorizontal: UIImageView!
@@ -256,6 +257,8 @@ class LevelThreeViewController: UIViewController {
             let translation = sender.translation(in: view)
             
             if sender.state == UIGestureRecognizerState.began {
+                LevelThreeScore = LevelThreeScore + 1
+                ScoreCard2.text = "\(LevelThreeScore)"
                 originalPlayerBlockCenter = playerBlock.center
             } else if sender.state == UIGestureRecognizerState.changed {
                 if (barrierUpper.frame.intersects(playerBlock.frame)) {     // Block has intersected with boundry, get unstuck.
@@ -496,6 +499,8 @@ class LevelThreeViewController: UIViewController {
             let translation = sender.translation(in: view)
             
             if sender.state == UIGestureRecognizerState.began {
+                LevelThreeScore = LevelThreeScore + 1
+                ScoreCard2.text = "\(LevelThreeScore)"
                 originalPuzzleBlockCenterVertical = puzzleBlockVertical.center
             } else if sender.state == UIGestureRecognizerState.changed {
                 if (barrierUpper.frame.intersects(puzzleBlockVertical.frame)) {     // Block has intersected with boundry, get unstuck.
@@ -696,6 +701,8 @@ class LevelThreeViewController: UIViewController {
             let translation = sender.translation(in: view)
             
             if sender.state == UIGestureRecognizerState.began {
+                LevelThreeScore = LevelThreeScore + 1
+                ScoreCard2.text = "\(LevelThreeScore)"
                 originalPuzzleBlockCenterHorizontal = puzzleBlockHorizontal.center
             } else if sender.state == UIGestureRecognizerState.changed {
                 if (barrierUpper.frame.intersects(puzzleBlockHorizontal.frame)) {     // Block has intersected with boundry, get unstuck.
@@ -921,6 +928,8 @@ class LevelThreeViewController: UIViewController {
             let translation = sender.translation(in: view)
             
             if sender.state == UIGestureRecognizerState.began {
+                LevelThreeScore = LevelThreeScore + 1
+                ScoreCard2.text = "\(LevelThreeScore)"
                 orginalPuzzleBlockCenterOrange = puzzleBlockVerticalOrange.center
             } else if sender.state == UIGestureRecognizerState.changed {
                 if (barrierUpper.frame.intersects(puzzleBlockVerticalOrange.frame)) {     // Block has intersected with boundry, get unstuck.
@@ -1120,6 +1129,8 @@ class LevelThreeViewController: UIViewController {
             let translation = sender.translation(in: view)
             
             if sender.state == UIGestureRecognizerState.began {
+                LevelThreeScore = LevelThreeScore + 1
+                ScoreCard2.text = "\(LevelThreeScore)"
                 originalPuzzleBlockCenterGreen = puzzleBlockVerticalGreen.center
             } else if sender.state == UIGestureRecognizerState.changed {
                 if (barrierUpper.frame.intersects(puzzleBlockVerticalGreen.frame)) {     // Block has intersected with boundry, get unstuck.
@@ -1319,6 +1330,8 @@ class LevelThreeViewController: UIViewController {
             let translation = sender.translation(in: view)
             
             if sender.state == UIGestureRecognizerState.began {
+                LevelThreeScore = LevelThreeScore + 1
+                ScoreCard2.text = "\(LevelThreeScore)"
                 originalPuzzleBlockCenterBlue = puzzleBlockHorizontalBlue.center
             } else if sender.state == UIGestureRecognizerState.changed {
                 if (barrierUpper.frame.intersects(puzzleBlockHorizontalBlue.frame)) {     // Block has intersected with boundry, get unstuck.
@@ -1543,6 +1556,8 @@ class LevelThreeViewController: UIViewController {
             let translation = sender.translation(in: view)
             
             if sender.state == UIGestureRecognizerState.began {
+                LevelThreeScore = LevelThreeScore + 1
+                ScoreCard2.text = "\(LevelThreeScore)"
                 originalPuzzleBlockCenterBrown = puzzleBlockHorizontalBrown.center
             } else if sender.state == UIGestureRecognizerState.changed {
                 if (barrierUpper.frame.intersects(puzzleBlockHorizontalBrown.frame)) {     // Block has intersected with boundry, get unstuck.
@@ -1768,6 +1783,8 @@ class LevelThreeViewController: UIViewController {
         let translation = sender.translation(in: view)
         
         if sender.state == UIGestureRecognizerState.began {
+            LevelThreeScore = LevelThreeScore + 1
+            ScoreCard2.text = "\(LevelThreeScore)"
             originalPuzzleBlockCenterHorizontalGreen = puzzleBlockHorizontalGreen.center
         } else if sender.state == UIGestureRecognizerState.changed {
             if (barrierUpper.frame.intersects(puzzleBlockHorizontalGreen.frame)) {     // Block has intersected with boundry, get unstuck.
@@ -1992,6 +2009,8 @@ class LevelThreeViewController: UIViewController {
         let translation = sender.translation(in: view)
         
         if sender.state == UIGestureRecognizerState.began {
+            LevelThreeScore = LevelThreeScore + 1
+            ScoreCard2.text = "\(LevelThreeScore)"
             originalPuzzleBlockCenterVerticalGrey = puzzleBlockVerticalGrey.center
         } else if sender.state == UIGestureRecognizerState.changed {
             if (barrierUpper.frame.intersects(puzzleBlockVerticalGrey.frame)) {     // Block has intersected with boundry, get unstuck.
@@ -2191,6 +2210,8 @@ class LevelThreeViewController: UIViewController {
         let translation = sender.translation(in: view)
         
         if sender.state == UIGestureRecognizerState.began {
+            LevelThreeScore = LevelThreeScore + 1
+            ScoreCard2.text = "\(LevelThreeScore)"
             orginalPuzzleBlockCenterVerticalBrown = puzzleBlockVerticalBrown.center
         } else if sender.state == UIGestureRecognizerState.changed {
             if (barrierUpper.frame.intersects(puzzleBlockVerticalBrown.frame)) {     // Block has intersected with boundry, get unstuck.
@@ -2390,6 +2411,8 @@ class LevelThreeViewController: UIViewController {
         let translation = sender.translation(in: view)
         
         if sender.state == UIGestureRecognizerState.began {
+            LevelThreeScore = LevelThreeScore + 1
+            ScoreCard2.text = "\(LevelThreeScore)"
             originalPuzzleBlockCenterVerticalRed = puzzleBlockVerticalRed.center
         } else if sender.state == UIGestureRecognizerState.changed {
             if (barrierUpper.frame.intersects(puzzleBlockVerticalRed.frame)) {     // Block has intersected with boundry, get unstuck.
@@ -2603,6 +2626,8 @@ class LevelThreeViewController: UIViewController {
         puzzleBlockVerticalGreen.frame = startPuzzleGreenHorz
         puzzleBlockVerticalGrey.frame = startPuzzleGreyVert
         puzzleBlockVerticalRed.frame = startPuzzleRedVert
+        ScoreCard2.text = "0"
+        
         
     }
     

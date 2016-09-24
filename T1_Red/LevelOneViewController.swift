@@ -46,6 +46,7 @@ class LevelOneViewController: UIViewController {
     
 
     @IBOutlet weak var TimerView: UILabel!
+    @IBOutlet weak var ScoreCard: UILabel!
     
     @IBOutlet weak var puzzleBlockHorizontal: UIImageView!
     @IBOutlet weak var puzzleBlockOrange: UIImageView!
@@ -92,6 +93,7 @@ class LevelOneViewController: UIViewController {
             timer = Timer.scheduledTimer(timeInterval: 0.01, target: self, selector: aSelector, userInfo: nil, repeats: true)
             startTime = Date.timeIntervalSinceReferenceDate
         }
+        //let aSelector1 : Selector = #selector(LevelOneViewController.updateScore)
         
         
 
@@ -190,7 +192,7 @@ class LevelOneViewController: UIViewController {
         timeScoreMin.append(strMinutes)
         timeScoreSec.append(strSeconds)
     }
-  
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -207,6 +209,7 @@ class LevelOneViewController: UIViewController {
 
         if sender.state == UIGestureRecognizerState.began {
             LevelOneScore = LevelOneScore + 1
+            ScoreCard.text = "\(LevelOneScore)"
             originalPlayerBlockCenter = playerBlock.center
         } else if sender.state == UIGestureRecognizerState.changed {
             if (barrierUpper.frame.intersects(playerBlock.frame)) {     // Block has intersected with boundry, get unstuck.
@@ -402,6 +405,8 @@ class LevelOneViewController: UIViewController {
         //var velocity = sender.velocity(in: view)
         let translation = sender.translation(in: view)
         if sender.state == UIGestureRecognizerState.began {
+            LevelOneScore = LevelOneScore + 1
+            ScoreCard.text = "\(LevelOneScore)"
             originalPuzzleBlockCenterVertical = puzzleBlockVertical.center
         } else if sender.state == UIGestureRecognizerState.changed {
             if (barrierUpper.frame.intersects(puzzleBlockVertical.frame)) {     // Block has intersected with boundry, get unstuck.
@@ -529,6 +534,8 @@ class LevelOneViewController: UIViewController {
         let translation = sender.translation(in: view)
         
         if sender.state == UIGestureRecognizerState.began {
+            LevelOneScore = LevelOneScore + 1
+            ScoreCard.text = "\(LevelOneScore)"
             originalPuzzleBlockCenterHorizontal = puzzleBlockHorizontal.center
         } else if sender.state == UIGestureRecognizerState.changed {
             if (barrierUpper.frame.intersects(puzzleBlockHorizontal.frame)) {     // Block has intersected with boundry, get unstuck.
@@ -657,6 +664,8 @@ class LevelOneViewController: UIViewController {
         let translation = sender.translation(in: view)
         
         if sender.state == UIGestureRecognizerState.began {
+            LevelOneScore = LevelOneScore + 1
+            ScoreCard.text = "\(LevelOneScore)"
             orginalPuzzleBloackCenterOrange = puzzleBlockOrange.center
         } else if sender.state == UIGestureRecognizerState.changed {
             if (barrierUpper.frame.intersects(puzzleBlockOrange.frame)) {     // Block has intersected with boundry, get unstuck.
@@ -792,7 +801,7 @@ class LevelOneViewController: UIViewController {
         puzzleBlockOrange.frame = startPuzzleOrange
         puzzleBlockHorizontal.frame = startPuzzleHorizontal
         puzzleBlockVertical.frame = startPuzzleVert
-        
+        ScoreCard.text = "0"
     }
     
     func Quit(){
