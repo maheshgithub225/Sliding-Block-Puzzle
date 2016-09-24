@@ -208,13 +208,15 @@ class LevelThreeViewController: UIViewController {
         let resetButton = UIButton(frame: CGRect(x: 299, y: 685, width: 95, height: 30))
         
         resetButton.backgroundColor = UIColor.clear
-        resetButton.setTitleColor(UIColor.white, for: UIControlState.normal)
+        resetButton.setTitleColor(#colorLiteral(red: 1, green: 0.4980392157, blue: 0, alpha: 1), for: UIControlState.normal)
+        resetButton.titleLabel!.font =  UIFont.systemFont(ofSize: 20, weight: UIFontWeightHeavy)
         resetButton.setTitle("Reset", for: UIControlState.normal)
         resetButton.addTarget(self, action: #selector(LevelOneViewController.Reset), for: UIControlEvents.touchUpInside)
         view.addSubview(resetButton)
         
         quitButton.backgroundColor = UIColor.clear
-        quitButton.setTitleColor(UIColor.white, for: UIControlState.normal)
+        quitButton.setTitleColor(#colorLiteral(red: 1, green: 0.4980392157, blue: 0, alpha: 1), for: UIControlState.normal)
+        quitButton.titleLabel!.font =  UIFont.systemFont(ofSize: 20, weight: UIFontWeightHeavy)
         quitButton.setTitle("Quit", for: UIControlState.normal)
         quitButton.addTarget(self, action: #selector(LevelOneViewController.Quit), for: UIControlEvents.touchUpInside)
         view.addSubview(quitButton)
