@@ -46,14 +46,15 @@ class LevelOneViewController: UIViewController {
     
     //Alert
     let alertController = UIAlertController(title: "Clue1", message: "Clue1", preferredStyle: .alert)
-    let NextClue = UIAlertAction(title: "Next Clue?", style: .destructive){
-        (result : UIAlertAction)in debugPrint("Next Clue")
+    let NextClue = UIAlertAction(title: "Next Clue?", style: .destructive){(_) -> Void in
+        
     }
     let Menu = UIAlertAction(title: "Menu", style: .destructive){
         (result : UIAlertAction)in debugPrint("Menu")
     }
     let Back = UIAlertAction(title: "Back", style: .destructive){
-         (result : UIAlertAction)in debugPrint("Menu")
+         (result : UIAlertAction)in debugPrint("Back")
+        
     }
     
     override func viewDidLoad() {
@@ -251,7 +252,7 @@ class LevelOneViewController: UIViewController {
                 sender.isEnabled = true
                 alertController.addAction(NextClue)
                 alertController.addAction(Menu)
-                alertController.addAction(Back)
+                //alertController.addAction(Back)
                 
                 self.present(alertController, animated: true, completion: nil)
               /*  let endScreen = UIView(frame: CGRect(x: 0, y: 0, width: 1000, height: 1000))

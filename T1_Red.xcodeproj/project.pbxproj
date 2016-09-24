@@ -16,6 +16,8 @@
 		93F567871D91231C008064B8 /* userguide.png in Resources */ = {isa = PBXBuildFile; fileRef = 93F5677F1D91231C008064B8 /* userguide.png */; };
 		93F567891D912355008064B8 /* Splash.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F567881D912355008064B8 /* Splash.swift */; };
 		93F5678B1D91235E008064B8 /* load.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F5678A1D91235E008064B8 /* load.swift */; };
+		A5679D441D9622B7000E3DDE /* Screen Shot 2016-09-23 at 9.55.10 PM.png in Resources */ = {isa = PBXBuildFile; fileRef = A5679D431D9622B7000E3DDE /* Screen Shot 2016-09-23 at 9.55.10 PM.png */; };
+		A5679D461D9623F9000E3DDE /* bottomScreen.png in Resources */ = {isa = PBXBuildFile; fileRef = A5679D451D9623F9000E3DDE /* bottomScreen.png */; };
 		A57F18311D94929500B941D4 /* cs3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A57F18301D94929500B941D4 /* cs3.jpg */; };
 		A57F18331D9493A700B941D4 /* Screen Shot 2016-09-22 at 5.32.44 PM.png in Resources */ = {isa = PBXBuildFile; fileRef = A57F18321D9493A700B941D4 /* Screen Shot 2016-09-22 at 5.32.44 PM.png */; };
 		A57F18351D94B06000B941D4 /* CrimeScene.png in Resources */ = {isa = PBXBuildFile; fileRef = A57F18341D94B06000B941D4 /* CrimeScene.png */; };
@@ -68,6 +70,8 @@
 		93F5677F1D91231C008064B8 /* userguide.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = userguide.png; sourceTree = "<group>"; };
 		93F567881D912355008064B8 /* Splash.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Splash.swift; sourceTree = "<group>"; };
 		93F5678A1D91235E008064B8 /* load.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = load.swift; sourceTree = "<group>"; };
+		A5679D431D9622B7000E3DDE /* Screen Shot 2016-09-23 at 9.55.10 PM.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Screen Shot 2016-09-23 at 9.55.10 PM.png"; sourceTree = "<group>"; };
+		A5679D451D9623F9000E3DDE /* bottomScreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bottomScreen.png; sourceTree = "<group>"; };
 		A57F18301D94929500B941D4 /* cs3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cs3.jpg; sourceTree = "<group>"; };
 		A57F18321D9493A700B941D4 /* Screen Shot 2016-09-22 at 5.32.44 PM.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Screen Shot 2016-09-22 at 5.32.44 PM.png"; sourceTree = "<group>"; };
 		A57F18341D94B06000B941D4 /* CrimeScene.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CrimeScene.png; sourceTree = "<group>"; };
@@ -127,7 +131,9 @@
 		BD7545E01D8881A900CB2082 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				A5679D431D9622B7000E3DDE /* Screen Shot 2016-09-23 at 9.55.10 PM.png */,
 				A57F18301D94929500B941D4 /* cs3.jpg */,
+				A5679D451D9623F9000E3DDE /* bottomScreen.png */,
 				BD79DE5B1D944F0500C49BD4 /* mag50x50.png */,
 				A57F18321D9493A700B941D4 /* Screen Shot 2016-09-22 at 5.32.44 PM.png */,
 				A57F18341D94B06000B941D4 /* CrimeScene.png */,
@@ -317,6 +323,7 @@
 			files = (
 				93F567821D91231C008064B8 /* cs1cropped.jpg in Resources */,
 				93F567831D91231C008064B8 /* logot.png in Resources */,
+				A5679D441D9622B7000E3DDE /* Screen Shot 2016-09-23 at 9.55.10 PM.png in Resources */,
 				A5BBD1481D9439870069301A /* Screen Shot 2016-09-22 at 11.08.14 AM.png in Resources */,
 				93F567851D91231C008064B8 /* play button.png in Resources */,
 				93F567841D91231C008064B8 /* options.png in Resources */,
@@ -334,6 +341,7 @@
 				A57F18311D94929500B941D4 /* cs3.jpg in Resources */,
 				A5BBD1461D9433DC0069301A /* splash screen pic.png in Resources */,
 				A57F18331D9493A700B941D4 /* Screen Shot 2016-09-22 at 5.32.44 PM.png in Resources */,
+				A5679D461D9623F9000E3DDE /* bottomScreen.png in Resources */,
 				A57F183B1D94B28200B941D4 /* Screen Shot 2016-09-22 at 7.42.41 PM.png in Resources */,
 				BD79DE581D9444AE00C49BD4 /* asphalt.jpg in Resources */,
 			);
