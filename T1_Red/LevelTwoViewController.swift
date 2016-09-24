@@ -10,6 +10,7 @@ import UIKit
 
 class LevelTwoViewController: UIViewController {
     
+    var LevelTwoScore: Int64 = 0
     
     var originalPlayerBlockCenter: CGPoint!
     var originalPuzzleBlockCenterVertical: CGPoint!
@@ -23,6 +24,14 @@ class LevelTwoViewController: UIViewController {
     // Debug Code
     let DEBUG_OUTPUT = false
     let DEBUG_FREE_PLAYER = false
+    
+    var startPlayer: CGRect!
+    var startPuzzleVert:CGRect!
+    var startPuzzleHorizontal: CGRect!
+    var startPuzzleOrange: CGRect!
+    var startPuzzleGreen:CGRect!
+    var startPuzzleBlue: CGRect!
+    var startPuzzleBrown: CGRect!
     
     // Exit
     let exitBlock = UIView(frame: CGRect(x: 430, y: 380, width: 700, height: 80))
@@ -70,6 +79,14 @@ class LevelTwoViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        startPlayer = playerBlock.frame
+        startPuzzleVert = puzzleBlockVertical.frame
+        startPuzzleHorizontal = puzzleBlockHorizontal.frame
+        startPuzzleOrange = puzzleBlockVerticalOrange.frame
+        startPuzzleGreen = puzzleBlockVerticalGreen.frame
+        startPuzzleBlue = puzzleBlockHorizontalBlue.frame
+        startPuzzleBrown = puzzleBlockHorizontalBrown.frame
         
         timeArrMin.insert("00", at: 0)
         timeArrSec.insert("00", at: 0)
@@ -143,6 +160,22 @@ class LevelTwoViewController: UIViewController {
         collision.addBoundary(withIdentifier: "puzzleBlockHorizontalBrown", for: UIBezierPath(rect: puzzleBlockHorizontalBrown.frame))
         collision.addBoundary(withIdentifier: "puzzleBlockVerticalGreen", for: UIBezierPath(rect: puzzleBlockVerticalGreen.frame))
         animator.addBehavior(collision)
+        
+        // Buttons
+        let quitButton = UIButton(frame: CGRect(x: 20, y: 685, width: 95, height: 30))
+        let resetButton = UIButton(frame: CGRect(x: 299, y: 685, width: 95, height: 30))
+        
+        resetButton.backgroundColor = UIColor.clear
+        resetButton.setTitleColor(UIColor.white, for: UIControlState.normal)
+        resetButton.setTitle("Reset", for: UIControlState.normal)
+        resetButton.addTarget(self, action: #selector(LevelOneViewController.Reset), for: UIControlEvents.touchUpInside)
+        view.addSubview(resetButton)
+        
+        quitButton.backgroundColor = UIColor.clear
+        quitButton.setTitleColor(UIColor.white, for: UIControlState.normal)
+        quitButton.setTitle("Quit", for: UIControlState.normal)
+        quitButton.addTarget(self, action: #selector(LevelOneViewController.Quit), for: UIControlEvents.touchUpInside)
+        view.addSubview(quitButton)
         
     }
     func updateTime() {
@@ -1328,6 +1361,26 @@ class LevelTwoViewController: UIViewController {
     func gestureRecognizer(gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWithGestureRecognizer otherGestureRecognizer: UIGestureRecognizer) -> Bool {
         return true
     }
+    
+    func Reset() {
+        LevelTwoScore = 0
+        playerBlock.frame = startPlayer
+        puzzleBlockVerticalOrange.frame = startPuzzleOrange
+        puzzleBlockHorizontal.frame = startPuzzleHorizontal
+        puzzleBlockVertical.frame = startPuzzleVert
+        puzzleBlockHorizontalBrown.frame = startPuzzleBrown
+        puzzleBlockHorizontalBlue.frame = startPuzzleBlue
+        puzzleBlockVerticalGreen.frame = startPuzzleGreen
+        
+    }
+    
+    func Quit(){
+        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+        // Change the identifier to the correct identifier of the viewcontroller on the storyboard and change the viewcontroller to the correct view controller
+        let resultViewController = storyBoard.instantiateViewController(withIdentifier: "MenuID") as! ViewController
+        self.present(resultViewController, animated:true, completion:nil)
+    }
+    
     
     /*
      // MARK: - Navigation

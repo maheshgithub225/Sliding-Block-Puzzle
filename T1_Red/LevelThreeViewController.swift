@@ -10,171 +10,216 @@ import UIKit
 
 class LevelThreeViewController: UIViewController {
 
-        var originalPlayerBlockCenter: CGPoint!
-        var originalPuzzleBlockCenterVertical: CGPoint!
-        var originalPuzzleBlockCenterHorizontal: CGPoint!
-        var orginalPuzzleBlockCenterOrange: CGPoint!
-        var originalPuzzleBlockCenterGreen: CGPoint!
-        var originalPuzzleBlockCenterBlue: CGPoint!
-        var originalPuzzleBlockCenterBrown: CGPoint!
-        var orginalPuzzleBlockCenterVerticalBrown: CGPoint!
-        var originalPuzzleBlockCenterHorizontalGreen: CGPoint!
-        var originalPuzzleBlockCenterVerticalGrey: CGPoint!
-        var originalPuzzleBlockCenterVerticalRed : CGPoint!
-        var collision: UICollisionBehavior!
-        var animator: UIDynamicAnimator!
-        // Debug Code
-        let DEBUG_OUTPUT = false
-        let DEBUG_FREE_PLAYER = false
-        // Exit
-        let exitBlock = UIView(frame: CGRect(x: 430, y: 380, width: 700, height: 80))
-    
-        //Alert
-        let alertController = UIAlertController(title: "Clue1", message: "Clue1", preferredStyle: .alert)
-        let NextClue = UIAlertAction(title: "Next Clue?", style: .destructive){(_) -> Void in
-        
-        }
-        let Menu = UIAlertAction(title: "Menu", style: .destructive){
-            (result : UIAlertAction)in debugPrint("Menu")
-        }
-        let Back = UIAlertAction(title: "Back", style: .destructive){
-            (result : UIAlertAction)in debugPrint("Back")
-        
-        }
-        @IBOutlet weak var TimerView3: UILabel!
-    
-        @IBOutlet weak var puzzleBlockVerticalOrange: UIImageView!
-        @IBOutlet weak var puzzleBlockHorizontal: UIImageView!
-        @IBOutlet weak var puzzleBlockVertical: UIImageView!
-        @IBOutlet weak var playerBlock: UIImageView!
-        @IBOutlet weak var puzzleBlockVerticalGreen: UIImageView!
-        @IBOutlet weak var puzzleBlockHorizontalBrown: UIImageView!
-        @IBOutlet weak var puzzleBlockHorizontalBlue: UIImageView!
-        @IBOutlet weak var puzzleBlockVerticalRed: UIImageView!
-        @IBOutlet weak var puzzleBlockVerticalGrey: UIImageView!
-        @IBOutlet weak var puzzleBlockHorizontalGreen: UIImageView!
-        @IBOutlet weak var puzzleBlockVerticalBrown: UIImageView!
-        
-        // Barriers
-        let barrierUpper = UIView(frame: CGRect(x: 0, y: -300, width: 414, height: 500))
-        let barrierLeft = UIView(frame: CGRect(x: -100, y: 200, width: 114, height: 736))
-        let barrierUpperRight = UIView(frame: CGRect(x: 400, y: 200, width: 414, height: 190))
-        let barrierLowerRight = UIView(frame: CGRect(x: 400, y: 460, width: 414, height: 190))
-        let barrierLower = UIView(frame: CGRect(x: 0, y: 636, width: 414, height: 400))
+    var LevelThreeScore: Int64 = 0
     
     
-        var timeScoreMin: [String] = []
-        var timeScoreSec: [String] = []
+    var originalPlayerBlockCenter: CGPoint!
+    var originalPuzzleBlockCenterVertical: CGPoint!
+    var originalPuzzleBlockCenterHorizontal: CGPoint!
+    var orginalPuzzleBlockCenterOrange: CGPoint!
+    var originalPuzzleBlockCenterGreen: CGPoint!
+    var originalPuzzleBlockCenterBlue: CGPoint!
+    var originalPuzzleBlockCenterBrown: CGPoint!
+    var orginalPuzzleBlockCenterVerticalBrown: CGPoint!
+    var originalPuzzleBlockCenterHorizontalGreen: CGPoint!
+    var originalPuzzleBlockCenterVerticalGrey: CGPoint!
+    var originalPuzzleBlockCenterVerticalRed : CGPoint!
+    var collision: UICollisionBehavior!
+    var animator: UIDynamicAnimator!
+    // Debug Code
+    let DEBUG_OUTPUT = false
+    let DEBUG_FREE_PLAYER = false
     
-        var timeArrMin:[String] = []
-        var timeArrSec:[String] = []
-    
-    
-        var startTime = TimeInterval()
-    
-        var timer:Timer = Timer()
-    
-        override func viewDidLoad() {
-            super.viewDidLoad()
-            
-            timeArrMin.insert("00", at: 0)
-            timeArrSec.insert("00", at: 0)
-            timeArrMin.insert("00", at: 1)
-            timeArrSec.insert("00", at: 1)
-            
-            if (!timer.isValid) {
-                let aSelector : Selector = #selector(LevelOneViewController.updateTime)
-                timer = Timer.scheduledTimer(timeInterval: 0.01, target: self, selector: aSelector, userInfo: nil, repeats: true)
-                startTime = Date.timeIntervalSinceReferenceDate
-            }
-           
-            //Set Gesture Controls
-            var panGestureRecognizer = UIPanGestureRecognizer(target: self, action: #selector(LevelThreeViewController.didPlayerBlockPan1(_:)))
-            playerBlock.isUserInteractionEnabled = true
-            playerBlock.addGestureRecognizer(panGestureRecognizer)
-            
-            panGestureRecognizer = UIPanGestureRecognizer(target: self, action: #selector(LevelThreeViewController.didPuzzleBlockPan(_:)))
-            puzzleBlockVertical.isUserInteractionEnabled = true
-            puzzleBlockVertical.addGestureRecognizer(panGestureRecognizer)
-            
-            panGestureRecognizer = UIPanGestureRecognizer(target: self, action: #selector(LevelThreeViewController.didPuzzleBlockPanHorizontalRed(_:)))
-            puzzleBlockHorizontal.isUserInteractionEnabled = true
-            puzzleBlockHorizontal.addGestureRecognizer(panGestureRecognizer)
-            
-            panGestureRecognizer = UIPanGestureRecognizer(target: self, action: #selector(LevelThreeViewController.didPuzzleBlockPanOrange(_:)))
-            puzzleBlockVerticalOrange.isUserInteractionEnabled = true
-            puzzleBlockVerticalOrange.addGestureRecognizer(panGestureRecognizer)
-            
-            panGestureRecognizer = UIPanGestureRecognizer(target: self, action: #selector(LevelThreeViewController.didPuzzleBlockPanBlue(_:)))
-            puzzleBlockHorizontalBlue.isUserInteractionEnabled = true
-            puzzleBlockHorizontalBlue.addGestureRecognizer(panGestureRecognizer)
-            
-            panGestureRecognizer = UIPanGestureRecognizer(target: self, action: #selector(LevelThreeViewController.didPuzzleBlockPanBrown(_:)))
-            puzzleBlockHorizontalBrown.isUserInteractionEnabled = true
-            puzzleBlockHorizontalBrown.addGestureRecognizer(panGestureRecognizer)
-            
-            panGestureRecognizer = UIPanGestureRecognizer(target: self, action: #selector(LevelThreeViewController.didPuzzleBlockPanGreen(_:)))
-            puzzleBlockVerticalGreen.isUserInteractionEnabled = true
-            puzzleBlockVerticalGreen.addGestureRecognizer(panGestureRecognizer)
-            
-            panGestureRecognizer = UIPanGestureRecognizer(target: self, action: #selector(LevelThreeViewController.didPuzzleBlockPanHorizontalGreen(_:)))
-            puzzleBlockHorizontalGreen.isUserInteractionEnabled = true
-            puzzleBlockHorizontalGreen.addGestureRecognizer(panGestureRecognizer)
-            
-            panGestureRecognizer = UIPanGestureRecognizer(target: self, action: #selector(LevelThreeViewController.didPuzzleBlockPanVerticalBrown(_:)))
-            puzzleBlockVerticalBrown.isUserInteractionEnabled = true
-            puzzleBlockVerticalBrown.addGestureRecognizer(panGestureRecognizer)
-            
-            panGestureRecognizer = UIPanGestureRecognizer(target: self, action: #selector(LevelThreeViewController.didPuzzleBlockPanVerticalGrey(_:)))
-            puzzleBlockVerticalGrey.isUserInteractionEnabled = true
-            puzzleBlockVerticalGrey.addGestureRecognizer(panGestureRecognizer)
-            
-            panGestureRecognizer = UIPanGestureRecognizer(target: self, action: #selector(LevelThreeViewController.didPuzzleBlockPanVerticalRed(_:)))
-            puzzleBlockVerticalRed.isUserInteractionEnabled = true
-            puzzleBlockVerticalRed.addGestureRecognizer(panGestureRecognizer)
-            
-            
-            //CreateExit
-            exitBlock.backgroundColor = UIColor.black
-            view.addSubview(exitBlock)
+    var startPlayer: CGRect!
+    var startPuzzleVert:CGRect!
+    var startPuzzleHorizontal: CGRect!
+    var startPuzzleOrange: CGRect!
+    var startPuzzleGreen:CGRect!
+    var startPuzzleBlue: CGRect!
+    var startPuzzleBrown: CGRect!
+    var startPuzzleBrownVert: CGRect!
+    var startPuzzleGreenHorz: CGRect!
+    var startPuzzleGreyVert: CGRect!
+    var startPuzzleRedVert: CGRect!
 
-            
-            // Set Barriers
-            barrierUpper.backgroundColor = UIColor.clear
-            barrierLeft.backgroundColor = UIColor.clear
-            barrierUpperRight.backgroundColor = UIColor.clear
-            barrierLowerRight.backgroundColor = UIColor.clear
-            barrierLower.backgroundColor = UIColor.clear
-            view.addSubview(barrierUpper)
-            view.addSubview(barrierLeft)
-            view.addSubview(barrierUpperRight)
-            view.addSubview(barrierLowerRight)
-            view.addSubview(barrierLower)
-            
-            //Set Collisions
-            animator = UIDynamicAnimator(referenceView: view)
-            collision = UICollisionBehavior(items: [playerBlock,puzzleBlockVertical,puzzleBlockHorizontal])
-            collision.translatesReferenceBoundsIntoBoundary = true
-            collision.addBoundary(withIdentifier: "barrierUpper", for: UIBezierPath(rect: barrierUpper.frame))
-            collision.addBoundary(withIdentifier: "barrierLeft", for: UIBezierPath(rect: barrierLeft.frame))
-            collision.addBoundary(withIdentifier: "barrierUpperRight", for: UIBezierPath(rect: barrierUpperRight.frame))
-            collision.addBoundary(withIdentifier: "barrierLowerRight", for: UIBezierPath(rect: barrierLowerRight.frame))
-            collision.addBoundary(withIdentifier: "barrierLower", for: UIBezierPath(rect: barrierLower.frame))
-            collision.addBoundary(withIdentifier: "puzzleBlockVertical", for: UIBezierPath(rect: puzzleBlockVertical.frame))
-            collision.addBoundary(withIdentifier: "puzzleBlockHorizontal", for: UIBezierPath(rect: puzzleBlockHorizontal.frame))
-            collision.addBoundary(withIdentifier: "puzzleBlockVerticalOrange", for: UIBezierPath(rect: puzzleBlockVerticalOrange.frame))
-            collision.addBoundary(withIdentifier: "puzzleBlockHorizontalBlue", for: UIBezierPath(rect: puzzleBlockHorizontalBlue.frame))
-            collision.addBoundary(withIdentifier: "puzzleBlockHorizontalBrown", for: UIBezierPath(rect: puzzleBlockHorizontalBrown.frame))
-            collision.addBoundary(withIdentifier: "puzzleBlockVerticalGreen", for: UIBezierPath(rect: puzzleBlockVerticalGreen.frame))
-            collision.addBoundary(withIdentifier: "puzzleBlockHorizontalGreen", for: UIBezierPath(rect: puzzleBlockHorizontalGreen.frame))
-            collision.addBoundary(withIdentifier: "puzzleBlockVerticalBrown", for: UIBezierPath(rect: puzzleBlockVerticalBrown.frame))
-            collision.addBoundary(withIdentifier: "puzzleBlockVerticalGrey", for: UIBezierPath(rect: puzzleBlockVerticalGrey.frame))
-            collision.addBoundary(withIdentifier: "puzzleBlockVerticalRed", for: UIBezierPath(rect: puzzleBlockVerticalRed.frame))
-            collision.addBoundary(withIdentifier: "puzzleBlockHorizontalBlue", for: UIBezierPath(rect: puzzleBlockHorizontalBlue.frame))
-            
-            animator.addBehavior(collision)
-            
+    // Exit
+    let exitBlock = UIView(frame: CGRect(x: 430, y: 380, width: 700, height: 80))
+
+    //Alert
+    let alertController = UIAlertController(title: "Clue1", message: "Clue1", preferredStyle: .alert)
+    let NextClue = UIAlertAction(title: "Next Clue?", style: .destructive){(_) -> Void in
+    
+    }
+    let Menu = UIAlertAction(title: "Menu", style: .destructive){
+        (result : UIAlertAction)in debugPrint("Menu")
+    }
+    let Back = UIAlertAction(title: "Back", style: .destructive){
+        (result : UIAlertAction)in debugPrint("Back")
+    
+    }
+    @IBOutlet weak var TimerView3: UILabel!
+
+    @IBOutlet weak var puzzleBlockVerticalOrange: UIImageView!
+    @IBOutlet weak var puzzleBlockHorizontal: UIImageView!
+    @IBOutlet weak var puzzleBlockVertical: UIImageView!
+    @IBOutlet weak var playerBlock: UIImageView!
+    @IBOutlet weak var puzzleBlockVerticalGreen: UIImageView!
+    @IBOutlet weak var puzzleBlockHorizontalBrown: UIImageView!
+    @IBOutlet weak var puzzleBlockHorizontalBlue: UIImageView!
+    @IBOutlet weak var puzzleBlockVerticalRed: UIImageView!
+    @IBOutlet weak var puzzleBlockVerticalGrey: UIImageView!
+    @IBOutlet weak var puzzleBlockHorizontalGreen: UIImageView!
+    @IBOutlet weak var puzzleBlockVerticalBrown: UIImageView!
+    
+    // Barriers
+    let barrierUpper = UIView(frame: CGRect(x: 0, y: -300, width: 414, height: 500))
+    let barrierLeft = UIView(frame: CGRect(x: -100, y: 200, width: 114, height: 736))
+    let barrierUpperRight = UIView(frame: CGRect(x: 400, y: 200, width: 414, height: 190))
+    let barrierLowerRight = UIView(frame: CGRect(x: 400, y: 460, width: 414, height: 190))
+    let barrierLower = UIView(frame: CGRect(x: 0, y: 636, width: 414, height: 400))
+
+
+    var timeScoreMin: [String] = []
+    var timeScoreSec: [String] = []
+
+    var timeArrMin:[String] = []
+    var timeArrSec:[String] = []
+
+
+    var startTime = TimeInterval()
+
+    var timer:Timer = Timer()
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        startPlayer = playerBlock.frame
+        startPuzzleHorizontal = puzzleBlockHorizontal.frame
+        startPuzzleVert = puzzleBlockVertical.frame
+        startPuzzleOrange = puzzleBlockVerticalOrange.frame
+        startPuzzleGreen = puzzleBlockHorizontalGreen.frame
+        startPuzzleBlue = puzzleBlockHorizontalBlue.frame
+        startPuzzleBrown = puzzleBlockHorizontalBrown.frame
+        startPuzzleBrownVert = puzzleBlockVerticalBrown.frame
+        startPuzzleGreenHorz = puzzleBlockVerticalGreen.frame
+        startPuzzleGreyVert = puzzleBlockVerticalGrey.frame
+        startPuzzleRedVert = puzzleBlockVerticalRed.frame
+        
+        timeArrMin.insert("00", at: 0)
+        timeArrSec.insert("00", at: 0)
+        timeArrMin.insert("00", at: 1)
+        timeArrSec.insert("00", at: 1)
+        
+        if (!timer.isValid) {
+            let aSelector : Selector = #selector(LevelOneViewController.updateTime)
+            timer = Timer.scheduledTimer(timeInterval: 0.01, target: self, selector: aSelector, userInfo: nil, repeats: true)
+            startTime = Date.timeIntervalSinceReferenceDate
         }
+       
+        //Set Gesture Controls
+        var panGestureRecognizer = UIPanGestureRecognizer(target: self, action: #selector(LevelThreeViewController.didPlayerBlockPan1(_:)))
+        playerBlock.isUserInteractionEnabled = true
+        playerBlock.addGestureRecognizer(panGestureRecognizer)
+        
+        panGestureRecognizer = UIPanGestureRecognizer(target: self, action: #selector(LevelThreeViewController.didPuzzleBlockPan(_:)))
+        puzzleBlockVertical.isUserInteractionEnabled = true
+        puzzleBlockVertical.addGestureRecognizer(panGestureRecognizer)
+        
+        panGestureRecognizer = UIPanGestureRecognizer(target: self, action: #selector(LevelThreeViewController.didPuzzleBlockPanHorizontalRed(_:)))
+        puzzleBlockHorizontal.isUserInteractionEnabled = true
+        puzzleBlockHorizontal.addGestureRecognizer(panGestureRecognizer)
+        
+        panGestureRecognizer = UIPanGestureRecognizer(target: self, action: #selector(LevelThreeViewController.didPuzzleBlockPanOrange(_:)))
+        puzzleBlockVerticalOrange.isUserInteractionEnabled = true
+        puzzleBlockVerticalOrange.addGestureRecognizer(panGestureRecognizer)
+        
+        panGestureRecognizer = UIPanGestureRecognizer(target: self, action: #selector(LevelThreeViewController.didPuzzleBlockPanBlue(_:)))
+        puzzleBlockHorizontalBlue.isUserInteractionEnabled = true
+        puzzleBlockHorizontalBlue.addGestureRecognizer(panGestureRecognizer)
+        
+        panGestureRecognizer = UIPanGestureRecognizer(target: self, action: #selector(LevelThreeViewController.didPuzzleBlockPanBrown(_:)))
+        puzzleBlockHorizontalBrown.isUserInteractionEnabled = true
+        puzzleBlockHorizontalBrown.addGestureRecognizer(panGestureRecognizer)
+        
+        panGestureRecognizer = UIPanGestureRecognizer(target: self, action: #selector(LevelThreeViewController.didPuzzleBlockPanGreen(_:)))
+        puzzleBlockVerticalGreen.isUserInteractionEnabled = true
+        puzzleBlockVerticalGreen.addGestureRecognizer(panGestureRecognizer)
+        
+        panGestureRecognizer = UIPanGestureRecognizer(target: self, action: #selector(LevelThreeViewController.didPuzzleBlockPanHorizontalGreen(_:)))
+        puzzleBlockHorizontalGreen.isUserInteractionEnabled = true
+        puzzleBlockHorizontalGreen.addGestureRecognizer(panGestureRecognizer)
+        
+        panGestureRecognizer = UIPanGestureRecognizer(target: self, action: #selector(LevelThreeViewController.didPuzzleBlockPanVerticalBrown(_:)))
+        puzzleBlockVerticalBrown.isUserInteractionEnabled = true
+        puzzleBlockVerticalBrown.addGestureRecognizer(panGestureRecognizer)
+        
+        panGestureRecognizer = UIPanGestureRecognizer(target: self, action: #selector(LevelThreeViewController.didPuzzleBlockPanVerticalGrey(_:)))
+        puzzleBlockVerticalGrey.isUserInteractionEnabled = true
+        puzzleBlockVerticalGrey.addGestureRecognizer(panGestureRecognizer)
+        
+        panGestureRecognizer = UIPanGestureRecognizer(target: self, action: #selector(LevelThreeViewController.didPuzzleBlockPanVerticalRed(_:)))
+        puzzleBlockVerticalRed.isUserInteractionEnabled = true
+        puzzleBlockVerticalRed.addGestureRecognizer(panGestureRecognizer)
+        
+        
+        //CreateExit
+        exitBlock.backgroundColor = UIColor.black
+        view.addSubview(exitBlock)
+
+        
+        // Set Barriers
+        barrierUpper.backgroundColor = UIColor.clear
+        barrierLeft.backgroundColor = UIColor.clear
+        barrierUpperRight.backgroundColor = UIColor.clear
+        barrierLowerRight.backgroundColor = UIColor.clear
+        barrierLower.backgroundColor = UIColor.clear
+        view.addSubview(barrierUpper)
+        view.addSubview(barrierLeft)
+        view.addSubview(barrierUpperRight)
+        view.addSubview(barrierLowerRight)
+        view.addSubview(barrierLower)
+        
+        //Set Collisions
+        animator = UIDynamicAnimator(referenceView: view)
+        collision = UICollisionBehavior(items: [playerBlock,puzzleBlockVertical,puzzleBlockHorizontal])
+        collision.translatesReferenceBoundsIntoBoundary = true
+        collision.addBoundary(withIdentifier: "barrierUpper", for: UIBezierPath(rect: barrierUpper.frame))
+        collision.addBoundary(withIdentifier: "barrierLeft", for: UIBezierPath(rect: barrierLeft.frame))
+        collision.addBoundary(withIdentifier: "barrierUpperRight", for: UIBezierPath(rect: barrierUpperRight.frame))
+        collision.addBoundary(withIdentifier: "barrierLowerRight", for: UIBezierPath(rect: barrierLowerRight.frame))
+        collision.addBoundary(withIdentifier: "barrierLower", for: UIBezierPath(rect: barrierLower.frame))
+        collision.addBoundary(withIdentifier: "puzzleBlockVertical", for: UIBezierPath(rect: puzzleBlockVertical.frame))
+        collision.addBoundary(withIdentifier: "puzzleBlockHorizontal", for: UIBezierPath(rect: puzzleBlockHorizontal.frame))
+        collision.addBoundary(withIdentifier: "puzzleBlockVerticalOrange", for: UIBezierPath(rect: puzzleBlockVerticalOrange.frame))
+        collision.addBoundary(withIdentifier: "puzzleBlockHorizontalBlue", for: UIBezierPath(rect: puzzleBlockHorizontalBlue.frame))
+        collision.addBoundary(withIdentifier: "puzzleBlockHorizontalBrown", for: UIBezierPath(rect: puzzleBlockHorizontalBrown.frame))
+        collision.addBoundary(withIdentifier: "puzzleBlockVerticalGreen", for: UIBezierPath(rect: puzzleBlockVerticalGreen.frame))
+        collision.addBoundary(withIdentifier: "puzzleBlockHorizontalGreen", for: UIBezierPath(rect: puzzleBlockHorizontalGreen.frame))
+        collision.addBoundary(withIdentifier: "puzzleBlockVerticalBrown", for: UIBezierPath(rect: puzzleBlockVerticalBrown.frame))
+        collision.addBoundary(withIdentifier: "puzzleBlockVerticalGrey", for: UIBezierPath(rect: puzzleBlockVerticalGrey.frame))
+        collision.addBoundary(withIdentifier: "puzzleBlockVerticalRed", for: UIBezierPath(rect: puzzleBlockVerticalRed.frame))
+        collision.addBoundary(withIdentifier: "puzzleBlockHorizontalBlue", for: UIBezierPath(rect: puzzleBlockHorizontalBlue.frame))
+        
+        animator.addBehavior(collision)
+        
+        // Buttons
+        let quitButton = UIButton(frame: CGRect(x: 20, y: 685, width: 95, height: 30))
+        let resetButton = UIButton(frame: CGRect(x: 299, y: 685, width: 95, height: 30))
+        
+        resetButton.backgroundColor = UIColor.clear
+        resetButton.setTitleColor(UIColor.white, for: UIControlState.normal)
+        resetButton.setTitle("Reset", for: UIControlState.normal)
+        resetButton.addTarget(self, action: #selector(LevelOneViewController.Reset), for: UIControlEvents.touchUpInside)
+        view.addSubview(resetButton)
+        
+        quitButton.backgroundColor = UIColor.clear
+        quitButton.setTitleColor(UIColor.white, for: UIControlState.normal)
+        quitButton.setTitle("Quit", for: UIControlState.normal)
+        quitButton.addTarget(self, action: #selector(LevelOneViewController.Quit), for: UIControlEvents.touchUpInside)
+        view.addSubview(quitButton)
+
+        
+    }
     func updateTime() {
         let currentTime = Date.timeIntervalSinceReferenceDate
         
@@ -2536,9 +2581,36 @@ class LevelThreeViewController: UIViewController {
             //Nothing!
         }
     }
-        func gestureRecognizer(gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWithGestureRecognizer otherGestureRecognizer: UIGestureRecognizer) -> Bool {
-            return true
-        }
+    
+    
+    func gestureRecognizer(gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWithGestureRecognizer otherGestureRecognizer: UIGestureRecognizer) -> Bool {
+        return true
+    }
+    
+    
+    func Reset() {
+        LevelThreeScore = 0
+        playerBlock.frame = startPlayer
+        puzzleBlockHorizontal.frame = startPuzzleHorizontal
+        puzzleBlockVertical.frame = startPuzzleVert
+        puzzleBlockVerticalOrange.frame = startPuzzleOrange
+        puzzleBlockHorizontalGreen.frame = startPuzzleGreen
+        puzzleBlockHorizontalBlue.frame = startPuzzleBlue
+        puzzleBlockHorizontalBrown.frame = startPuzzleBrown
+        puzzleBlockVerticalBrown.frame = startPuzzleBrownVert
+        puzzleBlockVerticalGreen.frame = startPuzzleGreenHorz
+        puzzleBlockVerticalGrey.frame = startPuzzleGreyVert
+        puzzleBlockVerticalRed.frame = startPuzzleRedVert
+        
+    }
+    
+    func Quit(){
+        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+        // Change the identifier to the correct identifier of the viewcontroller on the storyboard and change the viewcontroller to the correct view controller
+        let resultViewController = storyBoard.instantiateViewController(withIdentifier: "MenuID") as! ViewController
+        self.present(resultViewController, animated:true, completion:nil)
+    }
+
     
         /*
          // MARK: - Navigation
