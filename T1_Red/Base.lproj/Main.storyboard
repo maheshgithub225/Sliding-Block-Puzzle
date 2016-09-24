@@ -290,7 +290,7 @@
         <!--Third Level View Controller-->
         <scene sceneID="1Hn-vN-Ex4">
             <objects>
-                <viewController title="Third Level View Controller" id="uRz-KR-Kah" customClass="LevelThreeViewController" customModule="T1_Red" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Level3" title="Third Level View Controller" useStoryboardIdentifierAsRestorationIdentifier="YES" id="uRz-KR-Kah" customClass="LevelThreeViewController" customModule="T1_Red" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="yeK-qV-wIA"/>
                         <viewControllerLayoutGuide type="bottom" id="eX8-x9-zKt"/>

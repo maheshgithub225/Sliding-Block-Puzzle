@@ -250,19 +250,19 @@ class LevelOneViewController: UIViewController {
             }else if(exitBlock.frame.intersects(playerBlock.frame)){
                 sender.isEnabled = false
                 sender.isEnabled = true
-                alertController.addAction(NextClue)
-                alertController.addAction(Menu)
-                //alertController.addAction(Back)
-                
+                alertController.addAction(UIAlertAction(title:"Next Clue", style: .default, handler: {action in
+                    let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+                    // Change the identifier to the correct identifier of the viewcontroller on the storyboard and change the viewcontroller to the correct view controller
+                    let resultViewController = storyBoard.instantiateViewController(withIdentifier: "Level2") as! LevelTwoViewController
+                    self.present(resultViewController, animated:true, completion:nil)
+                }))
+                alertController.addAction(UIAlertAction(title:"Menu", style: .default, handler: {action in
+                    let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+                    // Change the identifier to the correct identifier of the viewcontroller on the storyboard and change the viewcontroller to the correct view controller
+                    let resultViewController = storyBoard.instantiateViewController(withIdentifier: "MenuID") as! ViewController
+                    self.present(resultViewController, animated:true, completion:nil)
+                }))                
                 self.present(alertController, animated: true, completion: nil)
-              /*  let endScreen = UIView(frame: CGRect(x: 0, y: 0, width: 1000, height: 1000))
-                endScreen.backgroundColor = UIColor(white: 1, alpha: 0.75)
-                super.view.addSubview(endScreen)
-                let nextButton = UIButton()
-                nextButton.setTitle("Next Level", for: .normal)
-                nextButton.frame = CGRect(x:15, y:-50, width: 300, height: 500)
-                nextButton.addTarget(self, action: Selector(("presed")), for: .touchUpInside)
-                super.view.addSubview(nextButton) */
             }else{
                 if(DEBUG_FREE_PLAYER){
                     playerBlock.center = CGPoint(x: originalPlayerBlockCenter.x + translation.x, y: originalPlayerBlockCenter.y + translation.y)
