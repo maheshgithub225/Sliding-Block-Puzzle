@@ -10,16 +10,25 @@ import UIKit
 
 class LevelOneViewController: UIViewController {
 
+    var LevelOneScore: Int64 = 0
+
     
     var originalPlayerBlockCenter: CGPoint!
     var originalPuzzleBlockCenterVertical: CGPoint!
     var originalPuzzleBlockCenterHorizontal: CGPoint!
     var orginalPuzzleBloackCenterOrange: CGPoint!
+    
+    var startPlayer: CGRect!
+    var startPuzzleVert:CGRect!
+    var startPuzzleHorizontal: CGRect!
+    var startPuzzleOrange: CGRect!
+    
     var collision: UICollisionBehavior!
     var animator: UIDynamicAnimator!
     // Debug Code
     let DEBUG_OUTPUT = false
     let DEBUG_FREE_PLAYER = false
+    
     // Player Blocks
     //let playerBlock = UIView(frame: CGRect(x: 10, y: 400, width: 50, height: 50))
     // Puzzle Blocks
@@ -34,6 +43,7 @@ class LevelOneViewController: UIViewController {
     let barrierUpperRight = UIView(frame: CGRect(x: 400, y: 200, width: 1014, height: 190))
     let barrierLowerRight = UIView(frame: CGRect(x: 400, y: 460, width: 1014, height: 190))
     let barrierLower = UIView(frame: CGRect(x: 0, y: 636, width: 414, height: 800))
+    
 
     
     @IBOutlet weak var puzzleBlockHorizontal: UIImageView!
@@ -72,6 +82,8 @@ class LevelOneViewController: UIViewController {
         //puzzleBlockOrange.backgroundColor = UIColor.orange
        // view.addSubview(puzzleBlockOrange)
         
+
+        
         // Create Exit
         exitBlock.backgroundColor = UIColor.black
         view.addSubview(exitBlock)
@@ -105,6 +117,12 @@ class LevelOneViewController: UIViewController {
         view.addSubview(barrierLowerRight)
         view.addSubview(barrierLower)
         
+        startPlayer = playerBlock.frame
+        startPuzzleVert = puzzleBlockVertical.frame
+        startPuzzleHorizontal = puzzleBlockHorizontal.frame
+        startPuzzleOrange = puzzleBlockOrange.frame
+        
+        
         //Set Collisions
         animator = UIDynamicAnimator(referenceView: view)
         collision = UICollisionBehavior(items: [playerBlock,puzzleBlockVertical,puzzleBlockHorizontal])
@@ -118,6 +136,23 @@ class LevelOneViewController: UIViewController {
         collision.addBoundary(withIdentifier: "puzzleBlockHorizontal", for: UIBezierPath(rect: puzzleBlockHorizontal.frame))
         collision.addBoundary(withIdentifier: "puzzleBlockOrange", for: UIBezierPath(rect: puzzleBlockOrange.frame))
         animator.addBehavior(collision)
+        
+        // Buttons
+        let quitButton = UIButton(frame: CGRect(x: 20, y: 685, width: 95, height: 30))
+        let resetButton = UIButton(frame: CGRect(x: 299, y: 685, width: 95, height: 30))
+        
+        resetButton.backgroundColor = UIColor.clear
+        resetButton.setTitleColor(UIColor.white, for: UIControlState.normal)
+        resetButton.setTitle("Reset", for: UIControlState.normal)
+        resetButton.addTarget(self, action: #selector(LevelOneViewController.Reset), for: UIControlEvents.touchUpInside)
+        view.addSubview(resetButton)
+        
+        quitButton.backgroundColor = UIColor.clear
+        quitButton.setTitleColor(UIColor.white, for: UIControlState.normal)
+        quitButton.setTitle("Quit", for: UIControlState.normal)
+        quitButton.addTarget(self, action: #selector(LevelOneViewController.Quit), for: UIControlEvents.touchUpInside)
+        view.addSubview(quitButton)
+
         
     }
     
@@ -137,6 +172,7 @@ class LevelOneViewController: UIViewController {
         let translation = sender.translation(in: view)
 
         if sender.state == UIGestureRecognizerState.began {
+            LevelOneScore = LevelOneScore + 1
             originalPlayerBlockCenter = playerBlock.center
         } else if sender.state == UIGestureRecognizerState.changed {
             if (barrierUpper.frame.intersects(playerBlock.frame)) {     // Block has intersected with boundry, get unstuck.
@@ -705,8 +741,30 @@ class LevelOneViewController: UIViewController {
     
     func gestureRecognizer(gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWithGestureRecognizer otherGestureRecognizer: UIGestureRecognizer) -> Bool {
         return true
-    }    
+    }
+    
+    
 
+    func Reset() {
+        LevelOneScore = 0
+        playerBlock.frame = startPlayer
+        puzzleBlockOrange.frame = startPuzzleOrange
+        puzzleBlockHorizontal.frame = startPuzzleHorizontal
+        puzzleBlockVertical.frame = startPuzzleVert
+        
+    }
+    
+    func Quit(){
+        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+        // Change the identifier to the correct identifier of the viewcontroller on the storyboard and change the viewcontroller to the correct view controller
+        let resultViewController = storyBoard.instantiateViewController(withIdentifier: "MenuID") as! ViewController
+        self.present(resultViewController, animated:true, completion:nil)
+    }
+    
+    
+    
+    
+    
     /*
     // MARK: - Navigation
 
