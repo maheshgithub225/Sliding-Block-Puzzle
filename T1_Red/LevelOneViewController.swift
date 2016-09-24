@@ -35,6 +35,7 @@ class LevelOneViewController: UIViewController {
     let barrierLowerRight = UIView(frame: CGRect(x: 400, y: 460, width: 1014, height: 190))
     let barrierLower = UIView(frame: CGRect(x: 0, y: 636, width: 414, height: 800))
 
+    @IBOutlet weak var TimerView: UILabel!
     
     @IBOutlet weak var puzzleBlockHorizontal: UIImageView!
     @IBOutlet weak var puzzleBlockOrange: UIImageView!
@@ -57,20 +58,31 @@ class LevelOneViewController: UIViewController {
         
     }
     
+    var timeScoreMin: [String] = []
+    var timeScoreSec: [String] = []
+    
+    var timeArrMin:[String] = []
+    var timeArrSec:[String] = []
+    
+    
+    var startTime = TimeInterval()
+    
+    var timer:Timer = Timer()
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Create Blocks 
-       // playerBlock.backgroundColor = UIColor(patternImage: UIImage(named: "mag50x50.png")!)
-        //view.addSubview(playerBlock)
+        timeArrMin.insert("00", at: 0)
+        timeArrSec.insert("00", at: 0)
+        timeArrMin.insert("00", at: 1)
+        timeArrSec.insert("00", at: 1)
         
-        // Create Puzzle Blocks
-        //puzzleBlockVertical.backgroundColor = UIColor.red
-        //view.addSubview(puzzleBlockVertical)
-        //puzzleBlockHorizontal.backgroundColor = UIColor.blue
-        //view.addSubview(puzzleBlockHorizontal)
-        //puzzleBlockOrange.backgroundColor = UIColor.orange
-       // view.addSubview(puzzleBlockOrange)
+        if (!timer.isValid) {
+            let aSelector : Selector = #selector(LevelOneViewController.updateTime)
+            timer = Timer.scheduledTimer(timeInterval: 0.01, target: self, selector: aSelector, userInfo: nil, repeats: true)
+            startTime = Date.timeIntervalSinceReferenceDate
+        }
+        
         
         // Create Exit
         exitBlock.backgroundColor = UIColor.black
@@ -120,7 +132,27 @@ class LevelOneViewController: UIViewController {
         animator.addBehavior(collision)
         
     }
-    
+    func updateTime() {
+        let currentTime = Date.timeIntervalSinceReferenceDate
+        
+        //Find the difference between current time and start time.
+        var elapsedTime: TimeInterval = currentTime - startTime
+        
+        //calculate the minutes in elapsed time.
+        let minutes = UInt8(elapsedTime / 60.0)
+        elapsedTime -= (TimeInterval(minutes) * 60)
+        
+        //calculate the seconds in elapsed time.
+        let seconds = UInt8(elapsedTime)
+        elapsedTime -= TimeInterval(seconds)
+        
+        let strMinutes = String(format: "%02d", minutes)
+        let strSeconds = String(format: "%02d", seconds)
+        
+        TimerView.text = "\(strMinutes):\(strSeconds)"
+        timeScoreMin.append(strMinutes)
+        timeScoreSec.append(strSeconds)
+    }
   
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -261,7 +293,14 @@ class LevelOneViewController: UIViewController {
                     // Change the identifier to the correct identifier of the viewcontroller on the storyboard and change the viewcontroller to the correct view controller
                     let resultViewController = storyBoard.instantiateViewController(withIdentifier: "MenuID") as! ViewController
                     self.present(resultViewController, animated:true, completion:nil)
-                }))                
+                }))
+                
+                timer.invalidate()
+                timeArrMin.append(timeScoreMin.last!)
+                timeArrSec.append(timeScoreSec.last!)
+                
+                //displayYourScoreTime.text = "Your Time: \(timeArrMin.last!)m:\(timeArrSec.last!)s"
+                
                 self.present(alertController, animated: true, completion: nil)
             }else{
                 if(DEBUG_FREE_PLAYER){

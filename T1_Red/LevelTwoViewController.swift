@@ -23,15 +23,24 @@ class LevelTwoViewController: UIViewController {
     // Debug Code
     let DEBUG_OUTPUT = false
     let DEBUG_FREE_PLAYER = false
-    // Player Blocks
-//    let playerBlock = UIView(frame: CGRect(x: 10, y: 400, width: 79, height: 50))
-//    
-//    // Puzzle Blocks
-//    let puzzleBlockVertical = UIView(frame: CGRect(x: 350, y: 460, width: 50, height: 175))
-//    let puzzleBlockHorizontal = UIView(frame: CGRect(x: 150, y: 550, width: 160, height: 50))
-//    let puzzleBlockVerticalOrange = UIView(frame: CGRect(x:80, y: 200, width:50, height:180))
-//    let puzzleBlockYellow = UIView(frame: CGRect(x:10, y: 500, width:100, height:50))
-//    // let sampleimage = UIImageView(frame: CGRect(x: 10, y: 400, width: 50, height: 50))
+    
+    // Exit
+    let exitBlock = UIView(frame: CGRect(x: 430, y: 380, width: 700, height: 80))
+    
+    //Alert
+    let alertController = UIAlertController(title: "Clue1", message: "Clue1", preferredStyle: .alert)
+    let NextClue = UIAlertAction(title: "Next Clue?", style: .destructive){(_) -> Void in
+        
+    }
+    let Menu = UIAlertAction(title: "Menu", style: .destructive){
+        (result : UIAlertAction)in debugPrint("Menu")
+    }
+    let Back = UIAlertAction(title: "Back", style: .destructive){
+        (result : UIAlertAction)in debugPrint("Back")
+        
+    }
+    @IBOutlet weak var TimerView2: UILabel!
+
     @IBOutlet weak var puzzleBlockVerticalOrange: UIImageView!
     @IBOutlet weak var puzzleBlockHorizontal: UIImageView!
     @IBOutlet weak var puzzleBlockVertical: UIImageView!
@@ -46,22 +55,32 @@ class LevelTwoViewController: UIViewController {
     let barrierUpperRight = UIView(frame: CGRect(x: 400, y: 200, width: 414, height: 190))
     let barrierLowerRight = UIView(frame: CGRect(x: 400, y: 460, width: 414, height: 190))
     let barrierLower = UIView(frame: CGRect(x: 0, y: 636, width: 414, height: 400))
+    
+    var timeScoreMin: [String] = []
+    var timeScoreSec: [String] = []
+    
+    var timeArrMin:[String] = []
+    var timeArrSec:[String] = []
+    
+    
+    var startTime = TimeInterval()
+    
+    var timer:Timer = Timer()
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Create Blocks
-//        playerBlock.backgroundColor = UIColor.green
-//        view.addSubview(playerBlock)
+        timeArrMin.insert("00", at: 0)
+        timeArrSec.insert("00", at: 0)
+        timeArrMin.insert("00", at: 1)
+        timeArrSec.insert("00", at: 1)
         
-        // Create Puzzle Blocks
-//        puzzleBlockVertical.backgroundColor = UIColor.brown
-//        view.addSubview(puzzleBlockVertical)
-//        puzzleBlockHorizontal.backgroundColor = UIColor.magenta
-//        view.addSubview(puzzleBlockHorizontal)
-//        puzzleBlockVerticalOrange.backgroundColor = UIColor.orange
-//        view.addSubview(puzzleBlockVerticalOrange)
-//        puzzleBlockYellow.backgroundColor = UIColor.yellow
-//        view.addSubview(puzzleBlockYellow)
+        if (!timer.isValid) {
+            let aSelector : Selector = #selector(LevelOneViewController.updateTime)
+            timer = Timer.scheduledTimer(timeInterval: 0.01, target: self, selector: aSelector, userInfo: nil, repeats: true)
+            startTime = Date.timeIntervalSinceReferenceDate
+        }
         
         //Set Gesture Controls
         var panGestureRecognizer = UIPanGestureRecognizer(target: self, action: #selector(LevelTwoViewController.didPlayerBlockPan1(_:)))
@@ -92,7 +111,9 @@ class LevelTwoViewController: UIViewController {
         puzzleBlockVerticalGreen.isUserInteractionEnabled = true
         puzzleBlockVerticalGreen.addGestureRecognizer(panGestureRecognizer)
         
-
+        //CreateExit
+        exitBlock.backgroundColor = UIColor.black
+        view.addSubview(exitBlock)
         
         // Set Barriers
         barrierUpper.backgroundColor = UIColor.clear
@@ -124,7 +145,28 @@ class LevelTwoViewController: UIViewController {
         animator.addBehavior(collision)
         
     }
-    
+    func updateTime() {
+        let currentTime = Date.timeIntervalSinceReferenceDate
+        
+        //Find the difference between current time and start time.
+        var elapsedTime: TimeInterval = currentTime - startTime
+        
+        //calculate the minutes in elapsed time.
+        let minutes = UInt8(elapsedTime / 60.0)
+        elapsedTime -= (TimeInterval(minutes) * 60)
+        
+        //calculate the seconds in elapsed time.
+        let seconds = UInt8(elapsedTime)
+        elapsedTime -= TimeInterval(seconds)
+        
+        let strMinutes = String(format: "%02d", minutes)
+        let strSeconds = String(format: "%02d", seconds)
+        
+        TimerView2.text = "\(strMinutes):\(strSeconds)"
+        timeScoreMin.append(strMinutes)
+        timeScoreSec.append(strSeconds)
+    }
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -271,6 +313,22 @@ class LevelTwoViewController: UIViewController {
                     }
                 }
                 sender.isEnabled = true
+            }else if(exitBlock.frame.intersects(playerBlock.frame)){
+                sender.isEnabled = false
+                sender.isEnabled = true
+                alertController.addAction(UIAlertAction(title:"Next Clue", style: .default, handler: {action in
+                    let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+                    // Change the identifier to the correct identifier of the viewcontroller on the storyboard and change the viewcontroller to the correct view controller
+                    let resultViewController = storyBoard.instantiateViewController(withIdentifier: "Level3") as! LevelThreeViewController
+                    self.present(resultViewController, animated:true, completion:nil)
+                }))
+                alertController.addAction(UIAlertAction(title:"Menu", style: .default, handler: {action in
+                    let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+                    // Change the identifier to the correct identifier of the viewcontroller on the storyboard and change the viewcontroller to the correct view controller
+                    let resultViewController = storyBoard.instantiateViewController(withIdentifier: "MenuID") as! ViewController
+                    self.present(resultViewController, animated:true, completion:nil)
+                }))
+                self.present(alertController, animated: true, completion: nil)
             }else{
                 if(DEBUG_FREE_PLAYER){
                     playerBlock.center = CGPoint(x: originalPlayerBlockCenter.x + translation.x, y: originalPlayerBlockCenter.y + translation.y)
