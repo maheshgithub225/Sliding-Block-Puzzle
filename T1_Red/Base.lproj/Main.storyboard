@@ -158,7 +158,7 @@
                                 <frame key="frameInset" minX="29" minY="106" width="81" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="20"/>
-                                <color key="textColor" red="1" green="0.61312330650000002" blue="0.15540080440000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="1" green="0.49803921568627452" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bottomScreen.png" translatesAutoresizingMaskIntoConstraints="NO" id="YlU-Qo-u52">
