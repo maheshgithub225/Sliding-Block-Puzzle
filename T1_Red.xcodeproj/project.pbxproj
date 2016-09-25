@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		793D0E131D9865A900AA8DDD /* guide.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 793D0E121D9865A900AA8DDD /* guide.pdf */; };
 		9324A6F31D975FDC00ECF083 /* catch.png in Resources */ = {isa = PBXBuildFile; fileRef = 9324A6F21D975FDC00ECF083 /* catch.png */; };
 		9324A6F61D9761C900ECF083 /* loudgun.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9324A6F51D9761C900ECF083 /* loudgun.mp3 */; };
 		93F567801D91231C008064B8 /* badge.png in Resources */ = {isa = PBXBuildFile; fileRef = 93F567781D91231C008064B8 /* badge.png */; };
@@ -65,6 +66,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		793D0E121D9865A900AA8DDD /* guide.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = guide.pdf; sourceTree = "<group>"; };
 		9324A6F21D975FDC00ECF083 /* catch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = catch.png; sourceTree = "<group>"; };
 		9324A6F51D9761C900ECF083 /* loudgun.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = loudgun.mp3; sourceTree = "<group>"; };
 		93F567781D91231C008064B8 /* badge.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = badge.png; sourceTree = "<group>"; };
@@ -213,6 +215,7 @@
 				BDED7C911D919A9E00DBCFEE /* LoadViewController.swift */,
 				BDF9BB8F1D81D19A00403F55 /* ViewController.swift */,
 				BDF9BB911D81D19A00403F55 /* Main.storyboard */,
+				793D0E121D9865A900AA8DDD /* guide.pdf */,
 				BD99DAB61D8DFCB50092C679 /* EndingViewController.swift */,
 				BDF9BB941D81D19A00403F55 /* Assets.xcassets */,
 				BDF9BB961D81D19A00403F55 /* LaunchScreen.storyboard */,
@@ -368,6 +371,7 @@
 				BDF9BB931D81D19A00403F55 /* Main.storyboard in Resources */,
 				93F567811D91231C008064B8 /* blackscreen.bmp in Resources */,
 				9324A6F61D9761C900ECF083 /* loudgun.mp3 in Resources */,
+				793D0E131D9865A900AA8DDD /* guide.pdf in Resources */,
 				A57F18351D94B06000B941D4 /* CrimeScene.png in Resources */,
 				A57F18311D94929500B941D4 /* cs3.jpg in Resources */,
 				A5BBD1461D9433DC0069301A /* splash screen pic.png in Resources */,

@@ -37,5 +37,30 @@ class ViewController: UIViewController {
         
         
     }
+    
+    
+    
+    @IBAction func showPDF(_ sender: AnyObject) {
+        
+        
+        let url = Bundle.main.url(forResource: "guide", withExtension: "pdf")
+        
+        if let url = url {
+            let webView = UIWebView(frame: self.view.frame)
+            let urlRequest = URLRequest(url: url)
+            webView.loadRequest(urlRequest)
+            
+            view.addSubview(webView)
+            
+        }
+    }
+    
+    
+    
+    
+    
+    
+    
+    
 }
 
