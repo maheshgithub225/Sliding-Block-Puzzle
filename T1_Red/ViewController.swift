@@ -8,9 +8,14 @@
 
 import UIKit
 import AVFoundation
+import SafariServices
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, SFSafariViewControllerDelegate {
     var audioplayer: AVAudioPlayer!
+    
+    var urlString: String = "guide.pdf"
+    
+    
     @IBOutlet weak var catchme: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,36 +36,18 @@ class ViewController: UIViewController {
             audioplayer = sound
             sound.play()
         }catch{
+        
         }
-
-        
-        
-        
     }
+    
     
     
     
     @IBAction func showPDF(_ sender: AnyObject) {
-        
-        
-        let url = Bundle.main.url(forResource: "guide", withExtension: "pdf")
-        
-        if let url = url {
-            let webView = UIWebView(frame: self.view.frame)
-            let urlRequest = URLRequest(url: url)
-            webView.loadRequest(urlRequest)
-            
-            view.addSubview(webView)
-            
-        }
+        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+        // Change the identifier to the correct identifier of the viewcontroller on the storyboard and change the viewcontroller to the correct view controller
+        let resultViewController = storyBoard.instantiateViewController(withIdentifier: "guide") as! HowToViewController
+        self.present(resultViewController, animated:true, completion:nil)
     }
-    
-    
-    
-    
-    
-    
-    
-    
 }
 
