@@ -38,6 +38,8 @@
 		BD99DAB51D8DFC620092C679 /* LevelThreeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD99DAB41D8DFC620092C679 /* LevelThreeViewController.swift */; };
 		BD99DAB71D8DFCB50092C679 /* EndingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD99DAB61D8DFCB50092C679 /* EndingViewController.swift */; };
 		BDAFF2971D986CDD0064BAF5 /* HowToViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDAFF2961D986CDD0064BAF5 /* HowToViewController.swift */; };
+		BDAFF29A1D987D1C0064BAF5 /* Menu.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BDAFF2981D987D1C0064BAF5 /* Menu.jpg */; };
+		BDAFF29B1D987D1C0064BAF5 /* Menuscreen.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BDAFF2991D987D1C0064BAF5 /* Menuscreen.jpg */; };
 		BDE536651D89B78C00514723 /* green_panel.png in Resources */ = {isa = PBXBuildFile; fileRef = BDE536641D89B78C00514723 /* green_panel.png */; };
 		BDED7C921D919A9E00DBCFEE /* LoadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDED7C911D919A9E00DBCFEE /* LoadViewController.swift */; };
 		BDF9BB8E1D81D19A00403F55 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF9BB8D1D81D19A00403F55 /* AppDelegate.swift */; };
@@ -98,6 +100,8 @@
 		BD99DAB41D8DFC620092C679 /* LevelThreeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LevelThreeViewController.swift; sourceTree = "<group>"; };
 		BD99DAB61D8DFCB50092C679 /* EndingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EndingViewController.swift; sourceTree = "<group>"; };
 		BDAFF2961D986CDD0064BAF5 /* HowToViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HowToViewController.swift; sourceTree = "<group>"; };
+		BDAFF2981D987D1C0064BAF5 /* Menu.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Menu.jpg; sourceTree = "<group>"; };
+		BDAFF2991D987D1C0064BAF5 /* Menuscreen.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Menuscreen.jpg; sourceTree = "<group>"; };
 		BDE536641D89B78C00514723 /* green_panel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = green_panel.png; sourceTree = "<group>"; };
 		BDED7C911D919A9E00DBCFEE /* LoadViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadViewController.swift; sourceTree = "<group>"; };
 		BDF9BB8A1D81D19A00403F55 /* T1_Red.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = T1_Red.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -160,28 +164,30 @@
 		BD7545E01D8881A900CB2082 /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				BD736AC31D97318E001E7733 /* Block Objects */,
-				A5679D431D9622B7000E3DDE /* Screen Shot 2016-09-23 at 9.55.10 PM.png */,
-				A57F18301D94929500B941D4 /* cs3.jpg */,
-				9324A6F21D975FDC00ECF083 /* catch.png */,
-				A5679D451D9623F9000E3DDE /* bottomScreen.png */,
-				BD79DE5B1D944F0500C49BD4 /* mag50x50.png */,
-				A57F18321D9493A700B941D4 /* Screen Shot 2016-09-22 at 5.32.44 PM.png */,
-				A57F18341D94B06000B941D4 /* CrimeScene.png */,
-				A57F183A1D94B28200B941D4 /* Screen Shot 2016-09-22 at 7.42.41 PM.png */,
 				BD79DE571D9444AE00C49BD4 /* asphalt.jpg */,
-				BD79DE551D94440A00C49BD4 /* vertical-make-it-chalk.png */,
-				BD79DE511D9440D200C49BD4 /* make-it-chalk-line.png */,
-				A5BBD1451D9433DC0069301A /* splash screen pic.png */,
 				93F567781D91231C008064B8 /* badge.png */,
-				A5BBD1471D9439870069301A /* Screen Shot 2016-09-22 at 11.08.14 AM.png */,
 				93F567791D91231C008064B8 /* blackscreen.bmp */,
+				BD736AC31D97318E001E7733 /* Block Objects */,
+				A5679D451D9623F9000E3DDE /* bottomScreen.png */,
+				9324A6F21D975FDC00ECF083 /* catch.png */,
+				A57F18341D94B06000B941D4 /* CrimeScene.png */,
 				93F5677A1D91231C008064B8 /* cs1cropped.jpg */,
+				A57F18301D94929500B941D4 /* cs3.jpg */,
+				BDE536641D89B78C00514723 /* green_panel.png */,
 				93F5677B1D91231C008064B8 /* logot.png */,
+				BD79DE5B1D944F0500C49BD4 /* mag50x50.png */,
+				BD79DE511D9440D200C49BD4 /* make-it-chalk-line.png */,
+				BDAFF2981D987D1C0064BAF5 /* Menu.jpg */,
+				BDAFF2991D987D1C0064BAF5 /* Menuscreen.jpg */,
 				93F5677C1D91231C008064B8 /* options.png */,
 				93F5677D1D91231C008064B8 /* play button.png */,
+				A57F18321D9493A700B941D4 /* Screen Shot 2016-09-22 at 5.32.44 PM.png */,
+				A57F183A1D94B28200B941D4 /* Screen Shot 2016-09-22 at 7.42.41 PM.png */,
+				A5BBD1471D9439870069301A /* Screen Shot 2016-09-22 at 11.08.14 AM.png */,
+				A5679D431D9622B7000E3DDE /* Screen Shot 2016-09-23 at 9.55.10 PM.png */,
+				A5BBD1451D9433DC0069301A /* splash screen pic.png */,
 				93F5677F1D91231C008064B8 /* userguide.png */,
-				BDE536641D89B78C00514723 /* green_panel.png */,
+				BD79DE551D94440A00C49BD4 /* vertical-make-it-chalk.png */,
 			);
 			name = Images;
 			sourceTree = "<group>";
@@ -363,7 +369,9 @@
 				93F567841D91231C008064B8 /* options.png in Resources */,
 				BDF9BB981D81D19A00403F55 /* LaunchScreen.storyboard in Resources */,
 				BD736AC51D9731A6001E7733 /* 817_NYS-impala.png in Resources */,
+				BDAFF29B1D987D1C0064BAF5 /* Menuscreen.jpg in Resources */,
 				BD736AC71D97322A001E7733 /* 752_ricks_police_car.png in Resources */,
+				BDAFF29A1D987D1C0064BAF5 /* Menu.jpg in Resources */,
 				BDF9BB951D81D19A00403F55 /* Assets.xcassets in Resources */,
 				93F567801D91231C008064B8 /* badge.png in Resources */,
 				BD79DE5C1D944F0500C49BD4 /* mag50x50.png in Resources */,
