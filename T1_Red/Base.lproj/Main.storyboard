@@ -39,30 +39,27 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QKR-y9-aPa">
-                                <frame key="frameInset" minX="16" minY="440" width="213" height="152"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Menu.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="U49-d8-nFg">
+                                <frame key="frameInset" width="414" height="736"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="userguide.png"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wM7-UN-efh">
+                                <frame key="frameInset" minX="260" minY="253" width="134" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
-                                    <segue destination="4Tp-PL-Op2" kind="show" id="9LS-m3-Bok"/>
+                                    <segue destination="vm9-XB-sXt" kind="show" id="n3M-Li-yWv"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1O5-uP-ILa">
-                                <frame key="frameInset" minX="16" minY="491" width="137" height="50"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K2o-6I-2L3">
+                                <frame key="frameInset" minX="260" minY="377" width="134" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="options.png"/>
                                 <connections>
-                                    <segue destination="uRz-KR-Kah" kind="showDetail" id="P13-mQ-ftz"/>
+                                    <segue destination="4Tp-PL-Op2" kind="showDetail" id="e2k-6u-nez"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EC7-Ds-fxk">
-                                <frame key="frameInset" minX="22" minY="390" width="131" height="36"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uOe-41-j33">
+                                <frame key="frameInset" minX="260" minY="315" width="128" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="catch.png"/>
-                                <connections>
-                                    <action selector="catcha:" destination="BYZ-38-t0r" eventType="touchDown" id="50u-is-dwZ"/>
-                                    <segue destination="vm9-XB-sXt" kind="showDetail" id="S6Z-Gv-N7S"/>
-                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
@@ -72,9 +69,6 @@
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="blackOpaque"/>
                     <nil key="simulatedTopBarMetrics"/>
                     <nil key="simulatedBottomBarMetrics"/>
-                    <connections>
-                        <outlet property="catchme" destination="EC7-Ds-fxk" id="fE5-3z-hmb"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -658,13 +652,11 @@
     <resources>
         <image name="752_ricks_police_car.png" width="921" height="442"/>
         <image name="CrimeScene.png" width="600" height="64"/>
+        <image name="Menu.jpg" width="830" height="1476"/>
         <image name="Screen Shot 2016-09-22 at 7.42.41 PM.png" width="110" height="1382"/>
         <image name="Screen Shot 2016-09-23 at 9.55.10 PM.png" width="826" height="308"/>
         <image name="badge.png" width="271" height="255"/>
         <image name="blackscreen.bmp" width="608" height="578"/>
         <image name="bottomScreen.png" width="598" height="322"/>
-        <image name="catch.png" width="131" height="36"/>
-        <image name="options.png" width="137" height="50"/>
-        <image name="userguide.png" width="213" height="152"/>
     </resources>
 </document>
