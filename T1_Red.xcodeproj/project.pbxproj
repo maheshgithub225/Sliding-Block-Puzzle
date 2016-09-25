@@ -20,6 +20,8 @@
 		93F567891D912355008064B8 /* Splash.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F567881D912355008064B8 /* Splash.swift */; };
 		93F5678B1D91235E008064B8 /* load.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F5678A1D91235E008064B8 /* load.swift */; };
 		A53184BC1D9889EF00CB0F70 /* perp.png in Resources */ = {isa = PBXBuildFile; fileRef = A53184BB1D9889EF00CB0F70 /* perp.png */; };
+		A53184BE1D98902500CB0F70 /* Menu.png in Resources */ = {isa = PBXBuildFile; fileRef = A53184BD1D98902500CB0F70 /* Menu.png */; };
+		A53184C01D9890BB00CB0F70 /* Menu.png in Resources */ = {isa = PBXBuildFile; fileRef = A53184BF1D9890BB00CB0F70 /* Menu.png */; };
 		A5679D441D9622B7000E3DDE /* Screen Shot 2016-09-23 at 9.55.10 PM.png in Resources */ = {isa = PBXBuildFile; fileRef = A5679D431D9622B7000E3DDE /* Screen Shot 2016-09-23 at 9.55.10 PM.png */; };
 		A5679D461D9623F9000E3DDE /* bottomScreen.png in Resources */ = {isa = PBXBuildFile; fileRef = A5679D451D9623F9000E3DDE /* bottomScreen.png */; };
 		A57F18311D94929500B941D4 /* cs3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A57F18301D94929500B941D4 /* cs3.jpg */; };
@@ -39,7 +41,6 @@
 		BD99DAB51D8DFC620092C679 /* LevelThreeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD99DAB41D8DFC620092C679 /* LevelThreeViewController.swift */; };
 		BD99DAB71D8DFCB50092C679 /* EndingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD99DAB61D8DFCB50092C679 /* EndingViewController.swift */; };
 		BDAFF2971D986CDD0064BAF5 /* HowToViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDAFF2961D986CDD0064BAF5 /* HowToViewController.swift */; };
-		BDAFF29A1D987D1C0064BAF5 /* Menu.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BDAFF2981D987D1C0064BAF5 /* Menu.jpg */; };
 		BDAFF29B1D987D1C0064BAF5 /* Menuscreen.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BDAFF2991D987D1C0064BAF5 /* Menuscreen.jpg */; };
 		BDE536651D89B78C00514723 /* green_panel.png in Resources */ = {isa = PBXBuildFile; fileRef = BDE536641D89B78C00514723 /* green_panel.png */; };
 		BDED7C921D919A9E00DBCFEE /* LoadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDED7C911D919A9E00DBCFEE /* LoadViewController.swift */; };
@@ -83,6 +84,8 @@
 		93F567881D912355008064B8 /* Splash.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Splash.swift; sourceTree = "<group>"; };
 		93F5678A1D91235E008064B8 /* load.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = load.swift; sourceTree = "<group>"; };
 		A53184BB1D9889EF00CB0F70 /* perp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = perp.png; sourceTree = "<group>"; };
+		A53184BD1D98902500CB0F70 /* Menu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Menu.png; sourceTree = "<group>"; };
+		A53184BF1D9890BB00CB0F70 /* Menu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Menu.png; sourceTree = "<group>"; };
 		A5679D431D9622B7000E3DDE /* Screen Shot 2016-09-23 at 9.55.10 PM.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Screen Shot 2016-09-23 at 9.55.10 PM.png"; sourceTree = "<group>"; };
 		A5679D451D9623F9000E3DDE /* bottomScreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bottomScreen.png; sourceTree = "<group>"; };
 		A57F18301D94929500B941D4 /* cs3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cs3.jpg; sourceTree = "<group>"; };
@@ -102,7 +105,6 @@
 		BD99DAB41D8DFC620092C679 /* LevelThreeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LevelThreeViewController.swift; sourceTree = "<group>"; };
 		BD99DAB61D8DFCB50092C679 /* EndingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EndingViewController.swift; sourceTree = "<group>"; };
 		BDAFF2961D986CDD0064BAF5 /* HowToViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HowToViewController.swift; sourceTree = "<group>"; };
-		BDAFF2981D987D1C0064BAF5 /* Menu.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Menu.jpg; sourceTree = "<group>"; };
 		BDAFF2991D987D1C0064BAF5 /* Menuscreen.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Menuscreen.jpg; sourceTree = "<group>"; };
 		BDE536641D89B78C00514723 /* green_panel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = green_panel.png; sourceTree = "<group>"; };
 		BDED7C911D919A9E00DBCFEE /* LoadViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadViewController.swift; sourceTree = "<group>"; };
@@ -170,6 +172,8 @@
 				BD79DE571D9444AE00C49BD4 /* asphalt.jpg */,
 				93F567781D91231C008064B8 /* badge.png */,
 				93F567791D91231C008064B8 /* blackscreen.bmp */,
+				A53184BD1D98902500CB0F70 /* Menu.png */,
+				A53184BF1D9890BB00CB0F70 /* Menu.png */,
 				BD736AC31D97318E001E7733 /* Block Objects */,
 				A5679D451D9623F9000E3DDE /* bottomScreen.png */,
 				9324A6F21D975FDC00ECF083 /* catch.png */,
@@ -180,7 +184,6 @@
 				93F5677B1D91231C008064B8 /* logot.png */,
 				BD79DE5B1D944F0500C49BD4 /* mag50x50.png */,
 				BD79DE511D9440D200C49BD4 /* make-it-chalk-line.png */,
-				BDAFF2981D987D1C0064BAF5 /* Menu.jpg */,
 				BDAFF2991D987D1C0064BAF5 /* Menuscreen.jpg */,
 				93F5677C1D91231C008064B8 /* options.png */,
 				93F5677D1D91231C008064B8 /* play button.png */,
@@ -374,12 +377,13 @@
 				BD736AC51D9731A6001E7733 /* 817_NYS-impala.png in Resources */,
 				BDAFF29B1D987D1C0064BAF5 /* Menuscreen.jpg in Resources */,
 				BD736AC71D97322A001E7733 /* 752_ricks_police_car.png in Resources */,
-				BDAFF29A1D987D1C0064BAF5 /* Menu.jpg in Resources */,
 				BDF9BB951D81D19A00403F55 /* Assets.xcassets in Resources */,
 				93F567801D91231C008064B8 /* badge.png in Resources */,
 				BD79DE5C1D944F0500C49BD4 /* mag50x50.png in Resources */,
 				BD79DE521D9440D200C49BD4 /* make-it-chalk-line.png in Resources */,
 				BDE536651D89B78C00514723 /* green_panel.png in Resources */,
+				A53184BE1D98902500CB0F70 /* Menu.png in Resources */,
+				A53184C01D9890BB00CB0F70 /* Menu.png in Resources */,
 				93F567871D91231C008064B8 /* userguide.png in Resources */,
 				BD79DE561D94440A00C49BD4 /* vertical-make-it-chalk.png in Resources */,
 				BDF9BB931D81D19A00403F55 /* Main.storyboard in Resources */,
