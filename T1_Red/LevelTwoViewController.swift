@@ -1393,10 +1393,19 @@ class LevelTwoViewController: UIViewController {
     }
     
     func Quit(){
-        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
-        // Change the identifier to the correct identifier of the viewcontroller on the storyboard and change the viewcontroller to the correct view controller
-        let resultViewController = storyBoard.instantiateViewController(withIdentifier: "MenuID") as! ViewController
-        self.present(resultViewController, animated:true, completion:nil)
+        let alertController1 = UIAlertController(title: "Quit", message: "Are You Sure?", preferredStyle: .alert)
+        let No = UIAlertAction(title: "No", style: .destructive){
+            (result : UIAlertAction)in debugPrint("No")
+        }
+        alertController1.addAction(UIAlertAction(title:"Yes", style: .default, handler: {action in
+            let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+            // Change the identifier to the correct identifier of the viewcontroller on the storyboard and change the viewcontroller to the correct view controller
+            let resultViewController = storyBoard.instantiateViewController(withIdentifier: "MenuID") as! ViewController
+            self.present(resultViewController, animated:true, completion:nil)
+            
+        }))
+        alertController1.addAction(No)
+        self.present(alertController1,animated: true,completion: nil)
     }
     
     
