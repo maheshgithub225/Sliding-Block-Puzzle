@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9324A6F31D975FDC00ECF083 /* catch.png in Resources */ = {isa = PBXBuildFile; fileRef = 9324A6F21D975FDC00ECF083 /* catch.png */; };
+		9324A6F61D9761C900ECF083 /* loudgun.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9324A6F51D9761C900ECF083 /* loudgun.mp3 */; };
 		93F567801D91231C008064B8 /* badge.png in Resources */ = {isa = PBXBuildFile; fileRef = 93F567781D91231C008064B8 /* badge.png */; };
 		93F567811D91231C008064B8 /* blackscreen.bmp in Resources */ = {isa = PBXBuildFile; fileRef = 93F567791D91231C008064B8 /* blackscreen.bmp */; };
 		93F567821D91231C008064B8 /* cs1cropped.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 93F5677A1D91231C008064B8 /* cs1cropped.jpg */; };
@@ -63,6 +65,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9324A6F21D975FDC00ECF083 /* catch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = catch.png; sourceTree = "<group>"; };
+		9324A6F51D9761C900ECF083 /* loudgun.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = loudgun.mp3; sourceTree = "<group>"; };
 		93F567781D91231C008064B8 /* badge.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = badge.png; sourceTree = "<group>"; };
 		93F567791D91231C008064B8 /* blackscreen.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; path = blackscreen.bmp; sourceTree = "<group>"; };
 		93F5677A1D91231C008064B8 /* cs1cropped.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cs1cropped.jpg; sourceTree = "<group>"; };
@@ -132,6 +136,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9324A6F41D97608400ECF083 /* sounds */ = {
+			isa = PBXGroup;
+			children = (
+				9324A6F51D9761C900ECF083 /* loudgun.mp3 */,
+			);
+			name = sounds;
+			sourceTree = "<group>";
+		};
 		BD736AC31D97318E001E7733 /* Block Objects */ = {
 			isa = PBXGroup;
 			children = (
@@ -147,6 +159,7 @@
 				BD736AC31D97318E001E7733 /* Block Objects */,
 				A5679D431D9622B7000E3DDE /* Screen Shot 2016-09-23 at 9.55.10 PM.png */,
 				A57F18301D94929500B941D4 /* cs3.jpg */,
+				9324A6F21D975FDC00ECF083 /* catch.png */,
 				A5679D451D9623F9000E3DDE /* bottomScreen.png */,
 				BD79DE5B1D944F0500C49BD4 /* mag50x50.png */,
 				A57F18321D9493A700B941D4 /* Screen Shot 2016-09-22 at 5.32.44 PM.png */,
@@ -192,6 +205,7 @@
 		BDF9BB8C1D81D19A00403F55 /* T1_Red */ = {
 			isa = PBXGroup;
 			children = (
+				9324A6F41D97608400ECF083 /* sounds */,
 				BD7545E01D8881A900CB2082 /* Images */,
 				BDF9BB8D1D81D19A00403F55 /* AppDelegate.swift */,
 				93F567881D912355008064B8 /* Splash.swift */,
@@ -353,6 +367,7 @@
 				BD79DE561D94440A00C49BD4 /* vertical-make-it-chalk.png in Resources */,
 				BDF9BB931D81D19A00403F55 /* Main.storyboard in Resources */,
 				93F567811D91231C008064B8 /* blackscreen.bmp in Resources */,
+				9324A6F61D9761C900ECF083 /* loudgun.mp3 in Resources */,
 				A57F18351D94B06000B941D4 /* CrimeScene.png in Resources */,
 				A57F18311D94929500B941D4 /* cs3.jpg in Resources */,
 				A5BBD1461D9433DC0069301A /* splash screen pic.png in Resources */,
@@ -360,6 +375,7 @@
 				A5679D461D9623F9000E3DDE /* bottomScreen.png in Resources */,
 				A57F183B1D94B28200B941D4 /* Screen Shot 2016-09-22 at 7.42.41 PM.png in Resources */,
 				BD79DE581D9444AE00C49BD4 /* asphalt.jpg in Resources */,
+				9324A6F31D975FDC00ECF083 /* catch.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11185.3" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Hdj-2h-Sr1">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11198.2" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Hdj-2h-Sr1">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11151.4"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -15,7 +15,7 @@
                         <viewControllerLayoutGuide type="bottom" id="lMa-H2-ACg"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Uag-Sp-tuo" customClass="load" customModule="T1_Red" customModuleProvider="target">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -36,30 +36,30 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" customClass="Splash" customModule="T1_Red" customModuleProvider="target">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Screen Shot 2016-09-22 at 5.32.44 PM.png" translatesAutoresizingMaskIntoConstraints="NO" id="9Hb-wE-SOj">
-                                <frame key="frameInset" width="414" height="736"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EC7-Ds-fxk">
+                                <frame key="frameInset" minY="398" width="131" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EC7-Ds-fxk">
-                                <frame key="frameInset" minX="7" minY="414" width="145" height="40"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="catch.png"/>
                                 <connections>
+                                    <action selector="catcha:" destination="BYZ-38-t0r" eventType="touchDown" id="50u-is-dwZ"/>
                                     <segue destination="vm9-XB-sXt" kind="showDetail" id="S6Z-Gv-N7S"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QKR-y9-aPa">
-                                <frame key="frameInset" minX="7" minY="490" width="154" height="42"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QKR-y9-aPa">
+                                <frame key="frameInset" minX="-6" minY="458" width="213" height="152"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="userguide.png"/>
                                 <connections>
                                     <segue destination="yUj-Hz-eFA" kind="showDetail" id="pJ0-vX-Uvj"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1O5-uP-ILa">
-                                <frame key="frameInset" minX="7" minY="563" width="154" height="44"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1O5-uP-ILa">
+                                <frame key="frameInset" minX="-6" minY="509" width="137" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="options.png"/>
                                 <connections>
                                     <segue destination="uRz-KR-Kah" kind="showDetail" id="P13-mQ-ftz"/>
                                 </connections>
@@ -71,6 +71,9 @@
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="blackOpaque"/>
                     <nil key="simulatedTopBarMetrics"/>
                     <nil key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="catchme" destination="EC7-Ds-fxk" id="fE5-3z-hmb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -85,7 +88,7 @@
                         <viewControllerLayoutGuide type="bottom" id="M5U-hC-EBW"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="0pR-JU-Mp1">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Dhd-5V-GwS">
@@ -216,7 +219,7 @@
                         <viewControllerLayoutGuide type="bottom" id="1PC-nT-9XS"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="bcZ-3J-xb3">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="blackscreen.bmp" translatesAutoresizingMaskIntoConstraints="NO" id="cIA-gJ-W8i">
@@ -365,7 +368,7 @@
                         <viewControllerLayoutGuide type="bottom" id="eX8-x9-zKt"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="k5s-KE-jf9">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="blackscreen.bmp" translatesAutoresizingMaskIntoConstraints="NO" id="jG0-Yr-QOQ">
@@ -533,7 +536,7 @@
                         <viewControllerLayoutGuide type="bottom" id="fbH-Vg-oG5"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="S9Z-rH-EQr">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="X9y-Im-NO0">
@@ -552,11 +555,13 @@
     <resources>
         <image name="752_ricks_police_car.png" width="921" height="442"/>
         <image name="CrimeScene.png" width="600" height="64"/>
-        <image name="Screen Shot 2016-09-22 at 5.32.44 PM.png" width="828" height="1474"/>
         <image name="Screen Shot 2016-09-22 at 7.42.41 PM.png" width="110" height="1382"/>
         <image name="Screen Shot 2016-09-23 at 9.55.10 PM.png" width="826" height="308"/>
         <image name="badge.png" width="271" height="255"/>
         <image name="blackscreen.bmp" width="608" height="578"/>
         <image name="bottomScreen.png" width="598" height="322"/>
+        <image name="catch.png" width="131" height="36"/>
+        <image name="options.png" width="137" height="50"/>
+        <image name="userguide.png" width="213" height="152"/>
     </resources>
 </document>

@@ -34,8 +34,8 @@ override func draw(_ rect: CGRect) {
     guard UIGraphicsGetCurrentContext() != nil else {return}
     
     //310-320, 510-550    2.97      2
-    let p = CGRect(x:0,y:0,width:capture.size.width/1.1,height:capture.size.height*1.38)
-   let ptwo = CGRect(x:50,y:0,width:(capture.size.width),height:capturetwo.size.height/1.73)
+    let p = CGRect(x:0,y:0,width:capture.size.width*1.123,height:capture.size.height*1.8)
+    let ptwo = CGRect(x:100,y:0,width:(capture.size.width),height:capturetwo.size.height/1.73)
 
    
     capture.draw(in: p)

@@ -141,14 +141,14 @@ class LevelOneViewController: UIViewController {
         animator = UIDynamicAnimator(referenceView: view)
         collision = UICollisionBehavior(items: [playerBlock,puzzleBlockVertical,puzzleBlockHorizontal])
         collision.translatesReferenceBoundsIntoBoundary = true
-        collision.addBoundary(withIdentifier: "barrierUpper", for: UIBezierPath(rect: barrierUpper.frame))
-        collision.addBoundary(withIdentifier: "barrierLeft", for: UIBezierPath(rect: barrierLeft.frame))
-        collision.addBoundary(withIdentifier: "barrierUpperRight", for: UIBezierPath(rect: barrierUpperRight.frame))
-        collision.addBoundary(withIdentifier: "barrierLowerRight", for: UIBezierPath(rect: barrierLowerRight.frame))
-        collision.addBoundary(withIdentifier: "barrierLower", for: UIBezierPath(rect: barrierLower.frame))
-        collision.addBoundary(withIdentifier: "puzzleBlockVertical", for: UIBezierPath(rect: puzzleBlockVertical.frame))
-        collision.addBoundary(withIdentifier: "puzzleBlockHorizontal", for: UIBezierPath(rect: puzzleBlockHorizontal.frame))
-        collision.addBoundary(withIdentifier: "puzzleBlockOrange", for: UIBezierPath(rect: puzzleBlockOrange.frame))
+        collision.addBoundary(withIdentifier: "barrierUpper" as NSCopying, for: UIBezierPath(rect: barrierUpper.frame))
+        collision.addBoundary(withIdentifier: "barrierLeft" as NSCopying, for: UIBezierPath(rect: barrierLeft.frame))
+        collision.addBoundary(withIdentifier: "barrierUpperRight" as NSCopying, for: UIBezierPath(rect: barrierUpperRight.frame))
+        collision.addBoundary(withIdentifier: "barrierLowerRight" as NSCopying, for: UIBezierPath(rect: barrierLowerRight.frame))
+        collision.addBoundary(withIdentifier: "barrierLower" as NSCopying, for: UIBezierPath(rect: barrierLower.frame))
+        collision.addBoundary(withIdentifier: "puzzleBlockVertical" as NSCopying, for: UIBezierPath(rect: puzzleBlockVertical.frame))
+        collision.addBoundary(withIdentifier: "puzzleBlockHorizontal" as NSCopying, for: UIBezierPath(rect: puzzleBlockHorizontal.frame))
+        collision.addBoundary(withIdentifier: "puzzleBlockOrange" as NSCopying, for: UIBezierPath(rect: puzzleBlockOrange.frame))
         animator.addBehavior(collision)
         
         // Buttons
