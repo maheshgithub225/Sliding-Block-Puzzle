@@ -15,6 +15,11 @@ class EndingViewController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
+    @IBOutlet weak var ImageFinal: UIImageView!
+    @IBAction func buttonImage(_ sender: AnyObject) {
+        ImageFinal.image = #imageLiteral(resourceName: "perp.png")
+        sender.setTitle(" ", for: UIControlState.normal)
+    }
  
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

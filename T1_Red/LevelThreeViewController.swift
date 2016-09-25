@@ -471,7 +471,7 @@ class LevelThreeViewController: UIViewController {
                     alertController.addAction(UIAlertAction(title:"Final Clue", style: .default, handler: {action in
                         let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
                         // Change the identifier to the correct identifier of the viewcontroller on the storyboard and change the viewcontroller to the correct view controller
-                        let resultViewController = storyBoard.instantiateViewController(withIdentifier: "LastView") as! LevelTwoViewController
+                        let resultViewController = storyBoard.instantiateViewController(withIdentifier: "LastView") as! EndingViewController
                         self.present(resultViewController, animated:true, completion:nil)
                     }))
                     alertController.addAction(UIAlertAction(title:"Menu", style: .default, handler: {action in
