@@ -217,6 +217,7 @@ class LevelTwoViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+
     
     @IBAction func didPlayerBlockPan1(_ sender: UIPanGestureRecognizer) {
         //var point = sender.location(in: view)
@@ -387,6 +388,9 @@ class LevelTwoViewController: UIViewController {
                 timeArrSec.append(timeScoreSec.last!)
                 lastTime = elapsedTime
                 
+                
+                player.setScore(scoreVal: 2, points: LevelTwoScore)
+                player.setTime(timeVal: 2, time: lastTime)
                 
                 self.present(alertController, animated: true, completion: nil)
             }else{
