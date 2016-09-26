@@ -39,7 +39,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Menu.png" translatesAutoresizingMaskIntoConstraints="NO" id="U49-d8-nFg">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="MenuFinal.png" translatesAutoresizingMaskIntoConstraints="NO" id="U49-d8-nFg">
                                 <frame key="frameInset" width="414" height="736"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -64,12 +64,26 @@
                                     <segue destination="RzL-LU-X2L" kind="show" id="eGg-RV-ebV"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nId-XG-hrO">
+                                <frame key="frameInset" minX="245" minY="259" width="162" height="43"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <segue destination="vm9-XB-sXt" kind="showDetail" id="Ofs-Je-SkK"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rd2-5r-ekR">
+                                <frame key="frameInset" minX="245" minY="337" width="162" height="43"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <segue destination="4Tp-PL-Op2" kind="showDetail" id="NMR-4a-QrN"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
                     </view>
                     <navigationItem key="navigationItem" id="yLS-Dn-R12"/>
-                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="blackOpaque"/>
+                    <nil key="simulatedStatusBarMetrics"/>
                     <nil key="simulatedTopBarMetrics"/>
                     <nil key="simulatedBottomBarMetrics"/>
                 </viewController>
@@ -711,9 +725,10 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AJ7-GO-4Dx">
-                                <frame key="frameInset" minX="269" minY="679" width="125" height="30"/>
+                                <frame key="frameInset" minX="129" minY="673" width="164" height="48"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Return to Menu">
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="20"/>
+                                <state key="normal" title="Return To Menu">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -735,7 +750,7 @@
     <resources>
         <image name="752_ricks_police_car.png" width="921" height="442"/>
         <image name="CrimeScene.png" width="600" height="64"/>
-        <image name="Menu.png" width="822" height="1470"/>
+        <image name="MenuFinal.png" width="824" height="1468"/>
         <image name="Screen Shot 2016-09-22 at 7.42.41 PM.png" width="110" height="1382"/>
         <image name="Screen Shot 2016-09-23 at 9.55.10 PM.png" width="826" height="308"/>
         <image name="badge.png" width="271" height="255"/>
@@ -745,6 +760,8 @@
         <image name="eagle top view.png" width="3362" height="1274"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Wzn-rK-cFa"/>
+        <segue reference="3IH-N9-yRi"/>
+        <segue reference="e2k-6u-nez"/>
+        <segue reference="n3M-Li-yWv"/>
     </inferredMetricsTieBreakers>
 </document>
