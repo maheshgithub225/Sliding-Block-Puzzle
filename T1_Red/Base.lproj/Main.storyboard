@@ -711,9 +711,11 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AJ7-GO-4Dx">
-                                <frame key="frameInset" minX="32" minY="124" width="125" height="30"/>
+                                <frame key="frameInset" minX="269" minY="679" width="125" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Return to Menu"/>
+                                <state key="normal" title="Return to Menu">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                                 <connections>
                                     <segue destination="BYZ-38-t0r" kind="show" id="3IH-N9-yRi"/>
                                 </connections>
@@ -743,6 +745,6 @@
         <image name="eagle top view.png" width="3362" height="1274"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="3IH-N9-yRi"/>
+        <segue reference="Wzn-rK-cFa"/>
     </inferredMetricsTieBreakers>
 </document>
