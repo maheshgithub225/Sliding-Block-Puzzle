@@ -14,6 +14,13 @@ class EndingViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        let score = player.getScore(scoreVal: 1) + player.getScore(scoreVal: 2) + player.getScore(scoreVal: 3)
+        total.text = "Score \(score)"
+        
+        
+        
+        
     }
     @IBOutlet weak var ImageFinal: UIImageView!
     @IBAction func buttonImage(_ sender: AnyObject) {
@@ -25,6 +32,14 @@ class EndingViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    
+    @IBOutlet weak var total: UILabel!
+    
+    
+    
+    
+    
     
 
     /*
