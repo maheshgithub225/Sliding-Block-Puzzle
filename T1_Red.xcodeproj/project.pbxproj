@@ -25,7 +25,7 @@
 		A57F183B1D94B28200B941D4 /* Screen Shot 2016-09-22 at 7.42.41 PM.png in Resources */ = {isa = PBXBuildFile; fileRef = A57F183A1D94B28200B941D4 /* Screen Shot 2016-09-22 at 7.42.41 PM.png */; };
 		A5CDE6C71D99B342004D2BBF /* eagle top view.png in Resources */ = {isa = PBXBuildFile; fileRef = A5CDE6C51D99B342004D2BBF /* eagle top view.png */; };
 		A5CDE6C81D99B342004D2BBF /* eagle side.png in Resources */ = {isa = PBXBuildFile; fileRef = A5CDE6C61D99B342004D2BBF /* eagle side.png */; };
-		A5CDE7151D99DCDD004D2BBF /* MenuFinal.png in Resources */ = {isa = PBXBuildFile; fileRef = A5CDE7141D99DCDD004D2BBF /* MenuFinal.png */; };
+		A5CDE7171D99E08C004D2BBF /* MenuFinal1.png in Resources */ = {isa = PBXBuildFile; fileRef = A5CDE7161D99E08C004D2BBF /* MenuFinal1.png */; };
 		BD07BF651D99C8BF0088411C /* lowerguncock.wav in Resources */ = {isa = PBXBuildFile; fileRef = BD07BF611D99C8BF0088411C /* lowerguncock.wav */; };
 		BD07BF661D99C8BF0088411C /* quick_gun-shot.wav in Resources */ = {isa = PBXBuildFile; fileRef = BD07BF621D99C8BF0088411C /* quick_gun-shot.wav */; };
 		BD07BF681D99C8BF0088411C /* retro crime music.wav in Resources */ = {isa = PBXBuildFile; fileRef = BD07BF641D99C8BF0088411C /* retro crime music.wav */; };
@@ -83,7 +83,7 @@
 		A57F183A1D94B28200B941D4 /* Screen Shot 2016-09-22 at 7.42.41 PM.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Screen Shot 2016-09-22 at 7.42.41 PM.png"; sourceTree = "<group>"; };
 		A5CDE6C51D99B342004D2BBF /* eagle top view.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "eagle top view.png"; sourceTree = "<group>"; };
 		A5CDE6C61D99B342004D2BBF /* eagle side.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "eagle side.png"; sourceTree = "<group>"; };
-		A5CDE7141D99DCDD004D2BBF /* MenuFinal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MenuFinal.png; sourceTree = "<group>"; };
+		A5CDE7161D99E08C004D2BBF /* MenuFinal1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MenuFinal1.png; sourceTree = "<group>"; };
 		BD07BF611D99C8BF0088411C /* lowerguncock.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = lowerguncock.wav; sourceTree = "<group>"; };
 		BD07BF621D99C8BF0088411C /* quick_gun-shot.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "quick_gun-shot.wav"; sourceTree = "<group>"; };
 		BD07BF641D99C8BF0088411C /* retro crime music.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "retro crime music.wav"; sourceTree = "<group>"; };
@@ -160,7 +160,7 @@
 		BD7545E01D8881A900CB2082 /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				A5CDE7141D99DCDD004D2BBF /* MenuFinal.png */,
+				A5CDE7161D99E08C004D2BBF /* MenuFinal1.png */,
 				A5CDE6C51D99B342004D2BBF /* eagle top view.png */,
 				A5CDE6C61D99B342004D2BBF /* eagle side.png */,
 				A53184BB1D9889EF00CB0F70 /* perp.png */,
@@ -351,9 +351,9 @@
 			files = (
 				93F567831D91231C008064B8 /* logot.png in Resources */,
 				A5679D441D9622B7000E3DDE /* Screen Shot 2016-09-23 at 9.55.10 PM.png in Resources */,
+				A5CDE7171D99E08C004D2BBF /* MenuFinal1.png in Resources */,
 				93F567841D91231C008064B8 /* options.png in Resources */,
 				A5CDE6C81D99B342004D2BBF /* eagle side.png in Resources */,
-				A5CDE7151D99DCDD004D2BBF /* MenuFinal.png in Resources */,
 				BD07BF651D99C8BF0088411C /* lowerguncock.wav in Resources */,
 				BDF9BB981D81D19A00403F55 /* LaunchScreen.storyboard in Resources */,
 				BD736AC51D9731A6001E7733 /* 817_NYS-impala.png in Resources */,
