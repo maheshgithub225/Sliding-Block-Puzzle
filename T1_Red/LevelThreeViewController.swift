@@ -487,8 +487,16 @@ class LevelThreeViewController: UIViewController {
                 }else if(exitBlock.frame.intersects(playerBlock.frame)){
                     sender.isEnabled = false
                     sender.isEnabled = true
+                    
+                    
+                    timer.invalidate()
+                    timeArrMin.append(timeScoreMin.last!)
+                    timeArrSec.append(timeScoreSec.last!)
+                    lastTime = elapsedTime
+                    
                     player.setScore(scoreVal: 3, points: LevelThreeScore)
-                    player.setTime(timeVal: 3, time: lastTime)
+                    player.setTime(timeVal:3,time:lastTime)
+                    
                     alertController.addAction(UIAlertAction(title:"Final Clue", style: .default, handler: {action in
                         let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
                         // Change the identifier to the correct identifier of the viewcontroller on the storyboard and change the viewcontroller to the correct view controller

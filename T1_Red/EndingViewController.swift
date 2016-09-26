@@ -14,9 +14,37 @@ class EndingViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        var timeBonus = 0
+        if(Int(player.getTime(timeVal: 1)/60.0) <= 5){
+            timeBonus = 5 - Int(player.getTime(timeVal: 1)/60.0)
+        }
+        if(Int(player.getTime(timeVal: 2)/60.0) <= 5){
+            timeBonus = 5 - Int(player.getTime(timeVal: 2)/60.0)
+        }
+        if(Int(player.getTime(timeVal: 3)/60.0) <= 5){
+            timeBonus = 5 - Int(player.getTime(timeVal: 3)/60.0)
+        }
         
-        let score = player.getScore(scoreVal: 1) + player.getScore(scoreVal: 2) + player.getScore(scoreVal: 3)
-        total.text = "Score \(score)"
+        var scoreWithPar = 0
+        if((1000 + (4 - Int(player.getScore(scoreVal: 1)))) > 0){
+            scoreWithPar = scoreWithPar + (1000 + (4 - Int(player.getScore(scoreVal: 1))))
+        }else{
+            scoreWithPar = 0
+        }
+        if((1000 + (6 - Int(player.getScore(scoreVal: 2)))) > 0){
+            scoreWithPar = scoreWithPar + (1000 + (6 - Int(player.getScore(scoreVal: 2))))
+        }else{
+            scoreWithPar = scoreWithPar + 0
+        }
+        if((1000 + (9 - Int(player.getScore(scoreVal: 3)))) > 0){
+            scoreWithPar = scoreWithPar + (1000 + (9 - Int(player.getScore(scoreVal: 3))))
+        }else{
+            scoreWithPar = scoreWithPar + 0
+        }
+        
+        
+        let score = scoreWithPar + Int64(timeBonus)
+        total.text = "Score:  \(score)"
         
         
         
