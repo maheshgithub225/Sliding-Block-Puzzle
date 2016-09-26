@@ -15,7 +15,7 @@
                         <viewControllerLayoutGuide type="bottom" id="lMa-H2-ACg"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Uag-Sp-tuo" customClass="load" customModule="T1_Red" customModuleProvider="target">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -36,7 +36,7 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" customClass="Splash" customModule="T1_Red" customModuleProvider="target">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="MenuFinal1.png" translatesAutoresizingMaskIntoConstraints="NO" id="U49-d8-nFg">
@@ -78,13 +78,12 @@
                                     <segue destination="4Tp-PL-Op2" kind="showDetail" id="NMR-4a-QrN"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="krZ-Ec-BUh">
-                                <frame key="frameInset" minX="106" minY="419" width="162" height="43"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Developed by Team Red" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6HO-42-7M8">
+                                <frame key="frameInset" minX="8" minY="686" width="174" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <connections>
-                                    <segue destination="uRz-KR-Kah" kind="show" id="Uji-mp-8a2"/>
-                                </connections>
-                            </button>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
@@ -107,7 +106,7 @@
                         <viewControllerLayoutGuide type="bottom" id="ivD-Fn-SLm"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="AYZ-Ho-UHw" customClass="Splash" customModule="T1_Red" customModuleProvider="target">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" alpha="0.65000000000000002" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="45c-pa-sYv">
@@ -224,7 +223,7 @@
                         <viewControllerLayoutGuide type="bottom" id="M5U-hC-EBW"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="0pR-JU-Mp1">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Dhd-5V-GwS">
@@ -355,7 +354,7 @@
                         <viewControllerLayoutGuide type="bottom" id="1PC-nT-9XS"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="bcZ-3J-xb3">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="blackscreen.bmp" translatesAutoresizingMaskIntoConstraints="NO" id="cIA-gJ-W8i">
@@ -504,7 +503,7 @@
                         <viewControllerLayoutGuide type="bottom" id="eX8-x9-zKt"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="k5s-KE-jf9">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="blackscreen.bmp" translatesAutoresizingMaskIntoConstraints="NO" id="jG0-Yr-QOQ">
@@ -672,7 +671,7 @@
                         <viewControllerLayoutGuide type="bottom" id="fbH-Vg-oG5"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="S9Z-rH-EQr">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rFK-Jw-IKP">
