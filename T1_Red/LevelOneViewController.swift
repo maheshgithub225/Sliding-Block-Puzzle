@@ -188,6 +188,8 @@ class LevelOneViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+
+    
     func pressed(sender: UIButton!) {
         let nextLevel =  super.self().storyboard?.instantiateViewController(withIdentifier: "Level2") as! ViewController
         super.self().present(nextLevel, animated: true, completion: nil)
@@ -325,7 +327,8 @@ class LevelOneViewController: UIViewController {
                 timeArrMin.append(timeScoreMin.last!)
                 timeArrSec.append(timeScoreSec.last!)
                 lastTime = elapsedTime
-                
+                player.setScore(scoreVal: 1, points: LevelOneScore)
+                player.setTime(timeVal: 1, time: lastTime)
                 alertController.addAction(UIAlertAction(title:"Next Clue", style: .default, handler: {action in
                     let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
                     // Change the identifier to the correct identifier of the viewcontroller on the storyboard and change the viewcontroller to the correct view controller
