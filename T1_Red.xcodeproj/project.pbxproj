@@ -12,44 +12,31 @@
 		9324A6F61D9761C900ECF083 /* loudgun.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9324A6F51D9761C900ECF083 /* loudgun.mp3 */; };
 		93F567801D91231C008064B8 /* badge.png in Resources */ = {isa = PBXBuildFile; fileRef = 93F567781D91231C008064B8 /* badge.png */; };
 		93F567811D91231C008064B8 /* blackscreen.bmp in Resources */ = {isa = PBXBuildFile; fileRef = 93F567791D91231C008064B8 /* blackscreen.bmp */; };
-		93F567821D91231C008064B8 /* cs1cropped.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 93F5677A1D91231C008064B8 /* cs1cropped.jpg */; };
 		93F567831D91231C008064B8 /* logot.png in Resources */ = {isa = PBXBuildFile; fileRef = 93F5677B1D91231C008064B8 /* logot.png */; };
 		93F567841D91231C008064B8 /* options.png in Resources */ = {isa = PBXBuildFile; fileRef = 93F5677C1D91231C008064B8 /* options.png */; };
-		93F567851D91231C008064B8 /* play button.png in Resources */ = {isa = PBXBuildFile; fileRef = 93F5677D1D91231C008064B8 /* play button.png */; };
 		93F567871D91231C008064B8 /* userguide.png in Resources */ = {isa = PBXBuildFile; fileRef = 93F5677F1D91231C008064B8 /* userguide.png */; };
 		93F567891D912355008064B8 /* Splash.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F567881D912355008064B8 /* Splash.swift */; };
 		93F5678B1D91235E008064B8 /* load.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F5678A1D91235E008064B8 /* load.swift */; };
 		A53184BC1D9889EF00CB0F70 /* perp.png in Resources */ = {isa = PBXBuildFile; fileRef = A53184BB1D9889EF00CB0F70 /* perp.png */; };
-		A53184BE1D98902500CB0F70 /* Menu.png in Resources */ = {isa = PBXBuildFile; fileRef = A53184BD1D98902500CB0F70 /* Menu.png */; };
-		A53184C01D9890BB00CB0F70 /* Menu.png in Resources */ = {isa = PBXBuildFile; fileRef = A53184BF1D9890BB00CB0F70 /* Menu.png */; };
 		A5679D441D9622B7000E3DDE /* Screen Shot 2016-09-23 at 9.55.10 PM.png in Resources */ = {isa = PBXBuildFile; fileRef = A5679D431D9622B7000E3DDE /* Screen Shot 2016-09-23 at 9.55.10 PM.png */; };
 		A5679D461D9623F9000E3DDE /* bottomScreen.png in Resources */ = {isa = PBXBuildFile; fileRef = A5679D451D9623F9000E3DDE /* bottomScreen.png */; };
 		A57F18311D94929500B941D4 /* cs3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A57F18301D94929500B941D4 /* cs3.jpg */; };
-		A57F18331D9493A700B941D4 /* Screen Shot 2016-09-22 at 5.32.44 PM.png in Resources */ = {isa = PBXBuildFile; fileRef = A57F18321D9493A700B941D4 /* Screen Shot 2016-09-22 at 5.32.44 PM.png */; };
 		A57F18351D94B06000B941D4 /* CrimeScene.png in Resources */ = {isa = PBXBuildFile; fileRef = A57F18341D94B06000B941D4 /* CrimeScene.png */; };
 		A57F183B1D94B28200B941D4 /* Screen Shot 2016-09-22 at 7.42.41 PM.png in Resources */ = {isa = PBXBuildFile; fileRef = A57F183A1D94B28200B941D4 /* Screen Shot 2016-09-22 at 7.42.41 PM.png */; };
-		A5BBD1461D9433DC0069301A /* splash screen pic.png in Resources */ = {isa = PBXBuildFile; fileRef = A5BBD1451D9433DC0069301A /* splash screen pic.png */; };
-		A5BBD1481D9439870069301A /* Screen Shot 2016-09-22 at 11.08.14 AM.png in Resources */ = {isa = PBXBuildFile; fileRef = A5BBD1471D9439870069301A /* Screen Shot 2016-09-22 at 11.08.14 AM.png */; };
 		A5CDE6C71D99B342004D2BBF /* eagle top view.png in Resources */ = {isa = PBXBuildFile; fileRef = A5CDE6C51D99B342004D2BBF /* eagle top view.png */; };
 		A5CDE6C81D99B342004D2BBF /* eagle side.png in Resources */ = {isa = PBXBuildFile; fileRef = A5CDE6C61D99B342004D2BBF /* eagle side.png */; };
-		A5CDE6CA1D99B683004D2BBF /* eaglesideview.png in Resources */ = {isa = PBXBuildFile; fileRef = A5CDE6C91D99B683004D2BBF /* eaglesideview.png */; };
+		A5CDE7151D99DCDD004D2BBF /* MenuFinal.png in Resources */ = {isa = PBXBuildFile; fileRef = A5CDE7141D99DCDD004D2BBF /* MenuFinal.png */; };
 		BD07BF651D99C8BF0088411C /* lowerguncock.wav in Resources */ = {isa = PBXBuildFile; fileRef = BD07BF611D99C8BF0088411C /* lowerguncock.wav */; };
 		BD07BF661D99C8BF0088411C /* quick_gun-shot.wav in Resources */ = {isa = PBXBuildFile; fileRef = BD07BF621D99C8BF0088411C /* quick_gun-shot.wav */; };
 		BD07BF681D99C8BF0088411C /* retro crime music.wav in Resources */ = {isa = PBXBuildFile; fileRef = BD07BF641D99C8BF0088411C /* retro crime music.wav */; };
 		BD07BF6A1D99CA7B0088411C /* rollover2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = BD07BF691D99CA7B0088411C /* rollover2.mp3 */; };
 		BD736AC51D9731A6001E7733 /* 817_NYS-impala.png in Resources */ = {isa = PBXBuildFile; fileRef = BD736AC41D9731A6001E7733 /* 817_NYS-impala.png */; };
 		BD736AC71D97322A001E7733 /* 752_ricks_police_car.png in Resources */ = {isa = PBXBuildFile; fileRef = BD736AC61D97322A001E7733 /* 752_ricks_police_car.png */; };
-		BD79DE521D9440D200C49BD4 /* make-it-chalk-line.png in Resources */ = {isa = PBXBuildFile; fileRef = BD79DE511D9440D200C49BD4 /* make-it-chalk-line.png */; };
-		BD79DE561D94440A00C49BD4 /* vertical-make-it-chalk.png in Resources */ = {isa = PBXBuildFile; fileRef = BD79DE551D94440A00C49BD4 /* vertical-make-it-chalk.png */; };
-		BD79DE581D9444AE00C49BD4 /* asphalt.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BD79DE571D9444AE00C49BD4 /* asphalt.jpg */; };
-		BD79DE5C1D944F0500C49BD4 /* mag50x50.png in Resources */ = {isa = PBXBuildFile; fileRef = BD79DE5B1D944F0500C49BD4 /* mag50x50.png */; };
 		BD97422D1D8B045C00830F1E /* LevelOneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD97422C1D8B045C00830F1E /* LevelOneViewController.swift */; };
 		BD99DAB31D8DFA670092C679 /* LevelTwoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD99DAB21D8DFA670092C679 /* LevelTwoViewController.swift */; };
 		BD99DAB51D8DFC620092C679 /* LevelThreeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD99DAB41D8DFC620092C679 /* LevelThreeViewController.swift */; };
 		BD99DAB71D8DFCB50092C679 /* EndingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD99DAB61D8DFCB50092C679 /* EndingViewController.swift */; };
 		BDAFF2971D986CDD0064BAF5 /* HowToViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDAFF2961D986CDD0064BAF5 /* HowToViewController.swift */; };
-		BDAFF29B1D987D1C0064BAF5 /* Menuscreen.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BDAFF2991D987D1C0064BAF5 /* Menuscreen.jpg */; };
-		BDE536651D89B78C00514723 /* green_panel.png in Resources */ = {isa = PBXBuildFile; fileRef = BDE536641D89B78C00514723 /* green_panel.png */; };
 		BDED7C921D919A9E00DBCFEE /* LoadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDED7C911D919A9E00DBCFEE /* LoadViewController.swift */; };
 		BDF9BB8E1D81D19A00403F55 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF9BB8D1D81D19A00403F55 /* AppDelegate.swift */; };
 		BDF9BB901D81D19A00403F55 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF9BB8F1D81D19A00403F55 /* ViewController.swift */; };
@@ -83,44 +70,31 @@
 		9324A6F51D9761C900ECF083 /* loudgun.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = loudgun.mp3; sourceTree = "<group>"; };
 		93F567781D91231C008064B8 /* badge.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = badge.png; sourceTree = "<group>"; };
 		93F567791D91231C008064B8 /* blackscreen.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; path = blackscreen.bmp; sourceTree = "<group>"; };
-		93F5677A1D91231C008064B8 /* cs1cropped.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cs1cropped.jpg; sourceTree = "<group>"; };
 		93F5677B1D91231C008064B8 /* logot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logot.png; sourceTree = "<group>"; };
 		93F5677C1D91231C008064B8 /* options.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = options.png; sourceTree = "<group>"; };
-		93F5677D1D91231C008064B8 /* play button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "play button.png"; sourceTree = "<group>"; };
 		93F5677F1D91231C008064B8 /* userguide.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = userguide.png; sourceTree = "<group>"; };
 		93F567881D912355008064B8 /* Splash.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Splash.swift; sourceTree = "<group>"; };
 		93F5678A1D91235E008064B8 /* load.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = load.swift; sourceTree = "<group>"; };
 		A53184BB1D9889EF00CB0F70 /* perp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = perp.png; sourceTree = "<group>"; };
-		A53184BD1D98902500CB0F70 /* Menu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Menu.png; sourceTree = "<group>"; };
-		A53184BF1D9890BB00CB0F70 /* Menu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Menu.png; sourceTree = "<group>"; };
 		A5679D431D9622B7000E3DDE /* Screen Shot 2016-09-23 at 9.55.10 PM.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Screen Shot 2016-09-23 at 9.55.10 PM.png"; sourceTree = "<group>"; };
 		A5679D451D9623F9000E3DDE /* bottomScreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bottomScreen.png; sourceTree = "<group>"; };
 		A57F18301D94929500B941D4 /* cs3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cs3.jpg; sourceTree = "<group>"; };
-		A57F18321D9493A700B941D4 /* Screen Shot 2016-09-22 at 5.32.44 PM.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Screen Shot 2016-09-22 at 5.32.44 PM.png"; sourceTree = "<group>"; };
 		A57F18341D94B06000B941D4 /* CrimeScene.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CrimeScene.png; sourceTree = "<group>"; };
 		A57F183A1D94B28200B941D4 /* Screen Shot 2016-09-22 at 7.42.41 PM.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Screen Shot 2016-09-22 at 7.42.41 PM.png"; sourceTree = "<group>"; };
-		A5BBD1451D9433DC0069301A /* splash screen pic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "splash screen pic.png"; sourceTree = "<group>"; };
-		A5BBD1471D9439870069301A /* Screen Shot 2016-09-22 at 11.08.14 AM.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Screen Shot 2016-09-22 at 11.08.14 AM.png"; sourceTree = "<group>"; };
 		A5CDE6C51D99B342004D2BBF /* eagle top view.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "eagle top view.png"; sourceTree = "<group>"; };
 		A5CDE6C61D99B342004D2BBF /* eagle side.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "eagle side.png"; sourceTree = "<group>"; };
-		A5CDE6C91D99B683004D2BBF /* eaglesideview.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = eaglesideview.png; sourceTree = "<group>"; };
+		A5CDE7141D99DCDD004D2BBF /* MenuFinal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MenuFinal.png; sourceTree = "<group>"; };
 		BD07BF611D99C8BF0088411C /* lowerguncock.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = lowerguncock.wav; sourceTree = "<group>"; };
 		BD07BF621D99C8BF0088411C /* quick_gun-shot.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "quick_gun-shot.wav"; sourceTree = "<group>"; };
 		BD07BF641D99C8BF0088411C /* retro crime music.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "retro crime music.wav"; sourceTree = "<group>"; };
 		BD07BF691D99CA7B0088411C /* rollover2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = rollover2.mp3; sourceTree = "<group>"; };
 		BD736AC41D9731A6001E7733 /* 817_NYS-impala.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "817_NYS-impala.png"; sourceTree = "<group>"; };
 		BD736AC61D97322A001E7733 /* 752_ricks_police_car.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 752_ricks_police_car.png; sourceTree = "<group>"; };
-		BD79DE511D9440D200C49BD4 /* make-it-chalk-line.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "make-it-chalk-line.png"; sourceTree = "<group>"; };
-		BD79DE551D94440A00C49BD4 /* vertical-make-it-chalk.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "vertical-make-it-chalk.png"; sourceTree = "<group>"; };
-		BD79DE571D9444AE00C49BD4 /* asphalt.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = asphalt.jpg; sourceTree = "<group>"; };
-		BD79DE5B1D944F0500C49BD4 /* mag50x50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mag50x50.png; sourceTree = "<group>"; };
 		BD97422C1D8B045C00830F1E /* LevelOneViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LevelOneViewController.swift; sourceTree = "<group>"; };
 		BD99DAB21D8DFA670092C679 /* LevelTwoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LevelTwoViewController.swift; sourceTree = "<group>"; };
 		BD99DAB41D8DFC620092C679 /* LevelThreeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LevelThreeViewController.swift; sourceTree = "<group>"; };
 		BD99DAB61D8DFCB50092C679 /* EndingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EndingViewController.swift; sourceTree = "<group>"; };
 		BDAFF2961D986CDD0064BAF5 /* HowToViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HowToViewController.swift; sourceTree = "<group>"; };
-		BDAFF2991D987D1C0064BAF5 /* Menuscreen.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Menuscreen.jpg; sourceTree = "<group>"; };
-		BDE536641D89B78C00514723 /* green_panel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = green_panel.png; sourceTree = "<group>"; };
 		BDED7C911D919A9E00DBCFEE /* LoadViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadViewController.swift; sourceTree = "<group>"; };
 		BDF9BB8A1D81D19A00403F55 /* T1_Red.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = T1_Red.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDF9BB8D1D81D19A00403F55 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -186,35 +160,22 @@
 		BD7545E01D8881A900CB2082 /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				A5CDE6C91D99B683004D2BBF /* eaglesideview.png */,
+				A5CDE7141D99DCDD004D2BBF /* MenuFinal.png */,
 				A5CDE6C51D99B342004D2BBF /* eagle top view.png */,
 				A5CDE6C61D99B342004D2BBF /* eagle side.png */,
 				A53184BB1D9889EF00CB0F70 /* perp.png */,
-				BD79DE571D9444AE00C49BD4 /* asphalt.jpg */,
 				93F567781D91231C008064B8 /* badge.png */,
 				93F567791D91231C008064B8 /* blackscreen.bmp */,
-				A53184BD1D98902500CB0F70 /* Menu.png */,
-				A53184BF1D9890BB00CB0F70 /* Menu.png */,
 				BD736AC31D97318E001E7733 /* Block Objects */,
 				A5679D451D9623F9000E3DDE /* bottomScreen.png */,
 				9324A6F21D975FDC00ECF083 /* catch.png */,
 				A57F18341D94B06000B941D4 /* CrimeScene.png */,
-				93F5677A1D91231C008064B8 /* cs1cropped.jpg */,
 				A57F18301D94929500B941D4 /* cs3.jpg */,
-				BDE536641D89B78C00514723 /* green_panel.png */,
 				93F5677B1D91231C008064B8 /* logot.png */,
-				BD79DE5B1D944F0500C49BD4 /* mag50x50.png */,
-				BD79DE511D9440D200C49BD4 /* make-it-chalk-line.png */,
-				BDAFF2991D987D1C0064BAF5 /* Menuscreen.jpg */,
 				93F5677C1D91231C008064B8 /* options.png */,
-				93F5677D1D91231C008064B8 /* play button.png */,
-				A57F18321D9493A700B941D4 /* Screen Shot 2016-09-22 at 5.32.44 PM.png */,
 				A57F183A1D94B28200B941D4 /* Screen Shot 2016-09-22 at 7.42.41 PM.png */,
-				A5BBD1471D9439870069301A /* Screen Shot 2016-09-22 at 11.08.14 AM.png */,
 				A5679D431D9622B7000E3DDE /* Screen Shot 2016-09-23 at 9.55.10 PM.png */,
-				A5BBD1451D9433DC0069301A /* splash screen pic.png */,
 				93F5677F1D91231C008064B8 /* userguide.png */,
-				BD79DE551D94440A00C49BD4 /* vertical-make-it-chalk.png */,
 			);
 			name = Images;
 			sourceTree = "<group>";
@@ -388,31 +349,21 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				93F567821D91231C008064B8 /* cs1cropped.jpg in Resources */,
 				93F567831D91231C008064B8 /* logot.png in Resources */,
 				A5679D441D9622B7000E3DDE /* Screen Shot 2016-09-23 at 9.55.10 PM.png in Resources */,
-				A5BBD1481D9439870069301A /* Screen Shot 2016-09-22 at 11.08.14 AM.png in Resources */,
-				93F567851D91231C008064B8 /* play button.png in Resources */,
 				93F567841D91231C008064B8 /* options.png in Resources */,
 				A5CDE6C81D99B342004D2BBF /* eagle side.png in Resources */,
+				A5CDE7151D99DCDD004D2BBF /* MenuFinal.png in Resources */,
 				BD07BF651D99C8BF0088411C /* lowerguncock.wav in Resources */,
 				BDF9BB981D81D19A00403F55 /* LaunchScreen.storyboard in Resources */,
 				BD736AC51D9731A6001E7733 /* 817_NYS-impala.png in Resources */,
-				BDAFF29B1D987D1C0064BAF5 /* Menuscreen.jpg in Resources */,
 				BD736AC71D97322A001E7733 /* 752_ricks_police_car.png in Resources */,
 				BDF9BB951D81D19A00403F55 /* Assets.xcassets in Resources */,
 				BD07BF681D99C8BF0088411C /* retro crime music.wav in Resources */,
 				93F567801D91231C008064B8 /* badge.png in Resources */,
 				BD07BF6A1D99CA7B0088411C /* rollover2.mp3 in Resources */,
-				BD79DE5C1D944F0500C49BD4 /* mag50x50.png in Resources */,
-				BD79DE521D9440D200C49BD4 /* make-it-chalk-line.png in Resources */,
 				A5CDE6C71D99B342004D2BBF /* eagle top view.png in Resources */,
-				BDE536651D89B78C00514723 /* green_panel.png in Resources */,
-				A53184BE1D98902500CB0F70 /* Menu.png in Resources */,
-				A53184C01D9890BB00CB0F70 /* Menu.png in Resources */,
 				93F567871D91231C008064B8 /* userguide.png in Resources */,
-				BD79DE561D94440A00C49BD4 /* vertical-make-it-chalk.png in Resources */,
-				A5CDE6CA1D99B683004D2BBF /* eaglesideview.png in Resources */,
 				BDF9BB931D81D19A00403F55 /* Main.storyboard in Resources */,
 				93F567811D91231C008064B8 /* blackscreen.bmp in Resources */,
 				9324A6F61D9761C900ECF083 /* loudgun.mp3 in Resources */,
@@ -420,11 +371,8 @@
 				A57F18351D94B06000B941D4 /* CrimeScene.png in Resources */,
 				A53184BC1D9889EF00CB0F70 /* perp.png in Resources */,
 				A57F18311D94929500B941D4 /* cs3.jpg in Resources */,
-				A5BBD1461D9433DC0069301A /* splash screen pic.png in Resources */,
-				A57F18331D9493A700B941D4 /* Screen Shot 2016-09-22 at 5.32.44 PM.png in Resources */,
 				A5679D461D9623F9000E3DDE /* bottomScreen.png in Resources */,
 				A57F183B1D94B28200B941D4 /* Screen Shot 2016-09-22 at 7.42.41 PM.png in Resources */,
-				BD79DE581D9444AE00C49BD4 /* asphalt.jpg in Resources */,
 				BD07BF661D99C8BF0088411C /* quick_gun-shot.wav in Resources */,
 				9324A6F31D975FDC00ECF083 /* catch.png in Resources */,
 			);
