@@ -94,10 +94,6 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                             </imageView>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="Screen Shot 2016-09-22 at 7.42.41 PM.png" translatesAutoresizingMaskIntoConstraints="NO" id="2kJ-Kn-OV6">
-                                <frame key="frameInset" width="18" height="736"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                            </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="User’s Guide Background " borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8Ui-bp-Ufe">
                                 <frame key="frameInset" minX="26" minY="69" width="362" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -145,11 +141,6 @@
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="Screen Shot 2016-09-22 at 7.42.41 PM.png" translatesAutoresizingMaskIntoConstraints="NO" id="cP4-r4-VLV">
-                                <frame key="frameInset" minX="396" width="18" height="736"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <rect key="contentStretch" x="1" y="1" width="1" height="1"/>
-                            </imageView>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" fixedFrame="YES" image="CrimeScene.png" translatesAutoresizingMaskIntoConstraints="NO" id="DGt-ZL-WD9">
                                 <frame key="frameInset" minY="-10" width="414" height="59"/>
                                 <autoresizingMask key="autoresizingMask"/>
@@ -169,6 +160,30 @@
                                     <segue destination="BYZ-38-t0r" kind="show" id="Wzn-rK-cFa"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Screen Shot 2016-09-22 at 7.42.41 PM.png" translatesAutoresizingMaskIntoConstraints="NO" id="Cc5-ft-KBY">
+                                <frame key="frameInset" minY="41" width="18" height="215"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Screen Shot 2016-09-22 at 7.42.41 PM.png" translatesAutoresizingMaskIntoConstraints="NO" id="hOU-sl-e3e">
+                                <frame key="frameInset" minY="255" width="18" height="218"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Screen Shot 2016-09-22 at 7.42.41 PM.png" translatesAutoresizingMaskIntoConstraints="NO" id="bXh-v2-Rl0">
+                                <frame key="frameInset" minY="472" width="18" height="222"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Screen Shot 2016-09-22 at 7.42.41 PM.png" translatesAutoresizingMaskIntoConstraints="NO" id="kcn-dH-Rbj">
+                                <frame key="frameInset" minX="396" minY="40" width="18" height="215"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Screen Shot 2016-09-22 at 7.42.41 PM.png" translatesAutoresizingMaskIntoConstraints="NO" id="jeH-tS-2WG">
+                                <frame key="frameInset" minX="396" minY="254" width="18" height="218"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Screen Shot 2016-09-22 at 7.42.41 PM.png" translatesAutoresizingMaskIntoConstraints="NO" id="Keu-7y-GqK">
+                                <frame key="frameInset" minX="396" minY="471" width="18" height="222"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -177,7 +192,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="m8v-Rf-JMb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-658" y="754"/>
+            <point key="canvasLocation" x="-659.4202898550725" y="753.26086956521749"/>
         </scene>
         <!--Level One View Controller-->
         <scene sceneID="hvt-Qf-SJx">
@@ -191,12 +206,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Dhd-5V-GwS">
-                                <frame key="frameInset" minX="239" minY="207" width="155" height="50"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="eagle top view.png" translatesAutoresizingMaskIntoConstraints="NO" id="Dhd-5V-GwS">
+                                <frame key="frameInset" minX="239" minY="207" width="155" height="47"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.87690199609999997" green="0.15237322680000001" blue="0.085564566149999993" alpha="1" colorSpace="calibratedRGB"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Vm5-Sq-Lbe">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="eagle side.png" translatesAutoresizingMaskIntoConstraints="NO" id="Vm5-Sq-Lbe">
                                 <frame key="frameInset" minX="115" minY="207" width="49" height="169"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.79339823300000001" green="0.77518856079999998" blue="0.53476831449999995" alpha="1" colorSpace="calibratedRGB"/>
@@ -207,7 +222,7 @@
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="tintColor" red="0.13121309880000001" green="0.63162715520000001" blue="0.88951051260000003" alpha="1" colorSpace="calibratedRGB"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="i7m-aM-iV6">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="eagle side.png" translatesAutoresizingMaskIntoConstraints="NO" id="i7m-aM-iV6">
                                 <frame key="frameInset" minX="273" minY="435" width="48" height="198"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.63475685370000001" green="0.69694862570000005" blue="0.26840156659999997" alpha="1" colorSpace="calibratedRGB"/>
@@ -346,13 +361,13 @@
                                 <frame key="frameInset" minX="402" minY="198" width="12" height="189"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tMn-vY-Bha">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="eagle side.png" translatesAutoresizingMaskIntoConstraints="NO" id="tMn-vY-Bha">
                                 <frame key="frameInset" minX="322" minY="319" width="48" height="148"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.63475685370000001" green="0.69694862570000005" blue="0.26840156659999997" alpha="1" colorSpace="calibratedRGB"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zrM-Qu-fZa">
-                                <frame key="frameInset" minX="104" minY="204" width="186" height="50"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="eagle top view.png" translatesAutoresizingMaskIntoConstraints="NO" id="zrM-Qu-fZa">
+                                <frame key="frameInset" minX="104" minY="204" width="186" height="49"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.87690199609999997" green="0.15237322680000001" blue="0.085564566149999993" alpha="1" colorSpace="calibratedRGB"/>
                             </imageView>
@@ -360,22 +375,22 @@
                                 <frame key="frameInset" minX="20" minY="398" width="83" height="46"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VnR-tz-FLq">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="eagle top view.png" translatesAutoresizingMaskIntoConstraints="NO" id="VnR-tz-FLq">
                                 <frame key="frameInset" minX="206" minY="499" width="164" height="48"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="w1d-ZG-eYs">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="eagle side.png" translatesAutoresizingMaskIntoConstraints="NO" id="w1d-ZG-eYs">
                                 <frame key="frameInset" minX="205" minY="279" width="48" height="188"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="0.61312330650000002" blue="0.15540080440000001" alpha="1" colorSpace="calibratedRGB"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qC9-9A-P2G">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="eagle side.png" translatesAutoresizingMaskIntoConstraints="NO" id="qC9-9A-P2G">
                                 <frame key="frameInset" minX="130" minY="277" width="48" height="157"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eLb-mv-Uel">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="eagle top view.png" translatesAutoresizingMaskIntoConstraints="NO" id="eLb-mv-Uel">
                                 <frame key="frameInset" minX="66" minY="576" width="177" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.79339823300000001" green="0.3639547521" blue="0.1072798083" alpha="1" colorSpace="calibratedRGB"/>
@@ -479,32 +494,27 @@
                                 <frame key="frameInset" minX="20" minY="391" width="92" height="46"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="daC-DN-uXy">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="eagle top view.png" translatesAutoresizingMaskIntoConstraints="NO" id="daC-DN-uXy">
                                 <frame key="frameInset" minX="152" minY="216" width="101" height="48"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JWf-kV-N6g">
-                                <frame key="frameInset" minX="346" minY="269" width="48" height="168"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.63475685370000001" green="0.69694862570000005" blue="0.26840156659999997" alpha="1" colorSpace="calibratedRGB"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ul4-vF-hG2">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="eagle side.png" translatesAutoresizingMaskIntoConstraints="NO" id="Ul4-vF-hG2">
                                 <frame key="frameInset" minX="192" minY="353" width="48" height="156"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.87690199609999997" green="0.15237322680000001" blue="0.085564566149999993" alpha="1" colorSpace="calibratedRGB"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TVy-qm-zWW">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="eagle top view.png" translatesAutoresizingMaskIntoConstraints="NO" id="TVy-qm-zWW">
                                 <frame key="frameInset" minX="136" minY="525" width="177" height="46"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.87690199609999997" green="0.15237322680000001" blue="0.085564566149999993" alpha="1" colorSpace="calibratedRGB"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="s3F-cd-9eo">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="eagle side.png" translatesAutoresizingMaskIntoConstraints="NO" id="s3F-cd-9eo">
                                 <frame key="frameInset" minX="20" minY="216" width="48" height="149"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XZc-eV-Z6S">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="eagle side.png" translatesAutoresizingMaskIntoConstraints="NO" id="XZc-eV-Z6S">
                                 <frame key="frameInset" minX="273" minY="269" width="48" height="130"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.79339823300000001" green="0.3639547521" blue="0.1072798083" alpha="1" colorSpace="calibratedRGB"/>
@@ -517,22 +527,22 @@
                                 <frame key="frameInset" minX="402" minY="198" width="12" height="189"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4aS-6D-2h2">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="eagle top view.png" translatesAutoresizingMaskIntoConstraints="NO" id="4aS-6D-2h2">
                                 <frame key="frameInset" minX="152" minY="272" width="101" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.79339823300000001" green="0.3639547521" blue="0.1072798083" alpha="1" colorSpace="calibratedRGB"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HTe-dT-JK0">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="eagle top view.png" translatesAutoresizingMaskIntoConstraints="NO" id="HTe-dT-JK0">
                                 <frame key="frameInset" minX="214" minY="579" width="139" height="46"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.63475685370000001" green="0.69694862570000005" blue="0.26840156659999997" alpha="1" colorSpace="calibratedRGB"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="O1u-wO-g80">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="eagle side.png" translatesAutoresizingMaskIntoConstraints="NO" id="O1u-wO-g80">
                                 <frame key="frameInset" minX="136" minY="391" width="48" height="118"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Nls-SU-6Bt">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="eagle side.png" translatesAutoresizingMaskIntoConstraints="NO" id="Nls-SU-6Bt">
                                 <frame key="frameInset" minX="76" minY="216" width="48" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="0.61312330650000002" blue="0.15540080440000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -600,6 +610,11 @@
                                 <frame key="frameInset" minY="671" width="414" height="63"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="eagle side.png" translatesAutoresizingMaskIntoConstraints="NO" id="JWf-kV-N6g">
+                                <frame key="frameInset" minX="346" minY="269" width="48" height="168"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.63475685370000001" green="0.69694862570000005" blue="0.26840156659999997" alpha="1" colorSpace="calibratedRGB"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                     </view>
@@ -648,11 +663,11 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Screen Shot 2016-09-22 at 7.42.41 PM.png" translatesAutoresizingMaskIntoConstraints="NO" id="vcP-KG-oFf">
-                                <frame key="frameInset" minX="402" minY="452" width="12" height="178"/>
+                                <frame key="frameInset" minX="402" minY="417" width="12" height="213"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Screen Shot 2016-09-22 at 7.42.41 PM.png" translatesAutoresizingMaskIntoConstraints="NO" id="YC8-IG-CCg">
-                                <frame key="frameInset" minX="402" minY="198" width="12" height="189"/>
+                                <frame key="frameInset" minX="402" minY="198" width="12" height="220"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Screen Shot 2016-09-22 at 7.42.41 PM.png" translatesAutoresizingMaskIntoConstraints="NO" id="MIw-tg-VoM">
@@ -716,5 +731,7 @@
         <image name="badge.png" width="271" height="255"/>
         <image name="blackscreen.bmp" width="608" height="578"/>
         <image name="bottomScreen.png" width="598" height="322"/>
+        <image name="eagle side.png" width="1274" height="3362"/>
+        <image name="eagle top view.png" width="3362" height="1274"/>
     </resources>
 </document>
