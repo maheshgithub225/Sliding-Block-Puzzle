@@ -8,18 +8,14 @@
 
 import UIKit
 import AVFoundation
-import SafariServices
 
-class ViewController: UIViewController, SFSafariViewControllerDelegate {
+class ViewController: UIViewController {
     var audioplayer: AVAudioPlayer!
-    
-    var urlString: String = "guide.pdf"
     
     
     @IBOutlet weak var catchme: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
- 
     } 
 
     override func didReceiveMemoryWarning() {
@@ -41,6 +37,7 @@ class ViewController: UIViewController, SFSafariViewControllerDelegate {
     }
     
     
+
     
     
     @IBAction func showPDF(_ sender: AnyObject) {

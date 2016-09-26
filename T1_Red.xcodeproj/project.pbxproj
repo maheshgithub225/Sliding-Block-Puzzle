@@ -33,6 +33,10 @@
 		A5CDE6C71D99B342004D2BBF /* eagle top view.png in Resources */ = {isa = PBXBuildFile; fileRef = A5CDE6C51D99B342004D2BBF /* eagle top view.png */; };
 		A5CDE6C81D99B342004D2BBF /* eagle side.png in Resources */ = {isa = PBXBuildFile; fileRef = A5CDE6C61D99B342004D2BBF /* eagle side.png */; };
 		A5CDE6CA1D99B683004D2BBF /* eaglesideview.png in Resources */ = {isa = PBXBuildFile; fileRef = A5CDE6C91D99B683004D2BBF /* eaglesideview.png */; };
+		BD07BF651D99C8BF0088411C /* lowerguncock.wav in Resources */ = {isa = PBXBuildFile; fileRef = BD07BF611D99C8BF0088411C /* lowerguncock.wav */; };
+		BD07BF661D99C8BF0088411C /* quick_gun-shot.wav in Resources */ = {isa = PBXBuildFile; fileRef = BD07BF621D99C8BF0088411C /* quick_gun-shot.wav */; };
+		BD07BF681D99C8BF0088411C /* retro crime music.wav in Resources */ = {isa = PBXBuildFile; fileRef = BD07BF641D99C8BF0088411C /* retro crime music.wav */; };
+		BD07BF6A1D99CA7B0088411C /* rollover2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = BD07BF691D99CA7B0088411C /* rollover2.mp3 */; };
 		BD736AC51D9731A6001E7733 /* 817_NYS-impala.png in Resources */ = {isa = PBXBuildFile; fileRef = BD736AC41D9731A6001E7733 /* 817_NYS-impala.png */; };
 		BD736AC71D97322A001E7733 /* 752_ricks_police_car.png in Resources */ = {isa = PBXBuildFile; fileRef = BD736AC61D97322A001E7733 /* 752_ricks_police_car.png */; };
 		BD79DE521D9440D200C49BD4 /* make-it-chalk-line.png in Resources */ = {isa = PBXBuildFile; fileRef = BD79DE511D9440D200C49BD4 /* make-it-chalk-line.png */; };
@@ -100,6 +104,10 @@
 		A5CDE6C51D99B342004D2BBF /* eagle top view.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "eagle top view.png"; sourceTree = "<group>"; };
 		A5CDE6C61D99B342004D2BBF /* eagle side.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "eagle side.png"; sourceTree = "<group>"; };
 		A5CDE6C91D99B683004D2BBF /* eaglesideview.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = eaglesideview.png; sourceTree = "<group>"; };
+		BD07BF611D99C8BF0088411C /* lowerguncock.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = lowerguncock.wav; sourceTree = "<group>"; };
+		BD07BF621D99C8BF0088411C /* quick_gun-shot.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "quick_gun-shot.wav"; sourceTree = "<group>"; };
+		BD07BF641D99C8BF0088411C /* retro crime music.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "retro crime music.wav"; sourceTree = "<group>"; };
+		BD07BF691D99CA7B0088411C /* rollover2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = rollover2.mp3; sourceTree = "<group>"; };
 		BD736AC41D9731A6001E7733 /* 817_NYS-impala.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "817_NYS-impala.png"; sourceTree = "<group>"; };
 		BD736AC61D97322A001E7733 /* 752_ricks_police_car.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 752_ricks_police_car.png; sourceTree = "<group>"; };
 		BD79DE511D9440D200C49BD4 /* make-it-chalk-line.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "make-it-chalk-line.png"; sourceTree = "<group>"; };
@@ -157,6 +165,10 @@
 		9324A6F41D97608400ECF083 /* sounds */ = {
 			isa = PBXGroup;
 			children = (
+				BD07BF691D99CA7B0088411C /* rollover2.mp3 */,
+				BD07BF611D99C8BF0088411C /* lowerguncock.wav */,
+				BD07BF621D99C8BF0088411C /* quick_gun-shot.wav */,
+				BD07BF641D99C8BF0088411C /* retro crime music.wav */,
 				9324A6F51D9761C900ECF083 /* loudgun.mp3 */,
 			);
 			name = sounds;
@@ -383,12 +395,15 @@
 				93F567851D91231C008064B8 /* play button.png in Resources */,
 				93F567841D91231C008064B8 /* options.png in Resources */,
 				A5CDE6C81D99B342004D2BBF /* eagle side.png in Resources */,
+				BD07BF651D99C8BF0088411C /* lowerguncock.wav in Resources */,
 				BDF9BB981D81D19A00403F55 /* LaunchScreen.storyboard in Resources */,
 				BD736AC51D9731A6001E7733 /* 817_NYS-impala.png in Resources */,
 				BDAFF29B1D987D1C0064BAF5 /* Menuscreen.jpg in Resources */,
 				BD736AC71D97322A001E7733 /* 752_ricks_police_car.png in Resources */,
 				BDF9BB951D81D19A00403F55 /* Assets.xcassets in Resources */,
+				BD07BF681D99C8BF0088411C /* retro crime music.wav in Resources */,
 				93F567801D91231C008064B8 /* badge.png in Resources */,
+				BD07BF6A1D99CA7B0088411C /* rollover2.mp3 in Resources */,
 				BD79DE5C1D944F0500C49BD4 /* mag50x50.png in Resources */,
 				BD79DE521D9440D200C49BD4 /* make-it-chalk-line.png in Resources */,
 				A5CDE6C71D99B342004D2BBF /* eagle top view.png in Resources */,
@@ -410,6 +425,7 @@
 				A5679D461D9623F9000E3DDE /* bottomScreen.png in Resources */,
 				A57F183B1D94B28200B941D4 /* Screen Shot 2016-09-22 at 7.42.41 PM.png in Resources */,
 				BD79DE581D9444AE00C49BD4 /* asphalt.jpg in Resources */,
+				BD07BF661D99C8BF0088411C /* quick_gun-shot.wav in Resources */,
 				9324A6F31D975FDC00ECF083 /* catch.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

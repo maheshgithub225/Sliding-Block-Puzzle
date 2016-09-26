@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AudioToolbox
 
 class LevelOneViewController: UIViewController {
     
@@ -28,15 +29,7 @@ class LevelOneViewController: UIViewController {
     // Debug Code
     let DEBUG_OUTPUT = false
     let DEBUG_FREE_PLAYER = false
-    
-    // Player Blocks
-    //let playerBlock = UIView(frame: CGRect(x: 10, y: 400, width: 50, height: 50))
-    // Puzzle Blocks
-    //let puzzleBlockVertical = UIView(frame: CGRect(x: 200, y: 430, width: 50, height: 198))
-    //let puzzleBlockHorizontal = UIView(frame: CGRect(x: 200, y: 200, width: 160, height: 50))
-    //let puzzleBlockOrange = UIView(frame: CGRect(x:80, y: 200, width:50, height:150))
-    // let sampleimage = UIImageView(frame: CGRect(x: 10, y: 400, width: 50, height: 50))
-    
+
     // Barriers
     let barrierUpper = UIView(frame: CGRect(x: 0, y: -600, width: 414, height: 800))
     let barrierLeft = UIView(frame: CGRect(x: -1000, y: 200, width: 1014, height: 736))
@@ -208,6 +201,14 @@ class LevelOneViewController: UIViewController {
             LevelOneScore = LevelOneScore + 1
             ScoreCard.text = "\(LevelOneScore)"
             originalPlayerBlockCenter = playerBlock.center
+            if let soundURL = Bundle.main.url(forResource: "rollover2", withExtension: "mp3") {
+                var mySound: SystemSoundID = 0
+                AudioServicesCreateSystemSoundID(soundURL, &mySound)
+                // Play
+                AudioServicesPlaySystemSound(mySound);
+            }
+            
+            
         } else if sender.state == UIGestureRecognizerState.changed {
             if (barrierUpper.frame.intersects(playerBlock.frame)) {     // Block has intersected with boundry, get unstuck.
                 sender.isEnabled = false    //Disables Gestures
@@ -408,6 +409,12 @@ class LevelOneViewController: UIViewController {
             LevelOneScore = LevelOneScore + 1
             ScoreCard.text = "\(LevelOneScore)"
             originalPuzzleBlockCenterVertical = puzzleBlockVertical.center
+            if let soundURL = Bundle.main.url(forResource: "rollover2", withExtension: "mp3") {
+                var mySound: SystemSoundID = 0
+                AudioServicesCreateSystemSoundID(soundURL, &mySound)
+                // Play
+                AudioServicesPlaySystemSound(mySound);
+            }
         } else if sender.state == UIGestureRecognizerState.changed {
             if (barrierUpper.frame.intersects(puzzleBlockVertical.frame)) {     // Block has intersected with boundry, get unstuck.
                 sender.isEnabled = false    //Disables Gestures
@@ -537,6 +544,12 @@ class LevelOneViewController: UIViewController {
             LevelOneScore = LevelOneScore + 1
             ScoreCard.text = "\(LevelOneScore)"
             originalPuzzleBlockCenterHorizontal = puzzleBlockHorizontal.center
+            if let soundURL = Bundle.main.url(forResource: "rollover2", withExtension: "mp3") {
+                var mySound: SystemSoundID = 0
+                AudioServicesCreateSystemSoundID(soundURL, &mySound)
+                // Play
+                AudioServicesPlaySystemSound(mySound);
+            }
         } else if sender.state == UIGestureRecognizerState.changed {
             if (barrierUpper.frame.intersects(puzzleBlockHorizontal.frame)) {     // Block has intersected with boundry, get unstuck.
                 sender.isEnabled = false    //Disables Gestures
@@ -667,6 +680,12 @@ class LevelOneViewController: UIViewController {
             LevelOneScore = LevelOneScore + 1
             ScoreCard.text = "\(LevelOneScore)"
             orginalPuzzleBloackCenterOrange = puzzleBlockOrange.center
+            if let soundURL = Bundle.main.url(forResource: "rollover2", withExtension: "mp3") {
+                var mySound: SystemSoundID = 0
+                AudioServicesCreateSystemSoundID(soundURL, &mySound)
+                // Play
+                AudioServicesPlaySystemSound(mySound);
+            }
         } else if sender.state == UIGestureRecognizerState.changed {
             if (barrierUpper.frame.intersects(puzzleBlockOrange.frame)) {     // Block has intersected with boundry, get unstuck.
                 sender.isEnabled = false    //Disables Gestures
