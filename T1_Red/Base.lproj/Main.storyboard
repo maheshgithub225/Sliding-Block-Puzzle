@@ -39,7 +39,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="MenuFinal.png" translatesAutoresizingMaskIntoConstraints="NO" id="U49-d8-nFg">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="MenuFinal1.png" translatesAutoresizingMaskIntoConstraints="NO" id="U49-d8-nFg">
                                 <frame key="frameInset" width="414" height="736"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -750,7 +750,7 @@
     <resources>
         <image name="752_ricks_police_car.png" width="921" height="442"/>
         <image name="CrimeScene.png" width="600" height="64"/>
-        <image name="MenuFinal.png" width="824" height="1468"/>
+        <image name="MenuFinal1.png" width="828" height="1470"/>
         <image name="Screen Shot 2016-09-22 at 7.42.41 PM.png" width="110" height="1382"/>
         <image name="Screen Shot 2016-09-23 at 9.55.10 PM.png" width="826" height="308"/>
         <image name="badge.png" width="271" height="255"/>
