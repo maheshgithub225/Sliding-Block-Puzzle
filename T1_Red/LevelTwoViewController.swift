@@ -11,6 +11,7 @@ import UIKit
 class LevelTwoViewController: UIViewController {
     
     var LevelTwoScore: Int64 = 0
+    var lastTime: TimeInterval!
     
     var originalPlayerBlockCenter: CGPoint!
     var originalPuzzleBlockCenterVertical: CGPoint!
@@ -37,7 +38,7 @@ class LevelTwoViewController: UIViewController {
     let exitBlock = UIView(frame: CGRect(x: 400, y: 380, width: 700, height: 80))
     
     //Alert
-    let alertController = UIAlertController(title: "Clue1", message: "Clue1", preferredStyle: .alert)
+    let alertController = UIAlertController(title: "Clue 2 Discovered", message: "Fingerprints have been found!", preferredStyle: .alert)
     let NextClue = UIAlertAction(title: "Next Clue?", style: .destructive){(_) -> Void in
         
     }
@@ -50,7 +51,7 @@ class LevelTwoViewController: UIViewController {
     }
     @IBOutlet weak var TimerView2: UILabel!
     @IBOutlet weak var ScoreCard1: UILabel!
-
+    
     @IBOutlet weak var puzzleBlockVerticalOrange: UIImageView!
     @IBOutlet weak var puzzleBlockHorizontal: UIImageView!
     @IBOutlet weak var puzzleBlockVertical: UIImageView!
@@ -74,9 +75,11 @@ class LevelTwoViewController: UIViewController {
     
     
     var startTime = TimeInterval()
-    
+    var elapsedTime:TimeInterval = TimeInterval()
     var timer:Timer = Timer()
-
+    
+    var reset = false
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -184,8 +187,13 @@ class LevelTwoViewController: UIViewController {
     func updateTime() {
         let currentTime = Date.timeIntervalSinceReferenceDate
         
+        if(reset){
+            startTime = Date.timeIntervalSinceReferenceDate
+            reset = false
+        }
+        
         //Find the difference between current time and start time.
-        var elapsedTime: TimeInterval = currentTime - startTime
+        elapsedTime = currentTime - startTime
         
         //calculate the minutes in elapsed time.
         let minutes = UInt8(elapsedTime / 60.0)
@@ -202,7 +210,7 @@ class LevelTwoViewController: UIViewController {
         timeScoreMin.append(strMinutes)
         timeScoreSec.append(strSeconds)
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -366,6 +374,13 @@ class LevelTwoViewController: UIViewController {
                     let resultViewController = storyBoard.instantiateViewController(withIdentifier: "MenuID") as! ViewController
                     self.present(resultViewController, animated:true, completion:nil)
                 }))
+                
+                timer.invalidate()
+                timeArrMin.append(timeScoreMin.last!)
+                timeArrSec.append(timeScoreSec.last!)
+                lastTime = elapsedTime
+                
+                
                 self.present(alertController, animated: true, completion: nil)
             }else{
                 if(DEBUG_FREE_PLAYER){
@@ -1373,7 +1388,7 @@ class LevelTwoViewController: UIViewController {
             //Nothing!
         }
     }
-
+    
     
     func gestureRecognizer(gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWithGestureRecognizer otherGestureRecognizer: UIGestureRecognizer) -> Bool {
         return true
@@ -1389,6 +1404,8 @@ class LevelTwoViewController: UIViewController {
         puzzleBlockHorizontalBlue.frame = startPuzzleBlue
         puzzleBlockVerticalGreen.frame = startPuzzleGreen
         ScoreCard1.text = "0"
+        reset = true
+        
         
     }
     

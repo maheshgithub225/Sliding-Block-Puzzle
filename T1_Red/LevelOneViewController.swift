@@ -9,9 +9,9 @@
 import UIKit
 
 class LevelOneViewController: UIViewController {
-
+    
     var LevelOneScore: Int64 = 0
-
+    var lastTime: TimeInterval!
     
     var originalPlayerBlockCenter: CGPoint!
     var originalPuzzleBlockCenterVertical: CGPoint!
@@ -35,8 +35,8 @@ class LevelOneViewController: UIViewController {
     //let puzzleBlockVertical = UIView(frame: CGRect(x: 200, y: 430, width: 50, height: 198))
     //let puzzleBlockHorizontal = UIView(frame: CGRect(x: 200, y: 200, width: 160, height: 50))
     //let puzzleBlockOrange = UIView(frame: CGRect(x:80, y: 200, width:50, height:150))
-   // let sampleimage = UIImageView(frame: CGRect(x: 10, y: 400, width: 50, height: 50))
-     
+    // let sampleimage = UIImageView(frame: CGRect(x: 10, y: 400, width: 50, height: 50))
+    
     // Barriers
     let barrierUpper = UIView(frame: CGRect(x: 0, y: -600, width: 414, height: 800))
     let barrierLeft = UIView(frame: CGRect(x: -1000, y: 200, width: 1014, height: 736))
@@ -44,7 +44,7 @@ class LevelOneViewController: UIViewController {
     let barrierLowerRight = UIView(frame: CGRect(x: 400, y: 460, width: 1014, height: 190))
     let barrierLower = UIView(frame: CGRect(x: 0, y: 636, width: 414, height: 800))
     
-
+    
     @IBOutlet weak var TimerView: UILabel!
     @IBOutlet weak var ScoreCard: UILabel!
     
@@ -57,17 +57,9 @@ class LevelOneViewController: UIViewController {
     let exitBlock = UIView(frame: CGRect(x: 400, y: 380, width: 700, height: 80))
     
     //Alert
-    let alertController = UIAlertController(title: "Clue1", message: "Clue1", preferredStyle: .alert)
-    let NextClue = UIAlertAction(title: "Next Clue?", style: .destructive){(_) -> Void in
-        
-    }
-    let Menu = UIAlertAction(title: "Menu", style: .destructive){
-        (result : UIAlertAction)in debugPrint("Menu")
-    }
-    let Back = UIAlertAction(title: "Back", style: .destructive){
-         (result : UIAlertAction)in debugPrint("Back")
-        
-    }
+    let alertController = UIAlertController(title: "Clue 1 Discovered", message: "We have found a murder weapon.", preferredStyle: .alert)
+    
+    
     
     var timeScoreMin: [String] = []
     var timeScoreSec: [String] = []
@@ -77,9 +69,11 @@ class LevelOneViewController: UIViewController {
     
     
     var startTime = TimeInterval()
-    
+    var elapsedTime:TimeInterval = TimeInterval()
     var timer:Timer = Timer()
-
+    
+    var reset = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -96,7 +90,7 @@ class LevelOneViewController: UIViewController {
         //let aSelector1 : Selector = #selector(LevelOneViewController.updateScore)
         
         
-
+        
         
         // Create Exit
         exitBlock.backgroundColor = UIColor.black
@@ -168,14 +162,17 @@ class LevelOneViewController: UIViewController {
         quitButton.setTitle("Quit", for: UIControlState.normal)
         quitButton.addTarget(self, action: #selector(LevelOneViewController.Quit), for: UIControlEvents.touchUpInside)
         view.addSubview(quitButton)
-
+        
         
     }
     func updateTime() {
         let currentTime = Date.timeIntervalSinceReferenceDate
-        
+        if(reset){
+            startTime = Date.timeIntervalSinceReferenceDate
+            reset = false
+        }
         //Find the difference between current time and start time.
-        var elapsedTime: TimeInterval = currentTime - startTime
+        elapsedTime = currentTime - startTime
         
         //calculate the minutes in elapsed time.
         let minutes = UInt8(elapsedTime / 60.0)
@@ -206,7 +203,7 @@ class LevelOneViewController: UIViewController {
     @IBAction func didPlayerBlockPan(_ sender: UIPanGestureRecognizer) {
         //let point = sender.location(in: view)
         let translation = sender.translation(in: view)
-
+        
         if sender.state == UIGestureRecognizerState.began {
             LevelOneScore = LevelOneScore + 1
             ScoreCard.text = "\(LevelOneScore)"
@@ -323,6 +320,11 @@ class LevelOneViewController: UIViewController {
             }else if(exitBlock.frame.intersects(playerBlock.frame)){
                 sender.isEnabled = false
                 sender.isEnabled = true
+                timer.invalidate()
+                timeArrMin.append(timeScoreMin.last!)
+                timeArrSec.append(timeScoreSec.last!)
+                lastTime = elapsedTime
+                
                 alertController.addAction(UIAlertAction(title:"Next Clue", style: .default, handler: {action in
                     let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
                     // Change the identifier to the correct identifier of the viewcontroller on the storyboard and change the viewcontroller to the correct view controller
@@ -336,9 +338,7 @@ class LevelOneViewController: UIViewController {
                     self.present(resultViewController, animated:true, completion:nil)
                 }))
                 
-                timer.invalidate()
-                timeArrMin.append(timeScoreMin.last!)
-                timeArrSec.append(timeScoreSec.last!)
+                
                 
                 //displayYourScoreTime.text = "Your Time: \(timeArrMin.last!)m:\(timeArrSec.last!)s"
                 
@@ -652,7 +652,7 @@ class LevelOneViewController: UIViewController {
                 }else{
                     puzzleBlockHorizontal.center = CGPoint(x: originalPuzzleBlockCenterHorizontal.x + translation.x , y: originalPuzzleBlockCenterHorizontal.y)
                 }
-
+                
             }
         } else if sender.state == UIGestureRecognizerState.ended {
             
@@ -794,7 +794,7 @@ class LevelOneViewController: UIViewController {
     }
     
     
-
+    
     func Reset() {
         LevelOneScore = 0
         playerBlock.frame = startPlayer
@@ -802,9 +802,10 @@ class LevelOneViewController: UIViewController {
         puzzleBlockHorizontal.frame = startPuzzleHorizontal
         puzzleBlockVertical.frame = startPuzzleVert
         ScoreCard.text = "0"
+        reset = true
     }
     
-
+    
     func Quit(){
         let alertController1 = UIAlertController(title: "Quit", message: "Are You Sure?", preferredStyle: .alert)
         let No = UIAlertAction(title: "No", style: .destructive){
@@ -826,14 +827,14 @@ class LevelOneViewController: UIViewController {
     
     
     /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: AnyObject?) {
+     // Get the new view controller using segue.destinationViewController.
+     // Pass the selected object to the new view controller.
+     }
+     */
     
 }
 

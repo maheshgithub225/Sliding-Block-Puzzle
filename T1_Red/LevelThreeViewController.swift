@@ -11,6 +11,7 @@ import UIKit
 class LevelThreeViewController: UIViewController {
 
     var LevelThreeScore: Int64 = 0
+    var lastTime: TimeInterval!
     
     
     var originalPlayerBlockCenter: CGPoint!
@@ -46,16 +47,16 @@ class LevelThreeViewController: UIViewController {
     let exitBlock = UIView(frame: CGRect(x: 400, y: 380, width: 700, height: 80))
 
     //Alert
-    let alertController = UIAlertController(title: "Clue1", message: "Clue1", preferredStyle: .alert)
+    let alertController = UIAlertController(title: "Clue 3 Discovered", message: "We know who the murderer is!", preferredStyle: .alert)
     let NextClue = UIAlertAction(title: "Next Clue?", style: .destructive){(_) -> Void in
-    
+        
     }
     let Menu = UIAlertAction(title: "Menu", style: .destructive){
         (result : UIAlertAction)in debugPrint("Menu")
     }
     let Back = UIAlertAction(title: "Back", style: .destructive){
         (result : UIAlertAction)in debugPrint("Back")
-    
+        
     }
     @IBOutlet weak var TimerView3: UILabel!
     @IBOutlet weak var ScoreCard2: UILabel!
@@ -88,9 +89,11 @@ class LevelThreeViewController: UIViewController {
 
 
     var startTime = TimeInterval()
-
     var timer:Timer = Timer()
+    var elapsedTime:TimeInterval = TimeInterval()
 
+    var reset = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -226,8 +229,13 @@ class LevelThreeViewController: UIViewController {
     func updateTime() {
         let currentTime = Date.timeIntervalSinceReferenceDate
         
+        if(reset){
+            startTime = Date.timeIntervalSinceReferenceDate
+            reset = false
+        }
+        
         //Find the difference between current time and start time.
-        var elapsedTime: TimeInterval = currentTime - startTime
+        elapsedTime = currentTime - startTime
         
         //calculate the minutes in elapsed time.
         let minutes = UInt8(elapsedTime / 60.0)
@@ -2627,8 +2635,7 @@ class LevelThreeViewController: UIViewController {
         puzzleBlockVerticalGrey.frame = startPuzzleGreyVert
         puzzleBlockVerticalRed.frame = startPuzzleRedVert
         ScoreCard2.text = "0"
-        
-        
+        reset = true
     }
     
     func Quit(){
