@@ -44,9 +44,7 @@ class EndingViewController: UIViewController {
         
         
         let score = scoreWithPar + Int64(timeBonus)
-        total.text = "Score:  \(score)"
-        
-        
+        total.text = "Your Score:  \(score)"
         
         
     }
