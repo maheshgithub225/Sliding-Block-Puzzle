@@ -401,17 +401,8 @@ class LevelTwoViewController: UIViewController {
                 }
             }
         } else if sender.state == UIGestureRecognizerState.ended {
-            if sender.state == UIGestureRecognizerState.began {
-                LevelTwoScore = LevelTwoScore + 1
-                ScoreCard1.text = "\(LevelTwoScore)"
-                originalPlayerBlockCenter = playerBlock.center
-                if let soundURL = Bundle.main.url(forResource: "rollover2", withExtension: "mp3") {
-                    var mySound: SystemSoundID = 0
-                    AudioServicesCreateSystemSoundID(soundURL, &mySound)
-                    // Play
-                    AudioServicesPlaySystemSound(mySound);
-                }
-            } else if sender.state == UIGestureRecognizerState.changed {
+            
+             if sender.state == UIGestureRecognizerState.changed {
                 if (barrierUpper.frame.intersects(playerBlock.frame)) {     // Block has intersected with boundry, get unstuck.
                     sender.isEnabled = false    //Disables Gestures
                     var unstuck: CGFloat = 0.00
@@ -761,17 +752,7 @@ class LevelTwoViewController: UIViewController {
                 }
             }
         } else if sender.state == UIGestureRecognizerState.ended {
-            if sender.state == UIGestureRecognizerState.began {
-                LevelTwoScore = LevelTwoScore + 1
-                ScoreCard1.text = "\(LevelTwoScore)"
-                originalPuzzleBlockCenterVertical = puzzleBlockVertical.center
-                if let soundURL = Bundle.main.url(forResource: "rollover2", withExtension: "mp3") {
-                    var mySound: SystemSoundID = 0
-                    AudioServicesCreateSystemSoundID(soundURL, &mySound)
-                    // Play
-                    AudioServicesPlaySystemSound(mySound);
-                }
-            } else if sender.state == UIGestureRecognizerState.changed {
+             if sender.state == UIGestureRecognizerState.changed {
                 if (barrierUpper.frame.intersects(puzzleBlockVertical.frame)) {     // Block has intersected with boundry, get unstuck.
                     sender.isEnabled = false    //Disables Gestures
                     var unstuck: CGFloat = 0.00
@@ -1095,17 +1076,7 @@ class LevelTwoViewController: UIViewController {
                 
             }
         } else if sender.state == UIGestureRecognizerState.ended {
-            if sender.state == UIGestureRecognizerState.began {
-                LevelTwoScore = LevelTwoScore + 1
-                ScoreCard1.text = "\(LevelTwoScore)"
-                originalPuzzleBlockCenterHorizontal = puzzleBlockHorizontal.center
-                if let soundURL = Bundle.main.url(forResource: "rollover2", withExtension: "mp3") {
-                    var mySound: SystemSoundID = 0
-                    AudioServicesCreateSystemSoundID(soundURL, &mySound)
-                    // Play
-                    AudioServicesPlaySystemSound(mySound);
-                }
-            } else if sender.state == UIGestureRecognizerState.changed {
+             if sender.state == UIGestureRecognizerState.changed {
                 if (barrierUpper.frame.intersects(puzzleBlockHorizontal.frame)) {     // Block has intersected with boundry, get unstuck.
                     sender.isEnabled = false    //Disables Gestures
                     var unstuck: CGFloat = 0.00
@@ -1430,17 +1401,7 @@ class LevelTwoViewController: UIViewController {
                 }
             }
         } else if sender.state == UIGestureRecognizerState.ended {
-            if sender.state == UIGestureRecognizerState.began {
-                LevelTwoScore = LevelTwoScore + 1
-                ScoreCard1.text = "\(LevelTwoScore)"
-                orginalPuzzleBlockCenterOrange = puzzleBlockVerticalOrange.center
-                if let soundURL = Bundle.main.url(forResource: "rollover2", withExtension: "mp3") {
-                    var mySound: SystemSoundID = 0
-                    AudioServicesCreateSystemSoundID(soundURL, &mySound)
-                    // Play
-                    AudioServicesPlaySystemSound(mySound);
-                }
-            } else if sender.state == UIGestureRecognizerState.changed {
+             if sender.state == UIGestureRecognizerState.changed {
                 if (barrierUpper.frame.intersects(puzzleBlockVerticalOrange.frame)) {     // Block has intersected with boundry, get unstuck.
                     sender.isEnabled = false    //Disables Gestures
                     var unstuck: CGFloat = 0.00
@@ -1787,17 +1748,7 @@ class LevelTwoViewController: UIViewController {
                 }
             }
         } else if sender.state == UIGestureRecognizerState.ended {
-            if sender.state == UIGestureRecognizerState.began {
-                LevelTwoScore = LevelTwoScore + 1
-                ScoreCard1.text = "\(LevelTwoScore)"
-                originalPuzzleBlockCenterGreen = puzzleBlockVerticalGreen.center
-                if let soundURL = Bundle.main.url(forResource: "rollover2", withExtension: "mp3") {
-                    var mySound: SystemSoundID = 0
-                    AudioServicesCreateSystemSoundID(soundURL, &mySound)
-                    // Play
-                    AudioServicesPlaySystemSound(mySound);
-                }
-            } else if sender.state == UIGestureRecognizerState.changed {
+            if sender.state == UIGestureRecognizerState.changed {
                 if (barrierUpper.frame.intersects(puzzleBlockVerticalGreen.frame)) {     // Block has intersected with boundry, get unstuck.
                     sender.isEnabled = false    //Disables Gestures
                     var unstuck: CGFloat = 0.00
@@ -2121,17 +2072,7 @@ class LevelTwoViewController: UIViewController {
                 
             }
         } else if sender.state == UIGestureRecognizerState.ended {
-            if sender.state == UIGestureRecognizerState.began {
-                LevelTwoScore = LevelTwoScore + 1
-                ScoreCard1.text = "\(LevelTwoScore)"
-                originalPuzzleBlockCenterBlue = puzzleBlockHorizontalBlue.center
-                if let soundURL = Bundle.main.url(forResource: "rollover2", withExtension: "mp3") {
-                    var mySound: SystemSoundID = 0
-                    AudioServicesCreateSystemSoundID(soundURL, &mySound)
-                    // Play
-                    AudioServicesPlaySystemSound(mySound);
-                }
-            } else if sender.state == UIGestureRecognizerState.changed {
+           if sender.state == UIGestureRecognizerState.changed {
                 if (barrierUpper.frame.intersects(puzzleBlockHorizontalBlue.frame)) {     // Block has intersected with boundry, get unstuck.
                     sender.isEnabled = false    //Disables Gestures
                     var unstuck: CGFloat = 0.00
@@ -2431,17 +2372,7 @@ class LevelTwoViewController: UIViewController {
                 
             }
         } else if sender.state == UIGestureRecognizerState.ended {
-            if sender.state == UIGestureRecognizerState.began {
-                LevelTwoScore = LevelTwoScore + 1
-                ScoreCard1.text = "\(LevelTwoScore)"
-                originalPuzzleBlockCenterBrown = puzzleBlockHorizontalBrown.center
-                if let soundURL = Bundle.main.url(forResource: "rollover2", withExtension: "mp3") {
-                    var mySound: SystemSoundID = 0
-                    AudioServicesCreateSystemSoundID(soundURL, &mySound)
-                    // Play
-                    AudioServicesPlaySystemSound(mySound);
-                }
-            } else if sender.state == UIGestureRecognizerState.changed {
+             if sender.state == UIGestureRecognizerState.changed {
                 if (barrierUpper.frame.intersects(puzzleBlockHorizontalBrown.frame)) {     // Block has intersected with boundry, get unstuck.
                     sender.isEnabled = false    //Disables Gestures
                     var unstuck: CGFloat = 0.00
